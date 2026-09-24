@@ -85,7 +85,7 @@ export function CourseTransformation({
 
           <StageReveal className="h-full" delay={0.08}>
             <article
-              className={`course-after-card relative h-full overflow-hidden bg-[#b00000] text-white ${
+              className={`course-after-card relative h-full overflow-hidden bg-[#0041b0] text-white ${
                 desktop ? "min-h-[650px] p-14" : "min-h-[560px] p-7"
               }`}
             >

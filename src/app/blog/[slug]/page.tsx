@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   if (!post) return {};
 
   return {
-    title: `${post.title} — Code Makers`,
+    title: `${post.title} — Code Flow`,
     description: post.description,
     alternates: { canonical: `/blog/${slug}` },
     openGraph: {

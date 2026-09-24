@@ -1,12 +1,12 @@
 /** Caminhos dos assets estáticos, centralizados para evitar strings soltas. */
 export const IMAGES = {
-  heroBackground: "/assets/hero-background-red.png",
-  heroRobot: "/assets/hero-robot-red.png",
+  heroBackground: "/assets/fundo-flow.png",
+  heroRobot: "/assets/hero-robot-blue.png",
   codeToCashFlow: "/assets/codemakers-code-to-cash-flow.png",
   redTexture: "/assets/textura-vermelha.png",
   integratedStack: "/assets/stack-solar-integrado.png",
   mobileCodeHunterCard: "/assets/mobile-code-hunter-card.png",
-  symbol: "/codemakers-symbol-transparent-v2.png",
+  symbol: "/code-flow-symbol.png",
 
   modules: {
     createAi: "/assets/codemakers-module-create-ai.png",

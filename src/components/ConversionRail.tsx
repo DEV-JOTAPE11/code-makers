@@ -5,11 +5,11 @@ import { motion } from "motion/react";
 import { CONVERSION_STEPS } from "@/data/site";
 import { EASE, WHATSAPP_GROUP_URL } from "@/lib/constants";
 
-/** "A fórmula Code Makers": manchete + cartão de decisão + trilho 01/02/03. */
+/** "A fórmula Code Flow": manchete + cartão de decisão + trilho 01/02/03. */
 export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
   return (
     <section
-      aria-label="A fórmula Code Makers"
+      aria-label="A fórmula Code Flow"
       className={`conversion-rail relative overflow-hidden bg-[#080808] text-white ${
         desktop ? "w-[1920px] px-[210px] py-[210px]" : "px-4 py-24"
       }`}
@@ -32,9 +32,9 @@ export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
           }`}
         >
           <div>
-            <div className="mb-5 flex items-center justify-center gap-3 font-['Inter:Medium',sans-serif] text-[12px] font-medium uppercase tracking-[0.18em] text-[#ff8b83] lg:justify-start">
-              <span className="size-2 rounded-full bg-[#ff3b30] shadow-[0_0_18px_rgba(255,59,48,0.85)]" />
-              CODE MAKERS + CODE HUNTER
+            <div className="mb-5 flex items-center justify-center gap-3 font-['Inter:Medium',sans-serif] text-[12px] font-medium uppercase tracking-[0.18em] text-[#83b0ff] lg:justify-start">
+              <span className="size-2 rounded-full bg-[#307cff] shadow-[0_0_18px_rgba(48,124,255,0.85)]" />
+              CODE FLOW + CODE HUNTER
             </div>
             <h2
               className={`font-['Sora:Regular',sans-serif] font-normal leading-[0.98] tracking-[-0.055em] ${
@@ -42,14 +42,14 @@ export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
               }`}
             >
               Crie com IA. Encontre com a Code Hunter.
-              <span className="mt-3 block text-[#ff4b43]">
+              <span className="mt-3 block text-[#4388ff]">
                 Venda com a nossa metodologia.
               </span>
             </h2>
           </div>
 
           <div className={`conversion-decision-card ${desktop ? "" : "mt-9"}`}>
-            <span className="font-['Inter:Medium',sans-serif] text-[10px] uppercase tracking-[0.2em] text-[#ff7770]">
+            <span className="font-['Inter:Medium',sans-serif] text-[10px] uppercase tracking-[0.2em] text-[#70a4ff]">
               DA IDEIA AO DINHEIRO NO BOLSO
             </span>
             <p className="mt-5 font-['Sora:Regular',sans-serif] text-[24px] leading-[1.25] tracking-[-0.035em] text-white">
@@ -63,7 +63,7 @@ export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
               href={WHATSAPP_GROUP_URL}
               target="_blank"
               rel="noreferrer"
-              className="conversion-rail-cta mt-7 inline-flex min-h-14 w-full items-center justify-between gap-5 rounded-full bg-[#c90000] px-7 font-['Inter:Medium',sans-serif] text-[14px] font-medium text-white transition-transform hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff6860]"
+              className="conversion-rail-cta mt-7 inline-flex min-h-14 w-full items-center justify-between gap-5 rounded-full bg-[#004ac9] px-7 font-['Inter:Medium',sans-serif] text-[14px] font-medium text-white transition-transform hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#609aff]"
             >
               Entrar no grupo oficial
               <span aria-hidden="true" className="text-xl">
@@ -99,11 +99,11 @@ export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
                   <span className="conversion-step-node grid size-11 place-items-center rounded-full font-['Inter:Medium',sans-serif] text-[11px]">
                     {step.number}
                   </span>
-                  <span className="font-['Inter:Medium',sans-serif] text-[11px] tracking-[0.2em] text-[#ff7770]">
+                  <span className="font-['Inter:Medium',sans-serif] text-[11px] tracking-[0.2em] text-[#70a4ff]">
                     {step.label}
                   </span>
                 </div>
-                <span className="conversion-step-arrow grid size-10 place-items-center rounded-full border border-white/20 text-lg transition-all duration-500 group-hover:border-[#ff4b43] group-hover:bg-[#b00000]">
+                <span className="conversion-step-arrow grid size-10 place-items-center rounded-full border border-white/20 text-lg transition-all duration-500 group-hover:border-[#4388ff] group-hover:bg-[#0041b0]">
                   ↗
                 </span>
               </div>
@@ -120,7 +120,7 @@ export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
               </p>
 
               <div className="conversion-step-outcome relative z-10 mt-auto pt-8">
-                <span className="text-[#ff5149]">✓</span>
+                <span className="text-[#498cff]">✓</span>
                 <span>{step.outcome}</span>
               </div>
             </motion.article>

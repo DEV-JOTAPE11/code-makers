@@ -16,7 +16,7 @@ export function CourseFinalPush({
 }) {
   return (
     <section
-      className={`course-final-push order-5 relative overflow-hidden bg-[#b00000] text-white ${
+      className={`course-final-push order-5 relative overflow-hidden bg-[#0041b0] text-white ${
         desktop ? "w-[1920px] px-[210px] py-[135px]" : "px-5 py-24"
       }`}
     >

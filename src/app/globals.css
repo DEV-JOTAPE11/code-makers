@@ -116,11 +116,11 @@ Sora
   initial-value: 0deg;
 }
 :root {
-  --brand-red: #b00000;
-  --brand-red-bright: #ff5a5a;
-  --brand-red-soft: #ffd6d6;
-  --brand-red-deep: #520000;
-  --brand-red-ink: #160000;
+  --brand-red: #0041b0;
+  --brand-red-bright: #5a97ff;
+  --brand-red-soft: #d6e5ff;
+  --brand-red-deep: #001e52;
+  --brand-red-ink: #000816;
 }
 .red-palette-image {
   filter: hue-rotate(132deg) saturate(1.22) contrast(1.04);
@@ -131,7 +131,7 @@ Sora
   opacity: 0;
   -webkit-backdrop-filter: blur(0.01px) saturate();
   will-change: opacity, backdrop-filter;
-  background: #2402020b;
+  background: #020e240b;
   transition:
     opacity 0.27s cubic-bezier(0.22, 1, 0.36, 1),
     -webkit-backdrop-filter 0.31s cubic-bezier(0.22, 1, 0.36, 1),
@@ -142,7 +142,7 @@ Sora
 #section-navigation-transition:after {
   content: "";
   opacity: 0;
-  background: radial-gradient(circle at 50% 44%, #ff5c5c1f, #1801012e 74%);
+  background: radial-gradient(circle at 50% 44%, #5c98ff1f, #0109182e 74%);
   transition: opacity 0.29s cubic-bezier(0.22, 1, 0.36, 1);
   position: absolute;
   inset: 0;
@@ -274,18 +274,18 @@ html.lenis body {
     linear-gradient(
       138deg,
       #0000 0 54%,
-      #ff7e7ebd 54.2%,
-      #970a0a6b 65%,
-      #120000eb 90%
+      #7eadffbd 54.2%,
+      #0a3e976b 65%,
+      #000712eb 90%
     ),
-    linear-gradient(145deg, #321414 0%, #810000 42%, #b00000 60%, #140202 100%);
+    linear-gradient(145deg, #141f32 0%, #002f81 42%, #0041b0 60%, #020914 100%);
 }
 .mobile-footer-gradient {
   background: linear-gradient(
     #f5f5f5 0%,
-    #ffdada 24%,
-    #b00000 49%,
-    #520606 67%,
+    #dae8ff 24%,
+    #0041b0 49%,
+    #062252 67%,
     #000 86%
   );
 }
@@ -296,21 +296,21 @@ html.lenis body {
     backdrop-filter: blur(12px) saturate(128%);
     background: linear-gradient(
       148deg,
-      #c23939fa -18%,
-      #800d0dfb 42%,
-      #3d0303fe 100%
+      #396bc2fa -18%,
+      #0d3780fb 42%,
+      #03183dfe 100%
     );
     box-shadow:
-      0 26px 70px #22000075,
+      0 26px 70px #000c2275,
       inset 0 1px #ffffff3d,
-      inset 0 -1px #1400003d;
+      inset 0 -1px #0007143d;
   }
   .mobile-nav-panel:before {
     z-index: -1;
     content: "";
     filter: blur(12px);
     pointer-events: none;
-    background: radial-gradient(#ffb0b057, #db3f3f21 38%, #0000 72%);
+    background: radial-gradient(#b0cdff57, #3f78db21 38%, #0000 72%);
     height: 68%;
     position: absolute;
     inset: -45% -28% auto;
@@ -321,7 +321,7 @@ html.lenis body {
     content: "";
     filter: blur(16px);
     pointer-events: none;
-    background: radial-gradient(circle, #230202ad, #0000 68%);
+    background: radial-gradient(circle, #020e23ad, #0000 68%);
     border-radius: 999px;
     width: 96%;
     position: absolute;
@@ -330,11 +330,11 @@ html.lenis body {
   }
   .mobile-nav-eyebrow,
   .mobile-nav-contact-label {
-    color: #ffddddb8;
+    color: #dde9ffb8;
   }
   .mobile-nav-link {
     color: #fffffff5;
-    text-shadow: 0 1px 16px #2300003d;
+    text-shadow: 0 1px 16px #000d233d;
     transition:
       background-color 0.36s cubic-bezier(0.22, 1, 0.36, 1),
       box-shadow 0.36s cubic-bezier(0.22, 1, 0.36, 1),
@@ -342,12 +342,12 @@ html.lenis body {
   }
   .mobile-nav-link:active,
   .mobile-nav-link:hover {
-    background: #ffebeb1f;
+    background: #ebf2ff1f;
     transform: translate(2px);
     box-shadow: inset 0 1px #ffffff29;
   }
   .mobile-nav-link-arrow {
-    color: #ffb8b8d6;
+    color: #b8d2ffd6;
     opacity: 0.8;
     transition:
       transform 0.36s cubic-bezier(0.22, 1, 0.36, 1),
@@ -359,39 +359,39 @@ html.lenis body {
     transform: translate(2px, -2px);
   }
   .mobile-nav-contact-section {
-    border-top: 1px solid #ffcdcd3d;
+    border-top: 1px solid #cddfff3d;
   }
   .mobile-nav-contact-card {
-    background: linear-gradient(110deg, #ffdada24, #a31e1e2e);
-    border: 1px solid #ffe0e038;
+    background: linear-gradient(110deg, #dae8ff24, #1e4fa32e);
+    border: 1px solid #e0ebff38;
     transition:
       border-color 0.36s cubic-bezier(0.22, 1, 0.36, 1),
       background-color 0.36s cubic-bezier(0.22, 1, 0.36, 1),
       transform 0.36s cubic-bezier(0.22, 1, 0.36, 1);
     box-shadow:
       inset 0 1px #ffffff1f,
-      0 8px 18px #2b000024;
+      0 8px 18px #00102b24;
   }
   .mobile-nav-contact-card:active,
   .mobile-nav-contact-card:hover {
-    background: linear-gradient(110deg, #ffdfdf33, #b8232340);
-    border-color: #ffdfdf66;
+    background: linear-gradient(110deg, #dfebff33, #235ab840);
+    border-color: #dfebff66;
     transform: translateY(-1px);
   }
   .mobile-nav-contact-initial {
-    color: #fff4f4;
-    background: linear-gradient(145deg, #d72f2ff0, #770707f0);
+    color: #f4f8ff;
+    background: linear-gradient(145deg, #2f6dd7f0, #073077f0);
     box-shadow:
       inset 0 1px #ffffff4d,
-      0 7px 16px #3600003d;
+      0 7px 16px #0014363d;
   }
   .mobile-nav-contact-arrow {
-    color: #780b0b;
-    background: #fff2f2f5;
+    color: #0b3378;
+    background: #f2f7fff5;
     transition:
       transform 0.36s cubic-bezier(0.22, 1, 0.36, 1),
       background-color 0.36s;
-    box-shadow: 0 5px 14px #2b000033;
+    box-shadow: 0 5px 14px #00102b33;
   }
   .mobile-nav-contact-card:hover .mobile-nav-contact-arrow,
   .mobile-nav-contact-card:active .mobile-nav-contact-arrow {
@@ -423,9 +423,9 @@ html.lenis body {
     position: relative;
     overflow: visible;
     box-shadow:
-      0 18px 42px #1d000061,
+      0 18px 42px #000b1d61,
       inset 0 0 0 1px #ffffff0d,
-      0 0 26px #b0000029;
+      0 0 26px #0041b029;
   }
   .shiny-cta:before,
   .shiny-cta:after {
@@ -439,9 +439,9 @@ html.lenis body {
     background: linear-gradient(
         105deg,
         #ffffff21 0% 38%,
-        #ff3930e0 46%,
+        #307cffe0 46%,
         #ffffffeb 50%,
-        #ff3930e0 54%,
+        #307cffe0 54%,
         #ffffff21 62% 100%
       )
       130%/320% 100%;
@@ -453,7 +453,7 @@ html.lenis body {
     z-index: 0;
     filter: blur(12px);
     opacity: 0;
-    background: #da0808b3;
+    background: #0855dab3;
     border-radius: 999px;
     width: 30%;
     height: 16px;
@@ -476,7 +476,7 @@ html.lenis body {
     border-radius: inherit;
     content: "";
     background:
-      radial-gradient(circle at 76% 120%, #b0000042, #0000 42%),
+      radial-gradient(circle at 76% 120%, #0041b042, #0000 42%),
       radial-gradient(circle at 22% -60%, #ffffff1c, #0000 40%),
       repeating-linear-gradient(115deg, #0000 0 7px, #ffffff05 7px 8px);
     position: absolute;
@@ -492,7 +492,7 @@ html.lenis body {
       #0000,
       #ffffff0a,
       #ffffff3d,
-      #ff443a24,
+      #3a82ff24,
       #0000
     );
     width: 24%;
@@ -520,7 +520,7 @@ html.lenis body {
   .shiny-cta-arrow {
     z-index: 2;
     color: #fff;
-    background: linear-gradient(145deg, #c90b0b, #760000);
+    background: linear-gradient(145deg, #0b51c9, #002b76);
     border: 1px solid #ffffff30;
     border-radius: 999px;
     flex: 0 0 44px;
@@ -536,18 +536,18 @@ html.lenis body {
     display: grid;
     position: relative;
     box-shadow:
-      0 7px 20px #b0000061,
+      0 7px 20px #0041b061,
       inset 0 1px #ffffff3d;
   }
   .shiny-cta:active {
     transform: scale(0.985);
     box-shadow:
-      0 11px 28px #1d000066,
-      0 0 34px #b0000038;
+      0 11px 28px #000b1d66,
+      0 0 34px #0041b038;
   }
   .shiny-cta:hover .shiny-cta-arrow,
   .shiny-cta:active .shiny-cta-arrow {
-    background: linear-gradient(145deg, #e11616, #8d0000);
+    background: linear-gradient(145deg, #1660e1, #00348d);
     transform: translate(2px, -2px) rotate(7deg);
   }
   .shiny-cta:focus-visible {
@@ -604,13 +604,13 @@ html.lenis body {
     0%,
     to {
       box-shadow:
-        0 7px 20px #b0000047,
+        0 7px 20px #0041b047,
         inset 0 1px #fff3;
     }
     50% {
       box-shadow:
-        0 8px 25px #d80a0a7a,
-        0 0 0 4px #b0000014,
+        0 8px 25px #0a56d87a,
+        0 0 0 4px #0041b014,
         inset 0 1px #ffffff3d;
     }
   }
@@ -811,10 +811,10 @@ html::-webkit-scrollbar {
 .hero-gradient-motion:before {
   opacity: 0.58;
   background: radial-gradient(
-    #ffe1e1d1 0%,
-    #ff5353ad 30%,
-    #b000006b 52%,
-    #38020200 76%
+    #e1ecffd1 0%,
+    #5392ffad 30%,
+    #0041b06b 52%,
+    #02163800 76%
   );
   width: 118%;
   height: 104%;
@@ -825,10 +825,10 @@ html::-webkit-scrollbar {
 .hero-gradient-motion:after {
   opacity: 0.54;
   background: radial-gradient(
-    #f84e4ec2 0%,
-    #b000009e 34%,
-    #740c0c61 54%,
-    #27010100 78%
+    #4e8cf8c2 0%,
+    #0041b09e 34%,
+    #0c327461 54%,
+    #010f2700 78%
   );
   width: 112%;
   height: 100%;
@@ -838,8 +838,8 @@ html::-webkit-scrollbar {
 }
 .hero-gradient-depth {
   background:
-    radial-gradient(at 50% 34%, #0000 34%, #0f000024 74%, #07000066 100%),
-    linear-gradient(#0000 0%, #1601010d 45%, #1201017a 73%, #070000d6 100%);
+    radial-gradient(at 50% 34%, #0000 34%, #00060f24 74%, #00030766 100%),
+    linear-gradient(#0000 0%, #0109160d 45%, #0107127a 73%, #000307d6 100%);
 }
 .hero-gradient-shadow-motion {
   overflow: hidden;
@@ -855,10 +855,10 @@ html::-webkit-scrollbar {
 }
 .hero-gradient-shadow-motion:before {
   background: radial-gradient(
-    #070000fa 0%,
-    #180101db 34%,
-    #50030394 55%,
-    #50030300 78%
+    #000307fa 0%,
+    #010918db 34%,
+    #031f5094 55%,
+    #031f5000 78%
   );
   width: 116%;
   height: 94%;
@@ -868,10 +868,10 @@ html::-webkit-scrollbar {
 }
 .hero-gradient-shadow-motion:after {
   background: radial-gradient(
-    #0a0000f0 0%,
-    #220202cc 38%,
-    #5c05057a 58%,
-    #5c050500 80%
+    #00040af0 0%,
+    #020e22cc 38%,
+    #05255c7a 58%,
+    #05255c00 80%
   );
   width: 108%;
   height: 92%;
@@ -959,7 +959,7 @@ html::-webkit-scrollbar {
   isolation: isolate;
 }
 .dark-gradient-motion {
-  background: linear-gradient(145deg, #00000004, #1600001a);
+  background: linear-gradient(145deg, #00000004, #0008161a);
   overflow: hidden;
 }
 .dark-gradient-motion:before,
@@ -974,10 +974,10 @@ html::-webkit-scrollbar {
 .dark-gradient-motion:before {
   opacity: 0.66;
   background: radial-gradient(
-    #b1171775 0%,
-    #6c070757 38%,
-    #1b000024 58%,
-    #10000000 76%
+    #174fb175 0%,
+    #072c6c57 38%,
+    #000a1b24 58%,
+    #00061000 76%
   );
   width: 128%;
   height: 112%;
@@ -989,9 +989,9 @@ html::-webkit-scrollbar {
   opacity: 0.62;
   background: radial-gradient(
     #000000c7 0%,
-    #0b0000b3 34%,
-    #34010175 54%,
-    #34010100 76%
+    #00040bb3 34%,
+    #01143475 54%,
+    #01143400 76%
   );
   width: 142%;
   height: 132%;
@@ -1042,29 +1042,29 @@ html::-webkit-scrollbar {
   background:
     radial-gradient(
       54% 56% at 80% 12%,
-      #ffefefd9 0%,
-      #ff939375 26%,
-      #b0000000 67%
+      #eff5ffd9 0%,
+      #93bbff75 26%,
+      #0041b000 67%
     ),
     radial-gradient(
       62% 70% at 66% 48%,
-      #d61919c7 0%,
-      #9605058a 38%,
-      #32020200 74%
+      #195ed6c7 0%,
+      #053a968a 38%,
+      #02143200 74%
     ),
     radial-gradient(
       72% 84% at 101% 80%,
       #000000f5 0%,
-      #140000db 42%,
-      #14000000 77%
+      #000714db 42%,
+      #00071400 77%
     ),
     radial-gradient(
       85% 95% at -6% 105%,
       #000000fa 0%,
-      #170000e0 46%,
-      #17000000 80%
+      #000817e0 46%,
+      #00081700 80%
     ),
-    linear-gradient(142deg, #100101 0%, #3b0505 31%, #b00000 64%, #4a0505 100%);
+    linear-gradient(142deg, #010610 0%, #05193b 31%, #0041b0 64%, #051e4a 100%);
 }
 .integrated-gradient-background:before,
 .integrated-gradient-background:after {
@@ -1077,8 +1077,8 @@ html::-webkit-scrollbar {
 }
 .integrated-gradient-background:before {
   background:
-    radial-gradient(at 32% 44%, #ffffffbf 0%, #ffaeae70 23%, #b0000000 59%),
-    radial-gradient(at 78% 76%, #e51b1bcc 0%, #8f08085c 40%, #37020200 72%);
+    radial-gradient(at 32% 44%, #ffffffbf 0%, #aeccff70 23%, #0041b000 59%),
+    radial-gradient(at 78% 76%, #1b65e5cc 0%, #083a8f5c 40%, #02153700 72%);
   width: 126%;
   height: 104%;
   animation: 7s linear infinite integrated-ruby-drift;
@@ -1090,11 +1090,11 @@ html::-webkit-scrollbar {
     radial-gradient(
       at 38% 42%,
       #000000fa 0%,
-      #0a0000e0 34%,
-      #3e010152 59%,
-      #3e010100 76%
+      #00040ae0 34%,
+      #01173e52 59%,
+      #01173e00 76%
     ),
-    radial-gradient(at 78% 18%, #b10a0aa8 0%, #3e020200 62%);
+    radial-gradient(at 78% 18%, #0a47b1a8 0%, #02183e00 62%);
   width: 138%;
   height: 122%;
   animation: 8.5s linear infinite integrated-black-drift;
@@ -1148,8 +1148,8 @@ html::-webkit-scrollbar {
   transition:
     border-color 0.76s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.9s cubic-bezier(0.22, 1, 0.36, 1);
-  box-shadow: inset 0 0 0 1px #f26e6e0d;
-  border-color: #cb848457 !important;
+  box-shadow: inset 0 0 0 1px #6e9ef20d;
+  border-color: #849ecb57 !important;
 }
 .service-illustration {
   transform-origin: 50%;
@@ -1171,9 +1171,9 @@ html::-webkit-scrollbar {
 @media (hover: hover) and (pointer: fine) {
   .service-solution-card:hover .service-solution-card-border {
     box-shadow:
-      inset 0 0 0 1px #f5515124,
-      0 0 28px #b0000029;
-    border-color: #ff7979a8 !important;
+      inset 0 0 0 1px #518df524,
+      0 0 28px #0041b029;
+    border-color: #79aaffa8 !important;
   }
   .service-solution-card:hover .service-illustration {
     filter: saturate(1.1) brightness(1.06);
@@ -1221,7 +1221,7 @@ html::-webkit-scrollbar {
 }
 .desktop-hero-cta-card:before {
   filter: blur(10px);
-  background: radial-gradient(circle, #b0000057, #0000 68%);
+  background: radial-gradient(circle, #0041b057, #0000 68%);
   border-radius: 999px;
   width: 230px;
   height: 190px;
@@ -1229,12 +1229,12 @@ html::-webkit-scrollbar {
   right: -45px;
 }
 .desktop-hero-cta-card:after {
-  background: linear-gradient(90deg, #ff4b43, #ff4b4300);
+  background: linear-gradient(90deg, #4388ff, #4388ff00);
   width: 110px;
   height: 2px;
   top: 0;
   left: 24px;
-  box-shadow: 0 0 18px #ff3b3085;
+  box-shadow: 0 0 18px #307cff85;
 }
 .desktop-hero-cta-card > * {
   z-index: 1;
@@ -1243,19 +1243,19 @@ html::-webkit-scrollbar {
 .conversion-rail {
   isolation: isolate;
   background:
-    radial-gradient(at 48% 28%, #b0000033, #0000 38%),
-    radial-gradient(at 90% 86%, #5c000029, #0000 28%),
-    linear-gradient(118deg, #050505 0%, #0a0707 46%, #160303 62%, #060606 100%);
+    radial-gradient(at 48% 28%, #0041b033, #0000 38%),
+    radial-gradient(at 90% 86%, #00225c29, #0000 28%),
+    linear-gradient(118deg, #050505 0%, #0a0707 46%, #030a16 62%, #060606 100%);
   border-top: 1px solid #ffffff1f;
-  border-bottom: 1px solid #b000006b;
+  border-bottom: 1px solid #0041b06b;
   box-shadow:
     inset 0 1px #ffffff0a,
-    0 38px 110px #34000029;
+    0 38px 110px #00133429;
 }
 .conversion-rail:before {
   content: "";
   pointer-events: none;
-  border: 1px solid #ff433a1f;
+  border: 1px solid #3a82ff1f;
   border-radius: 999px;
   width: 720px;
   height: 720px;
@@ -1263,8 +1263,8 @@ html::-webkit-scrollbar {
   top: -360px;
   right: -230px;
   box-shadow:
-    0 0 0 110px #b0000009,
-    0 0 0 220px #b0000005;
+    0 0 0 110px #0041b009,
+    0 0 0 220px #0041b005;
 }
 .conversion-rail-signal {
   opacity: 0.65;
@@ -1272,9 +1272,9 @@ html::-webkit-scrollbar {
   background: linear-gradient(
     90deg,
     #0000 0%,
-    #b000000d 18%,
-    #ff2f2638 50%,
-    #b000000a 82%,
+    #0041b00d 18%,
+    #2676ff38 50%,
+    #0041b00a 82%,
     #0000 100%
   );
   animation: 6.8s cubic-bezier(0.4, 0, 0.2, 1) infinite conversion-signal-pass;
@@ -1283,14 +1283,14 @@ html::-webkit-scrollbar {
 }
 .conversion-rail-cta {
   box-shadow:
-    0 16px 40px #b000006b,
+    0 16px 40px #0041b06b,
     inset 0 1px #ffffff40;
 }
 .conversion-decision-card {
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   background:
-    radial-gradient(circle at 100% 0, #ff3d3424, #0000 34%),
+    radial-gradient(circle at 100% 0, #347eff24, #0000 34%),
     linear-gradient(145deg, #ffffff0e, #ffffff05);
   border: 1px solid #ffffff1f;
   border-radius: 22px;
@@ -1303,13 +1303,13 @@ html::-webkit-scrollbar {
 }
 .conversion-decision-card:before {
   content: "";
-  background: linear-gradient(90deg, #ff4037, #0000);
+  background: linear-gradient(90deg, #3780ff, #0000);
   width: 86px;
   height: 2px;
   position: absolute;
   top: 0;
   left: 34px;
-  box-shadow: 0 0 18px #ff4037b8;
+  box-shadow: 0 0 18px #3780ffb8;
 }
 .conversion-steps {
   gap: 16px;
@@ -1320,9 +1320,9 @@ html::-webkit-scrollbar {
   background: linear-gradient(
     90deg,
     #0000,
-    #ff4a4152 10%,
-    #d20b04 50%,
-    #ff4a4152 90%,
+    #4187ff52 10%,
+    #0450d2 50%,
+    #4187ff52 90%,
     #0000
   );
   height: 1px;
@@ -1330,12 +1330,12 @@ html::-webkit-scrollbar {
   top: -25px;
   left: 1.5%;
   right: 1.5%;
-  box-shadow: 0 0 14px #b0000057;
+  box-shadow: 0 0 14px #0041b057;
 }
 .conversion-step {
   z-index: 1;
   background:
-    radial-gradient(circle at 88% 12%, #b0000021, #0000 34%),
+    radial-gradient(circle at 88% 12%, #0041b021, #0000 34%),
     linear-gradient(155deg, #ffffff0c, #ffffff03);
   border: 1px solid #ffffff1c;
   border-radius: 20px;
@@ -1349,18 +1349,18 @@ html::-webkit-scrollbar {
   display: flex;
 }
 .conversion-step:hover {
-  border-color: #ff4b436b;
+  border-color: #4388ff6b;
   transform: translateY(-8px);
 }
 .conversion-step-node {
   z-index: 2;
   color: #fff;
-  background: #9f0000;
-  border: 1px solid #ff61598c;
+  background: #003a9f;
+  border: 1px solid #5996ff8c;
   position: relative;
   box-shadow:
     0 0 0 7px #0c0808,
-    0 0 28px #dd110894;
+    0 0 28px #0856dd94;
 }
 .conversion-step-ghost {
   color: #ffffff06;
@@ -1415,7 +1415,7 @@ html::-webkit-scrollbar {
 .course-offer-section {
   background-color: #f2efec;
   background-image:
-    radial-gradient(circle at 84% 8%, #b000001b, #0000 28%),
+    radial-gradient(circle at 84% 8%, #0041b01b, #0000 28%),
     linear-gradient(90deg, #14141409 1px, #0000 1px);
   background-size:
     auto,
@@ -1427,7 +1427,7 @@ html::-webkit-scrollbar {
 .course-editorial-projects {
   background-color: #e9e4e0;
   background-image:
-    linear-gradient(135deg, #b0000016 0%, #0000 34%),
+    linear-gradient(135deg, #0041b016 0%, #0000 34%),
     linear-gradient(90deg, #1414140a 1px, #0000 1px);
   background-size:
     auto,
@@ -1436,17 +1436,17 @@ html::-webkit-scrollbar {
 .course-toolbelt {
   background: #101010;
   border-block: 1px solid #ffffff1a;
-  box-shadow: inset 0 22px 70px #b0000014;
+  box-shadow: inset 0 22px 70px #0041b014;
 }
 .course-toolbelt [class*="brand-track"] > div,
 .course-toolbelt .mobile-brand-track > div {
-  border: 1px solid #b000002e;
+  border: 1px solid #0041b02e;
   box-shadow: 0 14px 44px #00000038;
 }
 .course-editorial-dark {
   background:
-    radial-gradient(circle at 12% 20%, #b0000033, #0000 30%),
-    radial-gradient(circle at 88% 72%, #70000026, #0000 32%), #070707;
+    radial-gradient(circle at 12% 20%, #0041b033, #0000 30%),
+    radial-gradient(circle at 88% 72%, #00297026, #0000 32%), #070707;
 }
 .course-editorial-dark:after,
 .course-proof-section:after {
@@ -1462,22 +1462,22 @@ html::-webkit-scrollbar {
 }
 .course-editorial-facts {
   background-color: #f7f5f3;
-  border-block: 1px solid #b000001f;
+  border-block: 1px solid #0041b01f;
 }
 .course-offer-section {
   background-color: #ded7d1;
   background-image:
     radial-gradient(at 50% 18%, #ffffffeb, #0000 44%),
-    radial-gradient(circle at 8% 84%, #b0000029, #0000 30%),
-    radial-gradient(circle at 92% 16%, #b0000021, #0000 26%);
-  border-block: 1px solid #b000002e;
+    radial-gradient(circle at 8% 84%, #0041b029, #0000 30%),
+    radial-gradient(circle at 92% 16%, #0041b021, #0000 26%);
+  border-block: 1px solid #0041b02e;
 }
 .course-offer-section article {
-  box-shadow: 0 32px 90px #23030321;
+  box-shadow: 0 32px 90px #030f2321;
 }
 .course-offer-section article:first-of-type {
   box-shadow:
-    0 34px 100px #5e000057,
+    0 34px 100px #00225e57,
     inset 0 1px #ffffff26;
 }
 .course-offer-section [data-checkout-placeholder] {
@@ -1488,17 +1488,17 @@ html::-webkit-scrollbar {
 }
 .course-offer-section [data-checkout-placeholder]:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 36px #b0000038;
+  box-shadow: 0 15px 36px #0041b038;
 }
 .course-proof-section {
-  background: linear-gradient(115deg, #050505 0%, #0b0b0b 52%, #270202 100%);
-  border-bottom: 1px solid #b000003d;
+  background: linear-gradient(115deg, #050505 0%, #0b0b0b 52%, #021027 100%);
+  border-bottom: 1px solid #0041b03d;
   position: relative;
 }
 .course-editorial-blog {
   background-color: #eeeae7;
   background-image:
-    linear-gradient(155deg, #0000 0 64%, #b0000013 64% 100%),
+    linear-gradient(155deg, #0000 0 64%, #0041b013 64% 100%),
     linear-gradient(90deg, #14141409 1px, #0000 1px);
   background-size:
     auto,
@@ -1524,17 +1524,17 @@ html::-webkit-scrollbar {
   .conversion-steps:before {
     background: linear-gradient(
       #0000 0%,
-      #ff4e4657 9%,
-      #b0000094 48%,
-      #ff4e463d 91%,
+      #468aff57 9%,
+      #0041b094 48%,
+      #468aff3d 91%,
       #0000 100%
     );
     width: 1px;
     height: auto;
     inset: 36px auto 36px 4px;
     box-shadow:
-      0 0 7px #b0000033,
-      0 0 16px #b0000014;
+      0 0 7px #0041b033,
+      0 0 16px #0041b014;
   }
   .conversion-step {
     min-height: 315px;
@@ -1552,7 +1552,7 @@ html::-webkit-scrollbar {
   .conversion-step-node {
     box-shadow:
       0 0 0 6px #0c0808,
-      0 0 24px #dd110880;
+      0 0 24px #0856dd80;
   }
   .course-editorial-light,
   .course-editorial-projects,
@@ -1581,19 +1581,19 @@ html::-webkit-scrollbar {
 .course-sales-journey {
   --course-paper: #efebe7;
   --course-ink: #171717;
-  --course-red: #b00000;
-  --course-signal: #ff4b43;
+  --course-red: #0041b0;
+  --course-signal: #4388ff;
   background: var(--course-paper);
 }
 .course-manifesto {
   background:
-    radial-gradient(circle at 82% 22%, #b0000024, #0000 27%),
+    radial-gradient(circle at 82% 22%, #0041b024, #0000 27%),
     linear-gradient(90deg, #1414140b 1px, #0000 1px) 0 0/112px 100%,
     #efebe7;
 }
 .course-manifesto:before {
   content: "VALUE > TIME";
-  color: #b000000b;
+  color: #0041b00b;
   letter-spacing: -0.08em;
   white-space: nowrap;
   pointer-events: none;
@@ -1613,7 +1613,7 @@ html::-webkit-scrollbar {
 .course-primary-cta:hover,
 .course-enroll-button:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 48px #b0000040;
+  box-shadow: 0 20px 48px #0041b040;
 }
 .course-code-window {
   position: relative;
@@ -1626,22 +1626,22 @@ html::-webkit-scrollbar {
 .code-hunter-live-dot {
   animation: 1.8s ease-in-out infinite code-hunter-live;
   box-shadow:
-    0 0 0 5px #ff4b431a,
-    0 0 18px #ff4b43e0;
+    0 0 0 5px #4388ff1a,
+    0 0 18px #4388ffe0;
 }
 .code-hunter-radar {
   aspect-ratio: 1;
   background-color: #0000;
   background-image:
-    linear-gradient(#ff60582e 1px, #0000 1px),
-    linear-gradient(90deg, #ff60582e 1px, #0000 1px),
+    linear-gradient(#5895ff2e 1px, #0000 1px),
+    linear-gradient(90deg, #5895ff2e 1px, #0000 1px),
     repeating-radial-gradient(
       circle,
       #0000 0 17%,
-      #ff605830 18% 19%,
+      #5895ff30 18% 19%,
       #0000 20% 34%
     ),
-    radial-gradient(circle, #b0000033, #080808eb 68%);
+    radial-gradient(circle, #0041b033, #080808eb 68%);
   background-position: 50%;
   background-repeat: repeat, repeat, repeat, repeat;
   background-size:
@@ -1652,35 +1652,35 @@ html::-webkit-scrollbar {
   background-attachment: scroll, scroll, scroll, scroll;
   background-origin: padding-box, padding-box, padding-box, padding-box;
   background-clip: border-box, border-box, border-box, border-box;
-  border: 1px solid #ff605857;
+  border: 1px solid #5895ff57;
   border-radius: 999px;
   position: relative;
   overflow: hidden;
   box-shadow:
-    inset 0 0 28px #ff372f1f,
-    0 0 30px #b000001f;
+    inset 0 0 28px #2f7bff1f,
+    0 0 30px #0041b01f;
 }
 .code-hunter-radar-sweep {
   border-radius: inherit;
   background: conic-gradient(
     from 0deg,
     transparent 0 75%,
-    #ff4f4675 94%,
-    #ff847d0f 100%
+    #468aff75 94%,
+    #7dadff0f 100%
   );
   animation: 3.6s linear infinite code-hunter-scan;
   position: absolute;
   inset: -1px;
 }
 .code-hunter-radar-target {
-  background: #ff756d;
+  background: #6da3ff;
   border-radius: 999px;
   width: 6px;
   height: 6px;
   position: absolute;
   box-shadow:
-    0 0 0 4px #ff756d1f,
-    0 0 12px #ff4b43;
+    0 0 0 4px #6da3ff1f,
+    0 0 12px #4388ff;
 }
 .code-hunter-radar-target-a {
   top: 29%;
@@ -1711,7 +1711,7 @@ html::-webkit-scrollbar {
   content: "";
   pointer-events: none;
   inset-inline: 0;
-  background: linear-gradient(#0000, #ff413829, #0000);
+  background: linear-gradient(#0000, #3881ff29, #0000);
   height: 22%;
   animation: 4.8s ease-in-out infinite course-code-scan;
   position: absolute;
@@ -1736,8 +1736,8 @@ html::-webkit-scrollbar {
   }
 }
 .course-curriculum {
-  background: radial-gradient(circle at 96% 58%, #ff5b511a, #0000 26%), #efebe7;
-  border-block: 1px solid #49261f1a;
+  background: radial-gradient(circle at 96% 58%, #5191ff1a, #0000 26%), #efebe7;
+  border-block: 1px solid #1f2e491a;
   position: relative;
   overflow: hidden;
 }
@@ -1745,18 +1745,18 @@ html::-webkit-scrollbar {
   content: "";
   pointer-events: none;
   background:
-    linear-gradient(112deg, #0000 0 48%, #b0000009 48.1% 48.25%, #0000 48.35%),
+    linear-gradient(112deg, #0000 0 48%, #0041b009 48.1% 48.25%, #0000 48.35%),
     radial-gradient(
       circle at 85% 8%,
       #0000 0 126px,
-      #b0000014 127px 128px,
+      #0041b014 127px 128px,
       #0000 129px
     );
   position: absolute;
   inset: 0;
 }
 .course-curriculum-header {
-  border-bottom: 1px solid #29191524;
+  border-bottom: 1px solid #151c2924;
   padding-bottom: 52px;
   position: relative;
 }
@@ -1764,22 +1764,22 @@ html::-webkit-scrollbar {
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   background: #fffdfab8;
-  border: 1px solid #43231d21;
+  border: 1px solid #1d2b4321;
   border-radius: 22px;
   padding: 28px 30px;
-  box-shadow: 0 24px 70px #4b1f1614;
+  box-shadow: 0 24px 70px #16294b14;
 }
 .course-route-summary-head {
-  border-bottom: 1px solid #2b18141f;
+  border-bottom: 1px solid #141c2b1f;
 }
 .course-route-kicker {
-  color: #a90000;
+  color: #003ea9;
 }
 .course-route-count {
-  color: #2617146b;
+  color: #141b266b;
 }
 .course-route-text {
-  color: #302420ad;
+  color: #202630ad;
 }
 .course-module-roadmap {
   flex-direction: column;
@@ -1792,18 +1792,18 @@ html::-webkit-scrollbar {
 .course-module-row:before {
   content: "";
   z-index: 4;
-  background: linear-gradient(90deg, #b00000, #ff645b);
+  background: linear-gradient(90deg, #0041b0, #5b97ff);
   border-radius: 0 0 999px 999px;
   width: 112px;
   height: 4px;
   position: absolute;
   top: 0;
   left: 34px;
-  box-shadow: 0 8px 24px #b0000038;
+  box-shadow: 0 8px 24px #0041b038;
 }
 .course-module-row {
   background: #fffdfaeb;
-  border: 1px solid #45282224;
+  border: 1px solid #222f4524;
   border-radius: 34px;
   grid-template-columns: minmax(0, 1fr) minmax(0, 0.94fr);
   min-height: 440px;
@@ -1815,14 +1815,14 @@ html::-webkit-scrollbar {
   position: relative;
   overflow: hidden;
   box-shadow:
-    0 30px 90px #491e151a,
+    0 30px 90px #1528491a,
     inset 0 1px #ffffffe6;
 }
 .course-module-row:hover {
-  border-color: #b0000052;
+  border-color: #0041b052;
   transform: translateY(-5px);
   box-shadow:
-    0 40px 110px #491e1529,
+    0 40px 110px #15284929,
     inset 0 1px #fff;
 }
 .course-module-stage:nth-child(2n) .course-module-visual {
@@ -1858,12 +1858,12 @@ html::-webkit-scrollbar {
   background: linear-gradient(270deg, #0000 70%, #fffdfaad 100%);
 }
 .course-module-image-label {
-  color: #9e0000;
+  color: #003a9e;
   letter-spacing: 0.17em;
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   background: #fffcf9e0;
-  border: 1px solid #b0000038;
+  border: 1px solid #0041b038;
   border-radius: 999px;
   padding: 10px 15px;
   font-family: Inter, sans-serif;
@@ -1872,14 +1872,14 @@ html::-webkit-scrollbar {
   position: absolute;
   top: 28px;
   left: 28px;
-  box-shadow: 0 12px 32px #3f140d1f;
+  box-shadow: 0 12px 32px #0d1f3f1f;
 }
 .course-module-brand {
   color: #ffffffd6;
   letter-spacing: 0.15em;
   -webkit-backdrop-filter: blur(10px) saturate(120%);
   backdrop-filter: blur(10px) saturate(120%);
-  background: #0f04046b;
+  background: #04080f6b;
   border: 1px solid #ffffff2e;
   border-radius: 12px;
   align-items: center;
@@ -1894,7 +1894,7 @@ html::-webkit-scrollbar {
   bottom: 22px;
   right: 24px;
   box-shadow:
-    0 10px 30px #1400002e,
+    0 10px 30px #0007142e,
     inset 0 1px #ffffff14;
 }
 .course-module-brand-symbol {
@@ -1904,7 +1904,7 @@ html::-webkit-scrollbar {
 }
 .course-module-copy {
   background:
-    radial-gradient(circle at 100% 0, #ff5d5314, #0000 32%), #fffdfad6;
+    radial-gradient(circle at 100% 0, #5392ff14, #0000 32%), #fffdfad6;
   flex-direction: column;
   justify-content: space-between;
   padding: 48px 52px 44px;
@@ -1916,9 +1916,9 @@ html::-webkit-scrollbar {
   position: relative;
 }
 .course-module-meta {
-  color: #a90000;
+  color: #003ea9;
   letter-spacing: 0.18em;
-  border-bottom: 1px solid #311d181f;
+  border-bottom: 1px solid #1821311f;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 16px;
@@ -1928,7 +1928,7 @@ html::-webkit-scrollbar {
   display: flex;
 }
 .course-module-meta span:last-child {
-  color: #2a1c1866;
+  color: #181f2a66;
 }
 .course-module-title {
   letter-spacing: -0.055em;
@@ -1939,7 +1939,7 @@ html::-webkit-scrollbar {
   line-height: 0.96;
 }
 .course-module-description {
-  color: #332622a8;
+  color: #222833a8;
   max-width: 610px;
   margin-top: 20px;
   font-family: Inter, sans-serif;
@@ -1947,8 +1947,8 @@ html::-webkit-scrollbar {
   line-height: 1.62;
 }
 .course-module-outcome {
-  background: linear-gradient(100deg, #b0000018, #ff5a5009);
-  border: 1px solid #b000002e;
+  background: linear-gradient(100deg, #0041b018, #5090ff09);
+  border: 1px solid #0041b02e;
   border-radius: 18px;
   grid-template-columns: 1fr auto;
   align-items: center;
@@ -1958,7 +1958,7 @@ html::-webkit-scrollbar {
   display: grid;
 }
 .course-module-outcome-label {
-  color: #a90000;
+  color: #003ea9;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-family: Inter, sans-serif;
@@ -1966,7 +1966,7 @@ html::-webkit-scrollbar {
   font-weight: 600;
 }
 .course-module-outcome-text {
-  color: #231916e6;
+  color: #161b23e6;
   font-family: Inter, sans-serif;
   font-size: 15px;
   font-weight: 500;
@@ -1974,7 +1974,7 @@ html::-webkit-scrollbar {
 }
 .course-module-outcome-arrow {
   color: #fff;
-  background: #b00000;
+  background: #0041b0;
   border-radius: 999px;
   grid-area: 1/2/3;
   place-items: center;
@@ -1985,11 +1985,11 @@ html::-webkit-scrollbar {
     transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
     color 0.3s;
   display: grid;
-  box-shadow: 0 12px 26px #b000003d;
+  box-shadow: 0 12px 26px #0041b03d;
 }
 .course-module-row:hover .course-module-outcome-arrow {
   color: #fff;
-  background: #d10b0b;
+  background: #0b54d1;
   transform: translate(2px, -2px) rotate(8deg);
 }
 .course-transformation {
@@ -2050,8 +2050,8 @@ html::-webkit-scrollbar {
   z-index: 2;
   isolation: isolate;
   background:
-    radial-gradient(at 50% 36%, #de0c0cf5, #0000 58%),
-    linear-gradient(128deg, #250000 0%, #b00000 38%, #760000 67%, #170000 100%);
+    radial-gradient(at 50% 36%, #0c59def5, #0000 58%),
+    linear-gradient(128deg, #000e25 0%, #0041b0 38%, #002b76 67%, #000817 100%);
   position: relative;
   overflow: hidden;
 }
@@ -2084,9 +2084,9 @@ html::-webkit-scrollbar {
   filter: blur(58px) saturate(1.45);
   mix-blend-mode: screen;
   background:
-    radial-gradient(at 18% 18%, #ffc0b9e0 0%, #ff3128b8 14%, #0000 38%),
-    radial-gradient(at 82% 72%, #ff4236cc 0%, #cf00009e 16%, #0000 40%),
-    radial-gradient(at 47% 94%, #ff1b14ad 0%, #b0000080 15%, #0000 36%);
+    radial-gradient(at 18% 18%, #b9d3ffe0 0%, #2877ffb8 14%, #0000 38%),
+    radial-gradient(at 82% 72%, #3680ffcc 0%, #004ccf9e 16%, #0000 40%),
+    radial-gradient(at 47% 94%, #146affad 0%, #0041b080 15%, #0000 36%);
   animation: 6.4s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate
     course-offer-gradient-b;
 }
@@ -2125,13 +2125,13 @@ html::-webkit-scrollbar {
 .course-offer-frame {
   box-shadow:
     0 50px 140px #0000006b,
-    0 0 90px #b0000021;
+    0 0 90px #0041b021;
 }
 .course-faq summary::-webkit-details-marker {
   display: none;
 }
 .course-faq[open] summary {
-  color: #970000;
+  color: #003797;
 }
 .course-final-push {
   --course-interlock-depth: 120px;
@@ -2141,9 +2141,9 @@ html::-webkit-scrollbar {
   padding-bottom: calc(135px + var(--course-interlock-depth));
   box-shadow: none;
   background:
-    radial-gradient(circle at 20% 15%, #ff8b837a, #0000 28%),
-    radial-gradient(circle at 82% 85%, #2300007a, #0000 36%),
-    linear-gradient(135deg, #d21a12 0%, #b00000 48%, #6e0000 100%);
+    radial-gradient(circle at 20% 15%, #83b0ff7a, #0000 28%),
+    radial-gradient(circle at 82% 85%, #000d237a, #0000 36%),
+    linear-gradient(135deg, #1258d2 0%, #0041b0 48%, #00286e 100%);
 }
 .course-final-top-transition {
   z-index: 5;

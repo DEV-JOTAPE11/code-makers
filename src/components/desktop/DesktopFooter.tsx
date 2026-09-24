@@ -6,7 +6,7 @@ import { IMAGES } from "@/lib/images";
 import { navigateToSection } from "@/lib/navigateToSection";
 
 /** Gradiente radial claro→preto que abre o rodapé. */
-const FOOTER_GRADIENT = `url("data:image/svg+xml;utf8,<svg viewBox='0 0 1920 905.41' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(390.34 0 0 81.941 970.24 0)'><stop stop-color='rgba(245,245,245,1)' offset='0.22944'/><stop stop-color='rgba(255,238,238,1)' offset='0.28364'/><stop stop-color='rgba(255,216,216,1)' offset='0.3326'/><stop stop-color='rgba(252,155,155,1)' offset='0.40295'/><stop stop-color='rgba(239,85,85,1)' offset='0.46616'/><stop stop-color='rgba(176,0,0,1)' offset='0.52995'/><stop stop-color='rgba(158,26,26,1)' offset='0.56826'/><stop stop-color='rgba(121,13,13,1)' offset='0.60656'/><stop stop-color='rgba(80,7,7,1)' offset='0.66288'/><stop stop-color='rgba(60,5,5,1)' offset='0.69513'/><stop stop-color='rgba(43,3,3,1)' offset='0.72738'/><stop stop-color='rgba(24,2,2,1)' offset='0.81323'/><stop stop-color='rgba(13,1,1,1)' offset='0.85616'/><stop stop-color='rgba(0,0,0,1)' offset='0.89909'/></radialGradient></defs></svg>")`;
+const FOOTER_GRADIENT = `url("data:image/svg+xml;utf8,<svg viewBox='0 0 1920 905.41' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(390.34 0 0 81.941 970.24 0)'><stop stop-color='rgba(245,245,245,1)' offset='0.22944'/><stop stop-color='rgba(238,244,255,1)' offset='0.28364'/><stop stop-color='rgba(216,230,255,1)' offset='0.3326'/><stop stop-color='rgba(155,191,252,1)' offset='0.40295'/><stop stop-color='rgba(85,141,239,1)' offset='0.46616'/><stop stop-color='rgba(0,65,176,1)' offset='0.52995'/><stop stop-color='rgba(26,74,158,1)' offset='0.56826'/><stop stop-color='rgba(13,53,121,1)' offset='0.60656'/><stop stop-color='rgba(7,34,80,1)' offset='0.66288'/><stop stop-color='rgba(5,25,60,1)' offset='0.69513'/><stop stop-color='rgba(3,18,43,1)' offset='0.72738'/><stop stop-color='rgba(2,10,24,1)' offset='0.81323'/><stop stop-color='rgba(1,5,13,1)' offset='0.85616'/><stop stop-color='rgba(0,0,0,1)' offset='0.89909'/></radialGradient></defs></svg>")`;
 
 const PRIMARY_LINKS = [
   { id: "home", label: "Início" },
@@ -55,7 +55,7 @@ export function DesktopFooter() {
             </div>
             <div className="relative flex w-full shrink-0 flex-col items-center text-center font-['Inter:Regular',sans-serif] text-[16px] font-normal not-italic leading-[24px] text-[#171717] [word-break:break-word]">
               <p>Entre no grupo para aprender a criar com IA, encontrar clientes</p>
-              <p>com a Code Hunter e vender com o método Code Makers.</p>
+              <p>com a Code Hunter e vender com o método Code Flow.</p>
             </div>
           </div>
 
@@ -94,7 +94,7 @@ export function DesktopFooter() {
                       className="h-10 w-auto object-contain brightness-0 invert"
                       src={IMAGES.symbol}
                     />
-                    <span>Code Makers</span>
+                    <span>Code Flow</span>
                   </p>
                 </div>
                 <div className="relative flex w-full shrink-0 flex-col content-stretch items-start">
@@ -131,7 +131,7 @@ export function DesktopFooter() {
                 <div className="relative flex shrink-0 flex-col justify-center whitespace-nowrap text-center font-['Inter:Regular',sans-serif] text-[16px] font-normal not-italic leading-[0] text-[rgba(255,255,255,0.7)] [word-break:break-word]">
                   <p>
                     <span className="leading-[24px]">
-                      Copyright © 2026 Code Makers. Todos os direitos
+                      Copyright © 2026 Code Flow. Todos os direitos
                       reservados.
                     </span>
                   </p>

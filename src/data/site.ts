@@ -68,7 +68,7 @@ export const COURSE_MODULES: CourseModule[] = [
   {
     phase: "VENDER",
     title: "Encontre clientes. Conduza a venda.",
-    text: "Com a Code Hunter, você encontra empresas qualificadas. Com a metodologia Code Makers, você aborda, apresenta, propõe e conduz a conversa até o fechamento.",
+    text: "Com a Code Hunter, você encontra empresas qualificadas. Com a metodologia Code Flow, você aborda, apresenta, propõe e conduz a conversa até o fechamento.",
     image: IMAGES.modules.b2bSales,
     outcome: "Clientes no radar e um processo claro para fechar vendas",
   },
@@ -93,11 +93,11 @@ export const FAQ: [question: string, answer: string][] = [
   ],
   [
     "O que é a Code Hunter?",
-    "É a ferramenta da Code Makers criada para buscar clientes qualificados e colocar empresas com potencial real no seu radar de prospecção.",
+    "É a ferramenta da Code Flow criada para buscar clientes qualificados e colocar empresas com potencial real no seu radar de prospecção.",
   ],
   [
     "Como participo do lançamento?",
-    "Entre no grupo oficial. É por lá que você recebe os avisos de abertura e todos os detalhes da Code Makers e da Code Hunter.",
+    "Entre no grupo oficial. É por lá que você recebe os avisos de abertura e todos os detalhes da Code Flow e da Code Hunter.",
   ],
 ];
 

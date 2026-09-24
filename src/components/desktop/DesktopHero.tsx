@@ -9,7 +9,7 @@ const ARROW_PATH =
 
 /** Gradiente radial vermelho da hero, exportado do Figma como SVG inline.
  *  Por cima dele ficam as três camadas animadas (brilho, profundidade e sombra). */
-const HERO_GRADIENT_SVG = `url("data:image/svg+xml;utf8,<svg viewBox='0 0 1920 938' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(295.57 0 0 84.39 970.24 8.0085)'><stop stop-color='rgba(255,255,255,1)' offset='0.22944'/><stop stop-color='rgba(252,232,232,1)' offset='0.28364'/><stop stop-color='rgba(243,199,199,1)' offset='0.3326'/><stop stop-color='rgba(223,119,119,1)' offset='0.40295'/><stop stop-color='rgba(199,59,59,1)' offset='0.46616'/><stop stop-color='rgba(176,0,0,1)' offset='0.52995'/><stop stop-color='rgba(143,23,23,1)' offset='0.56826'/><stop stop-color='rgba(100,13,13,1)' offset='0.60656'/><stop stop-color='rgba(56,7,7,1)' offset='0.66288'/><stop stop-color='rgba(43,5,5,1)' offset='0.69513'/><stop stop-color='rgba(21,3,3,1)' offset='0.72738'/><stop stop-color='rgba(14,2,2,1)' offset='0.81323'/><stop stop-color='rgba(8,1,1,1)' offset='0.85616'/><stop stop-color='rgba(0,0,0,1)' offset='0.89909'/></radialGradient></defs></svg>")`;
+const HERO_GRADIENT_SVG = `url("data:image/svg+xml;utf8,<svg viewBox='0 0 1920 938' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(295.57 0 0 84.39 970.24 8.0085)'><stop stop-color='rgba(255,255,255,1)' offset='0.22944'/><stop stop-color='rgba(232,239,252,1)' offset='0.28364'/><stop stop-color='rgba(199,215,243,1)' offset='0.3326'/><stop stop-color='rgba(119,157,223,1)' offset='0.40295'/><stop stop-color='rgba(59,110,199,1)' offset='0.46616'/><stop stop-color='rgba(0,65,176,1)' offset='0.52995'/><stop stop-color='rgba(23,67,143,1)' offset='0.56826'/><stop stop-color='rgba(13,45,100,1)' offset='0.60656'/><stop stop-color='rgba(7,25,56,1)' offset='0.66288'/><stop stop-color='rgba(5,19,43,1)' offset='0.69513'/><stop stop-color='rgba(3,10,21,1)' offset='0.72738'/><stop stop-color='rgba(2,6,14,1)' offset='0.81323'/><stop stop-color='rgba(1,4,8,1)' offset='0.85616'/><stop stop-color='rgba(0,0,0,1)' offset='0.89909'/></radialGradient></defs></svg>")`;
 
 function HeroGradient() {
   return (
@@ -34,10 +34,10 @@ function HeroGradient() {
   );
 }
 
-/** Textura de fundo em 20% de opacidade, atrás do gradiente. */
+/** Fundo da hero (fundo-flow), cobrindo o gradiente. */
 function HeroBackdrop() {
   return (
-    <div className="absolute inset-[0_0_-0.02%_0] flex flex-col content-stretch items-start opacity-20">
+    <div className="absolute inset-[0_0_-0.02%_0] flex flex-col content-stretch items-start">
       <div className="relative flex min-h-px w-[1920px] flex-[1_0_0] flex-col content-stretch items-start justify-center overflow-clip">
         <div className="relative min-h-px w-full flex-[1_0_0]">
           <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -62,10 +62,10 @@ function HeroCta() {
       aria-label="Entrar no grupo oficial do lançamento"
       className="group block w-full cursor-pointer rounded-[12px] text-left outline-none focus-visible:ring-2 focus-visible:ring-white/90 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
     >
-      <CardReveal className="desktop-hero-cta-card relative flex w-full shrink-0 flex-col content-stretch items-center justify-center gap-[42px] overflow-clip rounded-[16px] border border-white/15 bg-[linear-gradient(145deg,rgba(8,8,8,0.96),rgba(42,0,0,0.94))] p-[26px] shadow-[0_22px_58px_rgba(32,0,0,0.34),inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-[5px] transition-[transform,border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-1 group-hover:border-[#ff5a52]/45 group-hover:shadow-[0_28px_68px_rgba(32,0,0,0.46),0_0_34px_rgba(176,0,0,0.18),inset_0_1px_0_rgba(255,255,255,0.12)]">
+      <CardReveal className="desktop-hero-cta-card relative flex w-full shrink-0 flex-col content-stretch items-center justify-center gap-[42px] overflow-clip rounded-[16px] border border-white/15 bg-[linear-gradient(145deg,rgba(8,8,8,0.96),rgba(0,15,42,0.94))] p-[26px] shadow-[0_22px_58px_rgba(0,12,32,0.34),inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-[5px] transition-[transform,border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-1 group-hover:border-[#5291ff]/45 group-hover:shadow-[0_28px_68px_rgba(0,12,32,0.46),0_0_34px_rgba(0,65,176,0.18),inset_0_1px_0_rgba(255,255,255,0.12)]">
         <div className="relative flex w-full shrink-0 flex-col content-stretch items-start">
-          <span className="mb-3 font-['Inter:Medium',sans-serif] text-[11px] font-medium uppercase tracking-[0.18em] text-[#ff7770]">
-            Code Makers + Code Hunter
+          <span className="mb-3 font-['Inter:Medium',sans-serif] text-[11px] font-medium uppercase tracking-[0.18em] text-[#70a4ff]">
+            Code Flow + Code Hunter
           </span>
           <div className="relative flex w-full shrink-0 flex-col justify-center font-['Sora:Regular',sans-serif] text-[22px] font-normal leading-[0] text-white [word-break:break-word]">
             <p className="leading-[29px]">Da ideia ao cliente.</p>
@@ -111,9 +111,9 @@ export function DesktopHero() {
       <HeroGradient />
       <HeroBackdrop />
 
-      <div className="relative flex w-full max-w-[1430px] shrink-0 -translate-x-[9px] flex-col content-stretch items-center justify-center">
+      <div className="relative left-[-9px] flex w-full max-w-[1430px] shrink-0 flex-col content-stretch items-center justify-center">
         <GsapStagger className="relative flex w-full shrink-0 flex-col content-stretch items-center justify-center gap-[130px]">
-          <div className="relative flex w-full shrink-0 items-center justify-between overflow-clip content-stretch">
+          <div className="relative z-20 flex w-full shrink-0 items-center justify-between overflow-clip content-stretch">
             <div className="relative h-[152px] min-w-px max-w-[420px] flex-[1_0_0]">
               <div className="absolute left-0 right-0 top-[-1.03px] flex flex-col content-stretch items-start">
                 <h1 className="relative flex shrink-0 flex-col justify-center whitespace-nowrap font-['Sora:Regular',sans-serif] text-[30px] font-normal leading-[0] text-white [word-break:break-word]">
@@ -138,18 +138,15 @@ export function DesktopHero() {
             </div>
           </div>
 
-          <div className="relative flex shrink-0 flex-col content-stretch items-start">
-            <div className="relative flex w-full shrink-0 flex-col content-stretch items-center">
-              <div className="relative flex shrink-0 flex-col justify-center whitespace-nowrap text-center font-['Sora:Regular',sans-serif] text-[248px] font-normal uppercase leading-[0] text-white [word-break:break-word]">
-                <p className="leading-[223.2px]">Code Makers</p>
-              </div>
-            </div>
+          <div className="relative flex w-full shrink-0 items-center justify-between whitespace-nowrap font-['Sora:Regular',sans-serif] text-[150px] font-normal uppercase leading-[223.2px] text-white">
+            <p>Code</p>
+            <p>Flow</p>
           </div>
         </GsapStagger>
       </div>
 
       <div
-        className="hero-robot-entry absolute bottom-0 left-[473px] flex h-[945px] w-[974px] flex-col content-stretch items-start justify-center overflow-clip"
+        className="hero-robot-entry absolute bottom-0 left-[120px] flex h-[945px] w-[1679px] flex-col content-stretch items-start justify-center overflow-clip"
         data-name="Container"
       >
         <div className="relative min-h-px w-full flex-[1_0_0]">

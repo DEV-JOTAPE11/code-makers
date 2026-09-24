@@ -14,7 +14,7 @@ export function MobileHome() {
     <main className="overflow-x-hidden bg-[#f5f5f5] text-[#171717]">
       <section
         id="home"
-        className="mobile-hero relative h-[100svh] min-h-[100svh] overflow-hidden bg-[#250404] px-4 pb-0 pt-[116px] text-white"
+        className="mobile-hero relative h-[100svh] min-h-[100svh] overflow-hidden bg-[#041025] px-4 pb-0 pt-[116px] text-white"
       >
         <img
           alt=""
@@ -29,7 +29,7 @@ export function MobileHome() {
 
         <div className="mobile-hero-content relative z-10 mx-auto flex max-w-[430px] flex-col items-center text-center">
           <p className="mobile-hero-wordmark font-['Sora:Regular',sans-serif] text-[44px] leading-none tracking-[-2px]">
-            CODE MAKERS
+            CODE FLOW
           </p>
           <h1 className="mobile-hero-heading mx-auto mt-5 max-w-[390px] font-['Sora:Regular',sans-serif] text-[24px] leading-[1.28] tracking-[-0.6px]">
             Crie com IA. Encontre com a Code Hunter. Venda com a nossa
@@ -46,10 +46,10 @@ export function MobileHome() {
           </ShinyCta>
         </div>
 
-        <div className="mobile-hero-robot absolute bottom-[-18px] left-1/2 z-[5] aspect-[974/945] h-[clamp(360px,45svh,430px)] max-w-none -translate-x-1/2">
+        <div className="mobile-hero-robot absolute bottom-[-18px] left-1/2 z-[5] aspect-[1672/941] h-[clamp(360px,45svh,430px)] max-w-none -translate-x-1/2">
           <div className="hero-robot-entry size-full">
             <img
-              alt="Robô abstrato da Code Makers"
+              alt="Robô abstrato da Code Flow"
               className="size-full max-w-none object-contain"
               src={IMAGES.heroRobot}
             />
@@ -94,13 +94,13 @@ export function MobileHome() {
               className="h-10 w-auto object-contain brightness-0 invert"
               src={IMAGES.symbol}
             />
-            <span>Code Makers</span>
+            <span>Code Flow</span>
           </p>
           <p className="mt-5 max-w-[300px] text-sm leading-6 text-white/72">
             Crie com IA. Encontre com a Code Hunter. Venda com método.
           </p>
           <p className="mt-12 border-t border-white/15 pt-6 text-center text-xs text-white/55">
-            © 2026 Code Makers. Todos os direitos reservados.
+            © 2026 Code Flow. Todos os direitos reservados.
           </p>
         </FadeUp>
       </section>

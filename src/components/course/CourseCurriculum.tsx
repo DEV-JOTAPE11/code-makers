@@ -79,7 +79,7 @@ export function CourseCurriculum({
                       className="course-module-brand-symbol brightness-0 invert"
                       src={IMAGES.symbol}
                     />
-                    <span>CODE MAKERS</span>
+                    <span>CODE FLOW</span>
                   </span>
                 </div>
 

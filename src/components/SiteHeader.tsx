@@ -17,13 +17,13 @@ export function SiteHeader() {
 
   return (
     <header className="site-header site-header-entry absolute inset-x-0 top-0 z-50 px-4 py-4 lg:px-16 lg:py-[22px]">
-      <div className="site-header-shell relative mx-auto w-full overflow-visible rounded-[22px] border border-white/30 bg-[rgba(99,7,7,0.28)] px-4 py-3 shadow-[0_16px_40px_rgba(38,0,0,0.22),inset_0_1px_0_rgba(255,255,255,0.18)] backdrop-blur-[18px] lg:max-w-[1430px] lg:px-5">
+      <div className="site-header-shell relative mx-auto w-full overflow-visible rounded-[22px] border border-white/30 bg-[rgba(7,41,99,0.28)] px-4 py-3 shadow-[0_16px_40px_rgba(0,14,38,0.22),inset_0_1px_0_rgba(255,255,255,0.18)] backdrop-blur-[18px] lg:max-w-[1430px] lg:px-5">
         <div className="flex items-center justify-between gap-4">
           <button
             type="button"
             onClick={() => goTo("home")}
             className="flex items-center"
-            aria-label="Code Makers — ir ao topo"
+            aria-label="Code Flow — ir ao topo"
           >
             <span className="site-header-logo inline-flex h-10 items-center gap-2.5 font-['Sora:Regular',sans-serif] text-[21px] tracking-[-0.8px] text-white lg:h-11 lg:gap-3 lg:text-[23px]">
               <img
@@ -32,7 +32,7 @@ export function SiteHeader() {
                 className="site-header-symbol h-7 w-auto object-contain brightness-0 invert lg:h-8"
                 src={IMAGES.symbol}
               />
-              <span>Code Makers</span>
+              <span>Code Flow</span>
             </span>
           </button>
 
@@ -73,7 +73,7 @@ export function SiteHeader() {
             <button
               type="button"
               onClick={() => setOpen((value) => !value)}
-              className="site-header-toggle flex size-12 items-center justify-center rounded-full border border-white/65 bg-white/95 text-[#260505] shadow-[0_8px_20px_rgba(38,0,0,0.16)] backdrop-blur-md transition-colors duration-300 hover:bg-white"
+              className="site-header-toggle flex size-12 items-center justify-center rounded-full border border-white/65 bg-white/95 text-[#051126] shadow-[0_8px_20px_rgba(0,14,38,0.16)] backdrop-blur-md transition-colors duration-300 hover:bg-white"
               aria-label={open ? "Fechar menu" : "Abrir menu"}
               aria-expanded={open}
               aria-controls="site-navigation"

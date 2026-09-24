@@ -6,7 +6,7 @@ import { WHATSAPP_GROUP_URL } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 
 const ARSENAL = [
-  "Método Code Makers para criar soluções com IA",
+  "Método Code Flow para criar soluções com IA",
   "Code Hunter para encontrar clientes qualificados",
   "Playbook de venda com oferta, abordagem e fechamento",
   "Kit de execução com prompts, scripts e proposta",
@@ -30,12 +30,12 @@ export function CourseOffer({
       <div className={container}>
         <StageReveal>
           <div
-            className={`course-offer-frame relative overflow-hidden rounded-[26px] border border-[#ff6058]/30 ${
+            className={`course-offer-frame relative overflow-hidden rounded-[26px] border border-[#5895ff]/30 ${
               desktop ? "grid min-h-[680px] grid-cols-[0.9fr_1.1fr]" : ""
             }`}
           >
             <div
-              className={`relative z-10 flex flex-col bg-[#b00000] ${
+              className={`relative z-10 flex flex-col bg-[#0041b0] ${
                 desktop ? "p-14" : "p-7 pb-12"
               }`}
             >
@@ -83,14 +83,14 @@ export function CourseOffer({
 
             <div className={`relative z-10 bg-[#101010] ${desktop ? "p-14" : "p-7"}`}>
               <div className="text-center">
-                <p className="font-['Inter:Medium',sans-serif] text-[11px] font-medium uppercase tracking-[0.19em] text-[#ff7770]">
+                <p className="font-['Inter:Medium',sans-serif] text-[11px] font-medium uppercase tracking-[0.19em] text-[#70a4ff]">
                   Tudo o que entra no seu arsenal
                 </p>
 
-                <div className="code-hunter-console mt-6 rounded-[20px] border border-[#ff6058]/30 bg-black/35 p-5 text-left">
+                <div className="code-hunter-console mt-6 rounded-[20px] border border-[#5895ff]/30 bg-black/35 p-5 text-left">
                   <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-4">
-                    <span className="flex items-center gap-2 font-['Inter:Medium',sans-serif] text-[11px] uppercase tracking-[0.18em] text-[#ff7770]">
-                      <span className="code-hunter-live-dot size-2 rounded-full bg-[#ff4b43]" />
+                    <span className="flex items-center gap-2 font-['Inter:Medium',sans-serif] text-[11px] uppercase tracking-[0.18em] text-[#70a4ff]">
+                      <span className="code-hunter-live-dot size-2 rounded-full bg-[#4388ff]" />
                       Code Hunter
                     </span>
                     <span className="rounded-full border border-white/12 bg-white/[0.055] px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.14em] text-white/55">
@@ -128,7 +128,7 @@ export function CourseOffer({
                     key={item}
                     className="flex items-center gap-4 rounded-[13px] border border-white/10 bg-white/[0.035] px-5 py-4"
                   >
-                    <span className="grid size-8 shrink-0 place-items-center rounded-full bg-[#b00000] text-[15px]">
+                    <span className="grid size-8 shrink-0 place-items-center rounded-full bg-[#0041b0] text-[15px]">
                       ✓
                     </span>
                     <span className="text-[16px] text-white/82">{item}</span>

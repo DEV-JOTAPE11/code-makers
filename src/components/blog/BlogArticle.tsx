@@ -18,13 +18,13 @@ export function BlogArticle({ post }: { post: BlogPost }) {
                 className="h-8 w-auto object-contain brightness-0"
                 src={IMAGES.symbol}
               />
-              <span>Code Makers</span>
+              <span>Code Flow</span>
             </span>
           </Link>
 
           <Link
             href="/"
-            className="inline-flex items-center gap-2 rounded-full bg-[#171717] px-5 py-3 font-['Inter:Medium',sans-serif] text-sm font-medium text-white transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b00000]"
+            className="inline-flex items-center gap-2 rounded-full bg-[#171717] px-5 py-3 font-['Inter:Medium',sans-serif] text-sm font-medium text-white transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0041b0]"
           >
             <span aria-hidden="true">←</span>
             Voltar ao site
@@ -35,8 +35,8 @@ export function BlogArticle({ post }: { post: BlogPost }) {
       <article className="mx-auto max-w-[1320px] px-5 pb-24 pt-14 sm:px-8 lg:px-12 lg:pt-20">
         <div className="grid items-end gap-10 lg:grid-cols-[minmax(0,1fr)_300px]">
           <div>
-            <div className="mb-6 flex items-center gap-3 font-['Inter:Medium',sans-serif] text-xs font-medium uppercase tracking-[0.14em] text-[#7e0000] sm:text-sm">
-              <span className="size-2 rounded-full bg-[#ff6666]" />
+            <div className="mb-6 flex items-center gap-3 font-['Inter:Medium',sans-serif] text-xs font-medium uppercase tracking-[0.14em] text-[#002e7e] sm:text-sm">
+              <span className="size-2 rounded-full bg-[#669eff]" />
               {post.category}
             </div>
             <h1 className="max-w-[940px] font-['Sora:Regular',sans-serif] text-[clamp(2.55rem,5vw,5rem)] font-normal leading-[1.02] tracking-[-0.045em]">
@@ -54,7 +54,7 @@ export function BlogArticle({ post }: { post: BlogPost }) {
           </div>
         </div>
 
-        <div className="mt-14 overflow-hidden rounded-[18px] bg-[#2c0303] shadow-[0_24px_80px_rgba(43,3,3,0.18)] lg:mt-18">
+        <div className="mt-14 overflow-hidden rounded-[18px] bg-[#03122c] shadow-[0_24px_80px_rgba(3,18,43,0.18)] lg:mt-18">
           <img
             src={post.image}
             alt={post.imageAlt}
@@ -67,7 +67,7 @@ export function BlogArticle({ post }: { post: BlogPost }) {
             <p className="font-['Inter:Regular',sans-serif] text-xl leading-9 text-[#2d363c] sm:text-[22px]">
               {post.introduction}
             </p>
-            <blockquote className="my-14 border-l-4 border-[#b00000] bg-white px-7 py-7 font-['Sora:Regular',sans-serif] text-[25px] leading-[1.4] shadow-[0_14px_45px_rgba(43,3,3,0.07)] sm:px-9 sm:text-[30px]">
+            <blockquote className="my-14 border-l-4 border-[#0041b0] bg-white px-7 py-7 font-['Sora:Regular',sans-serif] text-[25px] leading-[1.4] shadow-[0_14px_45px_rgba(3,18,43,0.07)] sm:px-9 sm:text-[30px]">
               {post.highlight}
             </blockquote>
 
@@ -79,7 +79,7 @@ export function BlogArticle({ post }: { post: BlogPost }) {
                   className="scroll-mt-10"
                 >
                   <div className="mb-5 flex items-start gap-4">
-                    <span className="mt-1 font-['Inter:Medium',sans-serif] text-sm font-medium text-[#b00000]">
+                    <span className="mt-1 font-['Inter:Medium',sans-serif] text-sm font-medium text-[#0041b0]">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <h2 className="font-['Sora:Regular',sans-serif] text-[30px] leading-[1.18] tracking-[-0.025em] sm:text-[38px]">
@@ -95,7 +95,7 @@ export function BlogArticle({ post }: { post: BlogPost }) {
                       <ul className="mt-7 space-y-3">
                         {section.bullets.map((bullet) => (
                           <li key={bullet} className="flex gap-3">
-                            <span className="mt-[11px] size-1.5 shrink-0 rounded-full bg-[#b00000]" />
+                            <span className="mt-[11px] size-1.5 shrink-0 rounded-full bg-[#0041b0]" />
                             <span>{bullet}</span>
                           </li>
                         ))}
@@ -108,8 +108,8 @@ export function BlogArticle({ post }: { post: BlogPost }) {
           </div>
 
           <aside className="lg:sticky lg:top-8">
-            <div className="overflow-hidden rounded-[18px] bg-[#2c0303] p-7 text-white sm:p-9">
-              <div className="mb-8 h-1 w-16 rounded-full bg-[#ff6666]" />
+            <div className="overflow-hidden rounded-[18px] bg-[#03122c] p-7 text-white sm:p-9">
+              <div className="mb-8 h-1 w-16 rounded-full bg-[#669eff]" />
               <p className="font-['Sora:Regular',sans-serif] text-[29px] leading-[1.16] tracking-[-0.025em]">
                 {post.ctaTitle}
               </p>
@@ -120,7 +120,7 @@ export function BlogArticle({ post }: { post: BlogPost }) {
                 href={WHATSAPP_GROUP_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-8 flex w-full items-center justify-center rounded-full bg-white px-5 py-4 text-center font-['Inter:Medium',sans-serif] text-sm font-medium text-[#240303] transition-colors hover:bg-[#ffd0d0] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff6666]"
+                className="mt-8 flex w-full items-center justify-center rounded-full bg-white px-5 py-4 text-center font-['Inter:Medium',sans-serif] text-sm font-medium text-[#030f24] transition-colors hover:bg-[#d0e1ff] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#669eff]"
               >
                 Entrar no grupo oficial
               </a>
@@ -130,7 +130,7 @@ export function BlogArticle({ post }: { post: BlogPost }) {
               aria-label="Neste artigo"
               className="mt-5 rounded-[18px] border border-black/10 bg-white p-7"
             >
-              <p className="font-['Inter:Medium',sans-serif] text-sm font-medium uppercase tracking-[0.12em] text-[#7e0000]">
+              <p className="font-['Inter:Medium',sans-serif] text-sm font-medium uppercase tracking-[0.12em] text-[#002e7e]">
                 Neste artigo
               </p>
               <ol className="mt-5 space-y-3 font-['Inter:Regular',sans-serif] text-sm leading-5 text-[#46525a]">
@@ -138,7 +138,7 @@ export function BlogArticle({ post }: { post: BlogPost }) {
                   <li key={section.title}>
                     <a
                       href={`#article-section-${index + 1}`}
-                      className="transition-colors hover:text-[#b00000]"
+                      className="transition-colors hover:text-[#0041b0]"
                     >
                       {String(index + 1).padStart(2, "0")} · {section.title}
                     </a>
@@ -155,7 +155,7 @@ export function BlogArticle({ post }: { post: BlogPost }) {
           </p>
           <Link
             href="/"
-            className="font-['Inter:Medium',sans-serif] text-sm font-medium text-[#171717] underline decoration-[#b00000] decoration-2 underline-offset-4"
+            className="font-['Inter:Medium',sans-serif] text-sm font-medium text-[#171717] underline decoration-[#0041b0] decoration-2 underline-offset-4"
           >
             Voltar para a home
           </Link>

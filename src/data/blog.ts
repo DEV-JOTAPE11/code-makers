@@ -28,7 +28,7 @@ export const BLOG_POSTS: Record<string, BlogPost> = {
     title: "Como vender seu primeiro site criado com IA",
     description:
       "Um caminho direto para transformar um protótipo rápido em uma oferta que uma empresa entende e pode comprar.",
-    author: "Code Makers",
+    author: "Code Flow",
     date: "10 abr. 2026",
     readingTime: "8 min de leitura",
     image: IMAGES.blog.leads,
@@ -65,7 +65,7 @@ export const BLOG_POSTS: Record<string, BlogPost> = {
     ],
     ctaTitle: "Quer criar e vender seu primeiro site?",
     ctaText:
-      "O método Code Makers mostra a sequência da criação com IA até a proposta comercial.",
+      "O método Code Flow mostra a sequência da criação com IA até a proposta comercial.",
   },
 
   "automacao-operacional": {
@@ -73,7 +73,7 @@ export const BLOG_POSTS: Record<string, BlogPost> = {
     title: "Sistemas com IA: da ideia à oferta",
     description:
       "Como transformar um problema repetitivo de uma empresa em um sistema demonstrável e comercialmente valioso.",
-    author: "Code Makers",
+    author: "Code Flow",
     date: "12 mai. 2026",
     readingTime: "9 min de leitura",
     image: IMAGES.blog.automacao,
@@ -110,7 +110,7 @@ export const BLOG_POSTS: Record<string, BlogPost> = {
     ],
     ctaTitle: "Quer transformar problemas em sistemas vendáveis?",
     ctaText:
-      "Aprenda a validar, construir e apresentar sistemas com IA pelo método Code Makers.",
+      "Aprenda a validar, construir e apresentar sistemas com IA pelo método Code Flow.",
   },
 
   "atendimento-ia": {
@@ -118,7 +118,7 @@ export const BLOG_POSTS: Record<string, BlogPost> = {
     title: "Como prospectar empresas sem complicação",
     description:
       "Uma abordagem prática para iniciar conversas, demonstrar valor e transformar um projeto com IA em proposta comercial.",
-    author: "Code Makers",
+    author: "Code Flow",
     date: "14 jun. 2026",
     readingTime: "8 min de leitura",
     image: IMAGES.blog.atendimento,
@@ -155,7 +155,7 @@ export const BLOG_POSTS: Record<string, BlogPost> = {
     ],
     ctaTitle: "Quer uma fórmula para criar e vender?",
     ctaText:
-      "O Code Makers conecta construção com IA, oferta, prospecção e fechamento em um método prático.",
+      "O Code Flow conecta construção com IA, oferta, prospecção e fechamento em um método prático.",
   },
 };
 

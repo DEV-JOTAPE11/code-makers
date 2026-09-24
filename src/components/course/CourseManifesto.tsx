@@ -47,7 +47,7 @@ export function CourseManifesto({
             }`}
           >
             Criar é só o começo.
-            <span className="mt-3 block text-[#b00000]">
+            <span className="mt-3 block text-[#0041b0]">
               O dinheiro entra quando você encontra e vende.
             </span>
           </h2>
@@ -56,7 +56,7 @@ export function CourseManifesto({
               desktop ? "text-[19px]" : "text-[17px]"
             }`}
           >
-            A Code Makers ensina você a construir a solução com IA. A Code Hunter
+            A Code Flow ensina você a construir a solução com IA. A Code Hunter
             encontra empresas qualificadas. Nossa metodologia mostra como
             abordar, apresentar, fechar e transformar o projeto em dinheiro no
             bolso.
@@ -73,10 +73,10 @@ export function CourseManifesto({
         </StageReveal>
 
         <StageReveal className={desktop ? "" : "mt-14"} delay={0.08}>
-          <div className="course-code-window overflow-hidden rounded-[22px] border border-black/10 bg-[#111] text-white shadow-[0_35px_100px_rgba(49,0,0,0.24)]">
+          <div className="course-code-window overflow-hidden rounded-[22px] border border-black/10 bg-[#111] text-white shadow-[0_35px_100px_rgba(0,18,49,0.24)]">
             <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
               <div className="flex gap-2">
-                <span className="size-2.5 rounded-full bg-[#ff4b43]" />
+                <span className="size-2.5 rounded-full bg-[#4388ff]" />
                 <span className="size-2.5 rounded-full bg-white/20" />
                 <span className="size-2.5 rounded-full bg-white/20" />
               </div>
@@ -87,7 +87,7 @@ export function CourseManifesto({
 
             <div className="relative p-6 sm:p-8">
               <img
-                alt="Fluxo visual do método Code Makers"
+                alt="Fluxo visual do método Code Flow"
                 className="absolute inset-0 size-full object-cover opacity-20 mix-blend-screen"
                 src={IMAGES.codeToCashFlow}
               />
@@ -95,14 +95,14 @@ export function CourseManifesto({
               <div className="relative z-10 space-y-3 font-mono text-[13px] leading-6 sm:text-[14px]">
                 {CODE_LINES.map((line) => (
                   <p key={line.call}>
-                    <span className="text-[#ff6b64]">{line.keyword}</span>
+                    <span className="text-[#649dff]">{line.keyword}</span>
                     {line.assignment}
                     <span className="text-white/55">{line.call}</span>
                     {line.rest}
                   </p>
                 ))}
                 <p>
-                  <span className="text-[#ff6b64]">return</span>{" "}
+                  <span className="text-[#649dff]">return</span>{" "}
                   <span className="text-white">venderParaEmpresa</span>
                   (oportunidades);
                 </p>
@@ -114,7 +114,7 @@ export function CourseManifesto({
                     key={step}
                     className="rounded-[10px] bg-white/[0.055] px-2 py-4"
                   >
-                    <span className="block text-[10px] text-[#ff7770]">
+                    <span className="block text-[10px] text-[#70a4ff]">
                       0{index + 1}
                     </span>
                     <span className="mt-1 block text-[11px] font-medium tracking-[0.08em]">

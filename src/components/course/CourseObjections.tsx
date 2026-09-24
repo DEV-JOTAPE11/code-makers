@@ -86,8 +86,8 @@ export function CourseObjections({
                     aria-expanded={isOpen}
                     className={`group flex w-full cursor-pointer items-center justify-between gap-6 py-7 text-left font-['Sora:Regular',sans-serif] text-[22px] tracking-[-0.02em] transition-colors duration-300 ${
                       isOpen
-                        ? "text-[#970000]"
-                        : "text-[#171717] hover:text-[#b00000]"
+                        ? "text-[#003797]"
+                        : "text-[#171717] hover:text-[#0041b0]"
                     }`}
                     onClick={() =>
                       setOpenIndex((current) =>
@@ -101,8 +101,8 @@ export function CourseObjections({
                       animate={{ rotate: isOpen ? 180 : 0 }}
                       className={`relative grid size-10 shrink-0 place-items-center rounded-full border transition-colors duration-300 ${
                         isOpen
-                          ? "border-[#b00000] bg-[#b00000] text-white"
-                          : "border-black/15 text-[#171717] group-hover:border-[#b00000]"
+                          ? "border-[#0041b0] bg-[#0041b0] text-white"
+                          : "border-black/15 text-[#171717] group-hover:border-[#0041b0]"
                       }`}
                       transition={{ duration: 0.45, ease: EASE }}
                     >

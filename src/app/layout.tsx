@@ -6,9 +6,9 @@ const SITE_URL = "https://codemakers.com.br";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Mega Lançamento Code Makers + Code Hunter",
+  title: "Mega Lançamento Code Flow + Code Hunter",
   description:
-    "Entre no grupo oficial do mega lançamento da Code Makers e conheça a jornada para criar com IA, encontrar clientes com a Code Hunter e vender com a nossa metodologia.",
+    "Entre no grupo oficial do mega lançamento da Code Flow e conheça a jornada para criar com IA, encontrar clientes com a Code Hunter e vender com a nossa metodologia.",
   keywords: [
     "criar sites com IA",
     "criar sistemas com IA",
@@ -16,12 +16,12 @@ export const metadata: Metadata = {
     "vender sistemas",
     "inteligência artificial",
     "negócios digitais",
-    "Code Makers",
+    "Code Flow",
   ],
-  authors: [{ name: "Code Makers" }],
-  creator: "Code Makers",
-  publisher: "Code Makers",
-  applicationName: "Code Makers",
+  authors: [{ name: "Code Flow" }],
+  creator: "Code Flow",
+  publisher: "Code Flow",
+  applicationName: "Code Flow",
   alternates: { canonical: "/" },
   robots: {
     index: true,
@@ -33,35 +33,35 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: SITE_URL,
-    title: "Mega Lançamento Code Makers + Code Hunter",
+    title: "Mega Lançamento Code Flow + Code Hunter",
     description:
-      "Crie com IA, encontre clientes qualificados com a Code Hunter e venda com a metodologia Code Makers.",
-    siteName: "Code Makers",
+      "Crie com IA, encontre clientes qualificados com a Code Hunter e venda com a metodologia Code Flow.",
+    siteName: "Code Flow",
     locale: "pt_BR",
     images: [
       {
         url: "/seo/codemakers-launch-square-1080.png",
         width: 1080,
         height: 1080,
-        alt: "Mega Lançamento Code Makers: crie, encontre e venda.",
+        alt: "Mega Lançamento Code Flow: crie, encontre e venda.",
       },
       {
         url: "/seo/codemakers-launch-og-1200x630.png",
         width: 1200,
         height: 630,
-        alt: "Code Makers e Code Hunter: crie com IA, encontre clientes e venda.",
+        alt: "Code Flow e Code Hunter: crie com IA, encontre clientes e venda.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mega Lançamento Code Makers + Code Hunter",
+    title: "Mega Lançamento Code Flow + Code Hunter",
     description:
       "Crie com IA. Encontre com a Code Hunter. Venda com método e transforme projetos em dinheiro no bolso.",
     images: [
       {
         url: "/seo/codemakers-launch-og-1200x630.png",
-        alt: "Mega Lançamento Code Makers + Code Hunter",
+        alt: "Mega Lançamento Code Flow + Code Hunter",
       },
     ],
   },
@@ -75,22 +75,22 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
-  appleWebApp: { title: "Code Makers" },
+  appleWebApp: { title: "Code Flow" },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#b00000",
+  themeColor: "#0041b0",
 };
 
 const ORGANIZATION_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
-  name: "Code Makers",
+  name: "Code Flow",
   url: `${SITE_URL}/`,
-  logo: `${SITE_URL}/codemakers-symbol-transparent-v2.png`,
+  logo: `${SITE_URL}/assets/logo-code-flow.png`,
   image: `${SITE_URL}/seo/codemakers-launch-og-1200x630.png`,
   description:
     "Método prático para criar e vender soluções com inteligência artificial, com a Code Hunter para buscar clientes qualificados.",

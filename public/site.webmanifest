@@ -1,11 +1,11 @@
 {
-  "name": "Code Makers",
-  "short_name": "Code Makers",
-  "description": "Crie com IA, encontre clientes com a Code Hunter e venda com a metodologia Code Makers.",
+  "name": "Code Flow",
+  "short_name": "Code Flow",
+  "description": "Crie com IA, encontre clientes com a Code Hunter e venda com a metodologia Code Flow.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0c0909",
-  "theme_color": "#b00000",
+  "theme_color": "#0041b0",
   "icons": [
     {
       "src": "/favicon.svg?v=codemakers-2",
