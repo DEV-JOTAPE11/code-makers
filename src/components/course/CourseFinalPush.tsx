@@ -46,11 +46,8 @@ export function CourseFinalPush({
       />
 
       <StageReveal className={`${container} relative z-10 text-center`}>
-        <p className="text-[11px] uppercase tracking-[0.2em] text-white/58">
-          Um prompt. Um site. Fora da curva.
-        </p>
         <h2
-          className={`mx-auto mt-7 max-w-[1200px] font-['Sora:Regular',sans-serif] leading-[0.94] tracking-[-0.065em] ${
+          className={`mx-auto max-w-[1200px] font-['Sora:Regular',sans-serif] leading-[0.94] tracking-[-0.065em] ${
             desktop ? "text-[104px]" : "text-[55px]"
           }`}
         >

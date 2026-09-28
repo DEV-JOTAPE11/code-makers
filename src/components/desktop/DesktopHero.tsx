@@ -67,9 +67,6 @@ function HeroCta() {
         <LiquidMetalBorder />
         <span aria-hidden="true" className="shiny-cta-surface" />
         <div className="relative flex w-full shrink-0 flex-col content-stretch items-start">
-          <span className="mb-3 font-['Inter:Medium',sans-serif] text-[11px] font-medium uppercase tracking-[0.18em] text-[#70a4ff]">
-            Método Code Flow
-          </span>
           <div className="relative flex w-full shrink-0 flex-col justify-center font-['Sora:Regular',sans-serif] text-[22px] font-normal leading-[0] text-white [word-break:break-word]">
             <p className="leading-[29px]">Site fora da curva.</p>
             <p className="leading-[29px] text-white/72">

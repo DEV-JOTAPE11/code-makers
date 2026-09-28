@@ -1,6 +1,5 @@
 "use client";
 
-import { SectionEyebrow } from "@/components/SectionEyebrow";
 import { StageReveal } from "@/components/motion-primitives";
 import { IMAGES } from "@/lib/images";
 
@@ -34,7 +33,6 @@ export function CourseTransformation({
     >
       <div className={container}>
         <StageReveal className="text-center">
-          <SectionEyebrow centered>A virada</SectionEyebrow>
           <h2
             className={`mx-auto max-w-[1320px] font-['Sora:Regular',sans-serif] leading-[0.98] tracking-[-0.05em] text-[#171717] ${
               desktop ? "text-[68px]" : "text-[42px]"
@@ -55,11 +53,8 @@ export function CourseTransformation({
                 desktop ? "min-h-[650px] p-14" : "min-h-[520px] p-7"
               }`}
             >
-              <span className="font-['Inter:Medium',sans-serif] text-[11px] uppercase tracking-[0.18em] text-white/35">
-                Sem método
-              </span>
               <h3
-                className={`mt-14 font-['Sora:Regular',sans-serif] leading-none tracking-[-0.045em] text-white/42 ${
+                className={`font-['Sora:Regular',sans-serif] leading-none tracking-[-0.045em] text-white/42 ${
                   desktop ? "text-[66px]" : "text-[43px]"
                 }`}
               >
@@ -95,11 +90,8 @@ export function CourseTransformation({
                 src={IMAGES.redTexture}
               />
               <div className="relative z-10">
-                <span className="font-['Inter:Medium',sans-serif] text-[11px] uppercase tracking-[0.18em] text-white/60">
-                  Com o método Code Flow
-                </span>
                 <h3
-                  className={`mt-14 font-['Sora:Regular',sans-serif] leading-none tracking-[-0.045em] ${
+                  className={`font-['Sora:Regular',sans-serif] leading-none tracking-[-0.045em] ${
                     desktop ? "text-[66px]" : "text-[43px]"
                   }`}
                 >

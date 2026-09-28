@@ -56,10 +56,6 @@ export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
           }`}
         >
           <div>
-            <div className="mb-5 flex items-center justify-center gap-3 font-['Inter:Medium',sans-serif] text-[12px] font-medium uppercase tracking-[0.18em] text-[#83b0ff] lg:justify-start">
-              <span className="size-2 rounded-full bg-[#307cff] shadow-[0_0_18px_rgba(48,124,255,0.85)]" />
-              MÉTODO CODE FLOW: SITE FORA DA CURVA
-            </div>
             <h2
               className={`font-['Sora:Regular',sans-serif] font-normal leading-[0.98] tracking-[-0.055em] ${
                 desktop ? "max-w-[920px] text-[78px]" : "text-[46px]"

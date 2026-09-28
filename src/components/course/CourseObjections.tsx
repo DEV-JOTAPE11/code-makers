@@ -3,7 +3,6 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 
-import { SectionEyebrow } from "@/components/SectionEyebrow";
 import { StageReveal } from "@/components/motion-primitives";
 import { FAQ } from "@/data/site";
 import { EASE } from "@/lib/constants";
@@ -57,7 +56,6 @@ export function CourseObjections({
         layout
       >
         <StageReveal className="text-center lg:text-left">
-          <SectionEyebrow>Antes de decidir</SectionEyebrow>
           <h2
             className={`font-['Sora:Regular',sans-serif] leading-[0.98] tracking-[-0.055em] text-[#171717] ${
               desktop ? "text-[72px]" : "text-[46px]"

@@ -105,9 +105,6 @@ export function SiteHeader() {
             transition={{ duration: 0.46, ease: [0.16, 1, 0.3, 1] }}
             className="mobile-nav-panel absolute left-1/2 top-[calc(100%+12px)] z-[60] flex max-h-[calc(100svh-118px)] w-[calc(100vw-32px)] max-w-[430px] origin-top -translate-x-1/2 flex-col gap-1 overflow-x-hidden overflow-y-auto overscroll-contain rounded-[22px] border border-white/25 p-3 lg:hidden"
           >
-            <p className="mobile-nav-eyebrow px-3 pb-2 pt-1 font-['Inter:Medium',sans-serif] text-[11px] font-medium uppercase tracking-[0.18em]">
-              Navegação
-            </p>
             {NAV_SECTIONS.map((section, index) => (
               <motion.button
                 key={section.id}

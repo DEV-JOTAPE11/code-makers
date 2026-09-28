@@ -1,6 +1,5 @@
 "use client";
 
-import { SectionEyebrow } from "@/components/SectionEyebrow";
 import { StageReveal } from "@/components/motion-primitives";
 import { WHATSAPP_GROUP_URL } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
@@ -48,7 +47,6 @@ export function CourseOffer({
               </div>
 
               <div className="relative z-10 flex h-full flex-col text-center lg:text-left">
-                <SectionEyebrow light>O método completo</SectionEyebrow>
                 <h2
                   className={`font-['Sora:Regular',sans-serif] leading-[0.95] tracking-[-0.06em] ${
                     desktop ? "text-[76px]" : "text-[52px]"
@@ -65,11 +63,8 @@ export function CourseOffer({
                 </p>
 
                 <div className="mt-auto pt-16">
-                  <p className="text-[11px] uppercase tracking-[0.17em] text-white/55">
-                    Método Code Flow
-                  </p>
                   <p
-                    className={`mt-2 font-['Sora:Regular',sans-serif] tracking-[-0.045em] ${
+                    className={`font-['Sora:Regular',sans-serif] tracking-[-0.045em] ${
                       desktop
                         ? "text-[52px]"
                         : "mx-auto max-w-[310px] text-[26px] leading-[1.12]"
@@ -83,11 +78,7 @@ export function CourseOffer({
 
             <div className={`relative z-10 bg-[#101010] ${desktop ? "p-14" : "p-7"}`}>
               <div className="text-center">
-                <p className="font-['Inter:Medium',sans-serif] text-[11px] font-medium uppercase tracking-[0.19em] text-[#70a4ff]">
-                  Tudo o que você vai receber
-                </p>
-
-                <div className="flow-console mt-6 rounded-[20px] border border-[#5895ff]/30 bg-black/35 p-5 text-left">
+                <div className="flow-console rounded-[20px] border border-[#5895ff]/30 bg-black/35 p-5 text-left">
                   <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-4">
                     <span className="flex items-center gap-2 font-['Inter:Medium',sans-serif] text-[11px] uppercase tracking-[0.18em] text-[#70a4ff]">
                       <span className="flow-live-dot size-2 rounded-full bg-[#4388ff]" />

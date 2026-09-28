@@ -59,7 +59,6 @@ src/
     SiteHeader.tsx          header fixo e menu
     ConversionRail.tsx      "A fórmula Code Makers" (01/02/03)
     ShinyCta.tsx            botão com borda animada
-    SectionEyebrow.tsx      rótulo com ponto luminoso
     ViewportHaze.tsx        faixa desfocada no rodapé da janela
     motion-primitives.tsx   reveals, stagger GSAP, hover magnético
     course/                 jornada: manifesto → módulos → oferta → dúvidas

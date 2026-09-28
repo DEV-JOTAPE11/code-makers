@@ -1,6 +1,5 @@
 "use client";
 
-import { SectionEyebrow } from "@/components/SectionEyebrow";
 import { StageReveal } from "@/components/motion-primitives";
 import { WHATSAPP_GROUP_URL } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
@@ -40,7 +39,6 @@ export function CourseManifesto({
         }`}
       >
         <StageReveal className="text-center lg:text-left">
-          <SectionEyebrow>Por que quase todo site de IA é igual</SectionEyebrow>
           <h2
             className={`font-['Sora:Regular',sans-serif] leading-[0.98] tracking-[-0.055em] text-[#151515] ${
               desktop ? "text-[82px]" : "text-[47px]"

@@ -1,6 +1,5 @@
 "use client";
 
-import { SectionEyebrow } from "@/components/SectionEyebrow";
 import { StageReveal } from "@/components/motion-primitives";
 import { COURSE_MODULES } from "@/data/site";
 import { IMAGES } from "@/lib/images";
@@ -28,7 +27,6 @@ export function CourseCurriculum({
             }`}
           >
             <div className="text-center lg:text-left">
-              <SectionEyebrow>O que você aprende</SectionEyebrow>
               <h2
                 className={`mx-auto max-w-[980px] font-['Sora:Regular',sans-serif] leading-[0.95] tracking-[-0.06em] lg:mx-0 ${
                   desktop ? "text-[82px]" : "text-[49px]"

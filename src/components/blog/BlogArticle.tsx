@@ -35,10 +35,6 @@ export function BlogArticle({ post }: { post: BlogPost }) {
       <article className="mx-auto max-w-[1320px] px-5 pb-24 pt-14 sm:px-8 lg:px-12 lg:pt-20">
         <div className="grid items-end gap-10 lg:grid-cols-[minmax(0,1fr)_300px]">
           <div>
-            <div className="mb-6 flex items-center gap-3 font-['Inter:Medium',sans-serif] text-xs font-medium uppercase tracking-[0.14em] text-[#002e7e] sm:text-sm">
-              <span className="size-2 rounded-full bg-[#669eff]" />
-              {post.category}
-            </div>
             <h1 className="max-w-[940px] font-['Sora:Regular',sans-serif] text-[clamp(2.55rem,5vw,5rem)] font-normal leading-[1.02] tracking-[-0.045em]">
               {post.title}
             </h1>
