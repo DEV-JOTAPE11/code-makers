@@ -463,47 +463,6 @@ html.lenis body {
     right: 8%;
     transform: translate(-230%);
   }
-  .shiny-cta-surface {
-    z-index: 1;
-    border-radius: inherit;
-    pointer-events: none;
-    background: linear-gradient(#111 0%, #050505 100%);
-    position: absolute;
-    inset: 1.5px;
-    overflow: hidden;
-  }
-  .shiny-cta-surface:before {
-    border-radius: inherit;
-    content: "";
-    background:
-      radial-gradient(circle at 76% 120%, #0041b042, #0000 42%),
-      radial-gradient(circle at 22% -60%, #ffffff1c, #0000 40%),
-      repeating-linear-gradient(115deg, #0000 0 7px, #ffffff05 7px 8px);
-    position: absolute;
-    inset: 0;
-  }
-  .shiny-cta-surface:after {
-    content: "";
-    pointer-events: none;
-    filter: blur(3px);
-    opacity: 0;
-    background: linear-gradient(
-      90deg,
-      #0000,
-      #ffffff0a,
-      #ffffff3d,
-      #3a82ff24,
-      #0000
-    );
-    width: 24%;
-    height: 340%;
-    animation: 4.6s cubic-bezier(0.45, 0, 0.2, 1) infinite
-      mobile-cta-surface-shine;
-    position: absolute;
-    top: -120%;
-    left: -38%;
-    transform: translate(0) rotate(18deg);
-  }
   .mobile-hero-card {
     margin-top: 28px;
   }
@@ -562,24 +521,6 @@ html.lenis body {
     62%,
     to {
       background-position: -130%;
-    }
-  }
-  @keyframes mobile-cta-surface-shine {
-    0%,
-    18% {
-      opacity: 0;
-      transform: translate(0) rotate(18deg);
-    }
-    27% {
-      opacity: 0.9;
-    }
-    62% {
-      opacity: 0;
-      transform: translate(610px) rotate(18deg);
-    }
-    to {
-      opacity: 0;
-      transform: translate(610px) rotate(18deg);
     }
   }
   @keyframes mobile-cta-bottom-glow {
@@ -1232,7 +1173,7 @@ html::-webkit-scrollbar {
   background: linear-gradient(90deg, #4388ff, #4388ff00);
   width: 110px;
   height: 2px;
-  top: 0;
+  top: 2px;
   left: 24px;
   box-shadow: 0 0 18px #307cff85;
 }
@@ -1286,20 +1227,148 @@ html::-webkit-scrollbar {
     0 16px 40px #0041b06b,
     inset 0 1px #ffffff40;
 }
-.conversion-decision-card {
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
+/* Brilho atrás do cartão: dá ao vidro algo para desfocar. */
+.conversion-decision-glow {
+  pointer-events: none;
+  position: absolute;
+  inset: 12% 8%;
+  z-index: -1;
+  border-radius: 9999px;
   background:
-    radial-gradient(circle at 100% 0, #347eff24, #0000 34%),
-    linear-gradient(145deg, #ffffff0e, #ffffff05);
-  border: 1px solid #ffffff1f;
+    radial-gradient(circle at 30% 35%, #3d9eff5c, #0000 60%),
+    radial-gradient(circle at 75% 70%, #004efd4d, #0000 62%);
+  filter: blur(48px);
+}
+/* Vidro translúcido estilo Apple no lugar do preto da badge; a borda é o anel
+   de metal líquido da badge (ver LiquidMetalBorder). */
+.liquid-glass {
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  backdrop-filter: blur(28px) saturate(180%);
+  background:
+    radial-gradient(circle at 100% 0, #3d9eff26, #0000 40%),
+    linear-gradient(160deg, #ffffff1c 0%, #ffffff0a 45%, #ffffff05 100%),
+    rgba(7, 20, 39, 0.28);
+  border: 0;
+}
+.conversion-decision-card {
   border-radius: 22px;
   padding: 34px;
   position: relative;
   overflow: hidden;
   box-shadow:
-    inset 0 1px #ffffff0d,
+    inset 0 1px #ffffff2e,
+    inset 0 -1px #ffffff0a,
+    0 18px 40px rgba(2, 8, 23, 0.45),
     0 30px 80px #0000004d;
+}
+/* Anel de 2px (a espessura da moldura da badge): o canvas do shader ocupa o
+   card inteiro, e a máscara deixa aparecer só o padding. O gradiente é o
+   fallback sem WebGL — o canvas cobre ele quando monta. */
+.liquid-metal-border {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  isolation: isolate;
+  border-radius: inherit;
+  padding: 2px;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    #f4f6fa 0%,
+    #5d6068 30%,
+    #e9ecf2 55%,
+    #26282d 80%,
+    #c9ccd3 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+/* Fundo do CTA da hero: global porque o card do desktop usa o mesmo do botão
+   mobile (.shiny-cta). */
+.shiny-cta-surface {
+  z-index: 1;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(#111 0%, #050505 100%);
+  position: absolute;
+  inset: 1.5px;
+  overflow: hidden;
+}
+.shiny-cta-surface:before {
+  border-radius: inherit;
+  content: "";
+  background:
+    radial-gradient(circle at 76% 120%, #0041b042, #0000 42%),
+    radial-gradient(circle at 22% -60%, #ffffff1c, #0000 40%),
+    repeating-linear-gradient(115deg, #0000 0 7px, #ffffff05 7px 8px);
+  position: absolute;
+  inset: 0;
+}
+.shiny-cta-surface:after {
+  content: "";
+  pointer-events: none;
+  filter: blur(3px);
+  opacity: 0;
+  background: linear-gradient(
+    90deg,
+    #0000,
+    #ffffff0a,
+    #ffffff3d,
+    #3a82ff24,
+    #0000
+  );
+  width: 24%;
+  height: 340%;
+  animation: 4.6s cubic-bezier(0.45, 0, 0.2, 1) infinite
+    mobile-cta-surface-shine;
+  position: absolute;
+  top: -120%;
+  left: -38%;
+  transform: translate(0) rotate(18deg);
+}
+@keyframes mobile-cta-surface-shine {
+  0%,
+  18% {
+    opacity: 0;
+    transform: translate(0) rotate(18deg);
+  }
+  27% {
+    opacity: 0.9;
+  }
+  62% {
+    opacity: 0;
+    transform: translate(610px) rotate(18deg);
+  }
+  to {
+    opacity: 0;
+    transform: translate(610px) rotate(18deg);
+  }
+}
+/* Com a borda de metal, o fundo recua 2px (a espessura do anel) e sai o
+   brilho de borda próprio do botão mobile. */
+.shiny-cta--metal {
+  background: transparent;
+}
+.shiny-cta--metal:before {
+  display: none;
+}
+.shiny-cta--metal > .shiny-cta-surface {
+  inset: 2px;
+}
+/* `.desktop-hero-cta-card > *` põe os filhos em position: relative. */
+.desktop-hero-cta-card > .liquid-metal-border,
+.desktop-hero-cta-card > .shiny-cta-surface {
+  position: absolute;
+}
+.desktop-hero-cta-card > .liquid-metal-border {
+  z-index: 2;
+}
+.desktop-hero-cta-card > .shiny-cta-surface {
+  z-index: 0;
+  inset: 2px;
 }
 .conversion-decision-card:before {
   content: "";
@@ -1307,7 +1376,7 @@ html::-webkit-scrollbar {
   width: 86px;
   height: 2px;
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 34px;
   box-shadow: 0 0 18px #3780ffb8;
 }

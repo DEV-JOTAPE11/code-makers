@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 
+import { LiquidMetalBorder } from "@/components/LiquidMetalBorder";
 import { CONVERSION_STEPS } from "@/data/site";
 import { EASE, WHATSAPP_GROUP_URL } from "@/lib/constants";
 
@@ -48,31 +49,35 @@ export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
             </h2>
           </div>
 
-          <div className={`conversion-decision-card ${desktop ? "" : "mt-9"}`}>
-            <span className="font-['Inter:Medium',sans-serif] text-[10px] uppercase tracking-[0.2em] text-[#70a4ff]">
-              SITE FORA DA CURVA
-            </span>
-            <p className="mt-5 font-['Sora:Regular',sans-serif] text-[24px] leading-[1.25] tracking-[-0.035em] text-white">
-              Do prompt ao site no ar, sem escrever uma linha de código.
-            </p>
-            <p className="mt-4 font-['Inter:Regular',sans-serif] text-[15px] leading-6 text-white/55">
-              Você aprende a estrutura exata de prompt que gera sites com
-              design, copy e animações de nível agência logo de primeira.
-            </p>
-            <a
-              href={WHATSAPP_GROUP_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="conversion-rail-cta mt-7 inline-flex min-h-14 w-full items-center justify-between gap-5 rounded-full bg-[#004ac9] px-7 font-['Inter:Medium',sans-serif] text-[14px] font-medium text-white transition-transform hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#609aff]"
-            >
-              Entrar no grupo do Code Flow
-              <span aria-hidden="true" className="text-xl">
-                ↗
+          <div className={`relative isolate ${desktop ? "" : "mt-9"}`}>
+            <div aria-hidden="true" className="conversion-decision-glow" />
+            <div className="conversion-decision-card liquid-glass">
+              <LiquidMetalBorder />
+              <span className="font-['Inter:Medium',sans-serif] text-[10px] uppercase tracking-[0.2em] text-[#70a4ff]">
+                SITE FORA DA CURVA
               </span>
-            </a>
-            <p className="mt-4 text-center font-['Inter:Medium',sans-serif] text-[10px] uppercase tracking-[0.16em] text-white/35">
-              Estruturar • gerar • publicar
-            </p>
+              <p className="mt-5 font-['Sora:Regular',sans-serif] text-[24px] leading-[1.25] tracking-[-0.035em] text-white">
+                Do prompt ao site no ar, sem escrever uma linha de código.
+              </p>
+              <p className="mt-4 font-['Inter:Regular',sans-serif] text-[15px] leading-6 text-white/55">
+                Você aprende a estrutura exata de prompt que gera sites com
+                design, copy e animações de nível agência logo de primeira.
+              </p>
+              <a
+                href={WHATSAPP_GROUP_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="conversion-rail-cta mt-7 inline-flex min-h-14 w-full items-center justify-between gap-5 rounded-full bg-[#004ac9] px-7 font-['Inter:Medium',sans-serif] text-[14px] font-medium text-white transition-transform hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#609aff]"
+              >
+                Entrar no grupo do Code Flow
+                <span aria-hidden="true" className="text-xl">
+                  ↗
+                </span>
+              </a>
+              <p className="mt-4 text-center font-['Inter:Medium',sans-serif] text-[10px] uppercase tracking-[0.16em] text-white/35">
+                Estruturar • gerar • publicar
+              </p>
+            </div>
           </div>
         </motion.div>
 

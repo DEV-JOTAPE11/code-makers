@@ -38,6 +38,7 @@ export function MobileHome() {
           <ShinyCta
             aria-label="Entrar no grupo do Code Flow"
             className="mobile-hero-card"
+            metalBorder
             href={WHATSAPP_GROUP_URL}
             target="_blank"
             rel="noreferrer"

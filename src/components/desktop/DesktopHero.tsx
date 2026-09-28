@@ -1,5 +1,6 @@
 "use client";
 
+import { LiquidMetalBorder } from "@/components/LiquidMetalBorder";
 import { CardReveal, GsapStagger } from "@/components/motion-primitives";
 import { WHATSAPP_GROUP_URL } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
@@ -62,7 +63,9 @@ function HeroCta() {
       aria-label="Entrar no grupo do Code Flow"
       className="group block w-full cursor-pointer rounded-[12px] text-left outline-none focus-visible:ring-2 focus-visible:ring-white/90 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
     >
-      <CardReveal className="desktop-hero-cta-card relative flex w-full shrink-0 flex-col content-stretch items-center justify-center gap-[42px] overflow-clip rounded-[16px] border border-white/15 bg-[linear-gradient(145deg,rgba(8,8,8,0.96),rgba(0,15,42,0.94))] p-[26px] shadow-[0_22px_58px_rgba(0,12,32,0.34),inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-[5px] transition-[transform,border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-1 group-hover:border-[#5291ff]/45 group-hover:shadow-[0_28px_68px_rgba(0,12,32,0.46),0_0_34px_rgba(0,65,176,0.18),inset_0_1px_0_rgba(255,255,255,0.12)]">
+      <CardReveal className="desktop-hero-cta-card relative flex w-full shrink-0 flex-col content-stretch items-center justify-center gap-[42px] overflow-clip rounded-[16px] p-[26px] shadow-[0_22px_58px_rgba(0,12,32,0.34),inset_0_1px_0_rgba(255,255,255,0.18)] transition-[transform,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-1 group-hover:shadow-[0_28px_68px_rgba(0,12,32,0.46),0_0_34px_rgba(0,65,176,0.18),inset_0_1px_0_rgba(255,255,255,0.24)]">
+        <LiquidMetalBorder />
+        <span aria-hidden="true" className="shiny-cta-surface" />
         <div className="relative flex w-full shrink-0 flex-col content-stretch items-start">
           <span className="mb-3 font-['Inter:Medium',sans-serif] text-[11px] font-medium uppercase tracking-[0.18em] text-[#70a4ff]">
             Método Code Flow
@@ -113,7 +116,9 @@ export function DesktopHero() {
 
       <div className="relative left-[-9px] flex w-full max-w-[1430px] shrink-0 flex-col content-stretch items-center justify-center">
         <GsapStagger className="relative flex w-full shrink-0 flex-col content-stretch items-center justify-center gap-[130px]">
-          <div className="relative z-20 flex w-full shrink-0 items-center justify-between overflow-clip content-stretch">
+          {/* Sem overflow-clip: o card é o item mais alto da linha, e o
+              -translate-y do hover cortava a borda de cima. */}
+          <div className="relative z-20 flex w-full shrink-0 items-center justify-between content-stretch">
             <div className="relative h-[152px] min-w-px max-w-[420px] flex-[1_0_0]">
               <div className="absolute left-0 right-0 top-[-1.03px] flex flex-col content-stretch items-start">
                 <h1 className="relative flex shrink-0 flex-col justify-center whitespace-nowrap font-['Sora:Regular',sans-serif] text-[30px] font-normal leading-[0] text-white [word-break:break-word]">
