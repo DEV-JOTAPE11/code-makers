@@ -51,7 +51,7 @@ export function MobileHome() {
           <div className="hero-robot-entry size-full">
             <img
               alt="Robô abstrato da Code Flow"
-              className="size-full max-w-none object-contain"
+              className="hero-robot-fade size-full max-w-none object-contain"
               src={IMAGES.heroRobot}
             />
           </div>

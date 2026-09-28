@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import { LiquidMetalBorder } from "@/components/LiquidMetalBorder";
 import { CONVERSION_STEPS } from "@/data/site";
 import { EASE, WHATSAPP_GROUP_URL } from "@/lib/constants";
+import { IMAGES } from "@/lib/images";
 
 /** "O método Code Flow": manchete + cartão de decisão + trilho 01/02/03. */
 export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
@@ -15,6 +16,28 @@ export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
         desktop ? "w-[1920px] px-[210px] py-[210px]" : "px-4 py-24"
       }`}
     >
+      {/* Fundo da hero espelhado na vertical: o rodapé escuro da hero encosta
+          no topo escuro daqui, e as duas seções parecem uma só. No mobile
+          entram também as camadas animadas que a hero mobile usa. */}
+      <div
+        aria-hidden="true"
+        className={`conversion-rail-mirror pointer-events-none absolute inset-0 -z-10 ${
+          desktop ? "" : "bg-[#041025]"
+        }`}
+      >
+        <img
+          alt=""
+          className={`absolute inset-0 size-full object-cover ${desktop ? "" : "opacity-90"}`}
+          src={IMAGES.heroBackground}
+        />
+        {!desktop && (
+          <>
+            <div className="hero-gradient-motion absolute inset-0" />
+            <div className="hero-gradient-shadow-motion absolute inset-0" />
+          </>
+        )}
+      </div>
+
       <div
         aria-hidden="true"
         className="conversion-rail-signal absolute inset-y-0 w-[34%]"

@@ -158,7 +158,7 @@ export function DesktopHero() {
           <div className="pointer-events-none absolute inset-0 overflow-hidden">
             <img
               alt=""
-              className="absolute left-[-0.01%] top-0 h-full w-[100.02%] max-w-none"
+              className="hero-robot-fade absolute left-[-0.01%] top-0 h-full w-[100.02%] max-w-none"
               src={IMAGES.heroRobot}
             />
           </div>
