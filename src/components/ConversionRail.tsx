@@ -5,11 +5,11 @@ import { motion } from "motion/react";
 import { CONVERSION_STEPS } from "@/data/site";
 import { EASE, WHATSAPP_GROUP_URL } from "@/lib/constants";
 
-/** "A fórmula Code Flow": manchete + cartão de decisão + trilho 01/02/03. */
+/** "O método Code Flow": manchete + cartão de decisão + trilho 01/02/03. */
 export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
   return (
     <section
-      aria-label="A fórmula Code Flow"
+      aria-label="O método Code Flow"
       className={`conversion-rail relative overflow-hidden bg-[#080808] text-white ${
         desktop ? "w-[1920px] px-[210px] py-[210px]" : "px-4 py-24"
       }`}
@@ -34,30 +34,30 @@ export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
           <div>
             <div className="mb-5 flex items-center justify-center gap-3 font-['Inter:Medium',sans-serif] text-[12px] font-medium uppercase tracking-[0.18em] text-[#83b0ff] lg:justify-start">
               <span className="size-2 rounded-full bg-[#307cff] shadow-[0_0_18px_rgba(48,124,255,0.85)]" />
-              CODE FLOW + CODE HUNTER
+              MÉTODO CODE FLOW: SITE FORA DA CURVA
             </div>
             <h2
               className={`font-['Sora:Regular',sans-serif] font-normal leading-[0.98] tracking-[-0.055em] ${
                 desktop ? "max-w-[920px] text-[78px]" : "text-[46px]"
               }`}
             >
-              Crie com IA. Encontre com a Code Hunter.
+              Um prompt. Um site que ninguém acredita que saiu da IA.
               <span className="mt-3 block text-[#4388ff]">
-                Venda com a nossa metodologia.
+                Esse é o método Code Flow.
               </span>
             </h2>
           </div>
 
           <div className={`conversion-decision-card ${desktop ? "" : "mt-9"}`}>
             <span className="font-['Inter:Medium',sans-serif] text-[10px] uppercase tracking-[0.2em] text-[#70a4ff]">
-              DA IDEIA AO DINHEIRO NO BOLSO
+              SITE FORA DA CURVA
             </span>
             <p className="mt-5 font-['Sora:Regular',sans-serif] text-[24px] leading-[1.25] tracking-[-0.035em] text-white">
-              Uma rota completa para sair do prompt e chegar ao pagamento.
+              Do prompt ao site no ar, sem escrever uma linha de código.
             </p>
             <p className="mt-4 font-['Inter:Regular',sans-serif] text-[15px] leading-6 text-white/55">
-              Você cria a solução, encontra as empresas certas e aprende a
-              conduzir a conversa até fechar a venda.
+              Você aprende a estrutura exata de prompt que gera sites com
+              design, copy e animações de nível agência logo de primeira.
             </p>
             <a
               href={WHATSAPP_GROUP_URL}
@@ -65,13 +65,13 @@ export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
               rel="noreferrer"
               className="conversion-rail-cta mt-7 inline-flex min-h-14 w-full items-center justify-between gap-5 rounded-full bg-[#004ac9] px-7 font-['Inter:Medium',sans-serif] text-[14px] font-medium text-white transition-transform hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#609aff]"
             >
-              Entrar no grupo oficial
+              Entrar no grupo do Code Flow
               <span aria-hidden="true" className="text-xl">
                 ↗
               </span>
             </a>
             <p className="mt-4 text-center font-['Inter:Medium',sans-serif] text-[10px] uppercase tracking-[0.16em] text-white/35">
-              Criar • encontrar • vender
+              Estruturar • gerar • publicar
             </p>
           </div>
         </motion.div>
@@ -129,7 +129,7 @@ export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
 
         {desktop && (
           <div className="mt-8 flex justify-end font-['Inter:Medium',sans-serif] text-[11px] uppercase tracking-[0.16em] text-white/38">
-            Crie com IA. Encontre com a Code Hunter. Venda com método.
+            Um prompt. Um site fora da curva. Método Code Flow.
           </div>
         )}
       </div>

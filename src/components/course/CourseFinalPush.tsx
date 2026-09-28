@@ -47,15 +47,15 @@ export function CourseFinalPush({
 
       <StageReveal className={`${container} relative z-10 text-center`}>
         <p className="text-[11px] uppercase tracking-[0.2em] text-white/58">
-          Crie. Encontre. Venda.
+          Um prompt. Um site. Fora da curva.
         </p>
         <h2
           className={`mx-auto mt-7 max-w-[1200px] font-['Sora:Regular',sans-serif] leading-[0.94] tracking-[-0.065em] ${
             desktop ? "text-[104px]" : "text-[55px]"
           }`}
         >
-          Seu próximo cliente não precisa aparecer por acaso. Encontre. Venda.
-          Coloque dinheiro no bolso.
+          Enquanto todo mundo gera o mesmo site, você entrega o que ninguém
+          esperava.
         </h2>
         <a
           className="mt-10 inline-flex min-h-15 items-center gap-6 rounded-full bg-black px-9 font-['Inter:Medium',sans-serif] text-[16px] font-medium text-white shadow-[0_20px_55px_rgba(0,0,0,0.28)]"
@@ -63,7 +63,7 @@ export function CourseFinalPush({
           target="_blank"
           rel="noreferrer"
         >
-          Entrar no grupo oficial <span aria-hidden="true">↗</span>
+          Entrar no grupo do Code Flow <span aria-hidden="true">↗</span>
         </a>
       </StageReveal>
     </section>

@@ -6,16 +6,16 @@ const SITE_URL = "https://codemakers.com.br";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Mega Lançamento Code Flow + Code Hunter",
+  title: "Método Code Flow: Site Fora da Curva",
   description:
-    "Entre no grupo oficial do mega lançamento da Code Flow e conheça a jornada para criar com IA, encontrar clientes com a Code Hunter e vender com a nossa metodologia.",
+    "Aprenda a criar sites fora da curva com um único prompt. Entre no grupo do Code Flow e receba todos os detalhes do método.",
   keywords: [
     "criar sites com IA",
-    "criar sistemas com IA",
-    "vender sites para empresas",
-    "vender sistemas",
+    "site com um prompt",
+    "prompt para criar site",
+    "site fora da curva",
+    "site premium com IA",
     "inteligência artificial",
-    "negócios digitais",
     "Code Flow",
   ],
   authors: [{ name: "Code Flow" }],
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: SITE_URL,
-    title: "Mega Lançamento Code Flow + Code Hunter",
+    title: "Método Code Flow: Site Fora da Curva",
     description:
-      "Crie com IA, encontre clientes qualificados com a Code Hunter e venda com a metodologia Code Flow.",
+      "Um prompt. Um site fora da curva. Aprenda o método Code Flow e crie sites de nível agência com IA.",
     siteName: "Code Flow",
     locale: "pt_BR",
     images: [
@@ -43,25 +43,25 @@ export const metadata: Metadata = {
         url: "/seo/codemakers-launch-square-1080.png",
         width: 1080,
         height: 1080,
-        alt: "Mega Lançamento Code Flow: crie, encontre e venda.",
+        alt: "Método Code Flow: Site Fora da Curva.",
       },
       {
         url: "/seo/codemakers-launch-og-1200x630.png",
         width: 1200,
         height: 630,
-        alt: "Code Flow e Code Hunter: crie com IA, encontre clientes e venda.",
+        alt: "Método Code Flow: sites fora da curva com um único prompt.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mega Lançamento Code Flow + Code Hunter",
+    title: "Método Code Flow: Site Fora da Curva",
     description:
-      "Crie com IA. Encontre com a Code Hunter. Venda com método e transforme projetos em dinheiro no bolso.",
+      "Um prompt. Um site fora da curva. Sem código, sem template, sem cara de IA.",
     images: [
       {
         url: "/seo/codemakers-launch-og-1200x630.png",
-        alt: "Mega Lançamento Code Flow + Code Hunter",
+        alt: "Método Code Flow: Site Fora da Curva",
       },
     ],
   },
@@ -93,12 +93,11 @@ const ORGANIZATION_SCHEMA = {
   logo: `${SITE_URL}/assets/logo-code-flow.png`,
   image: `${SITE_URL}/seo/codemakers-launch-og-1200x630.png`,
   description:
-    "Método prático para criar e vender soluções com inteligência artificial, com a Code Hunter para buscar clientes qualificados.",
+    "Método para criar sites fora da curva com inteligência artificial usando um único prompt.",
   knowsAbout: [
     "Criação de sites com inteligência artificial",
-    "Criação de sistemas com inteligência artificial",
-    "Vendas B2B",
-    "Empreendedorismo digital",
+    "Engenharia de prompt",
+    "Web design",
   ],
 };
 

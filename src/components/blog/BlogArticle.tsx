@@ -122,7 +122,7 @@ export function BlogArticle({ post }: { post: BlogPost }) {
                 rel="noreferrer"
                 className="mt-8 flex w-full items-center justify-center rounded-full bg-white px-5 py-4 text-center font-['Inter:Medium',sans-serif] text-sm font-medium text-[#030f24] transition-colors hover:bg-[#d0e1ff] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#669eff]"
               >
-                Entrar no grupo oficial
+                Entrar no grupo do Code Flow
               </a>
             </div>
 

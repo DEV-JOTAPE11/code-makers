@@ -1,7 +1,7 @@
 # Code Makers
 
 Reconstrução em **Next.js 15 + TypeScript** do site publicado em
-[codemakers.com.br](https://www.codemakers.com.br/) — mesmo layout, mesma
+[codemakers.com.br](https://www.codemakers.com.br/), mesmo layout, mesma
 tipografia, mesmas cores e o mesmo motion do que está no ar.
 
 ## Rodando
@@ -20,7 +20,7 @@ npm run typecheck  # tsc --noEmit
 | --- | --- |
 | Framework | Next.js 15 (App Router) + React 19 |
 | Estilos | Tailwind CSS v4 + CSS próprio em `src/app/globals.css` |
-| Motion de entrada | `motion` (Framer Motion) — `whileInView` |
+| Motion de entrada | `motion` (Framer Motion), `whileInView` |
 | Motion da hero | GSAP (stagger + efeito magnético) |
 | Rolagem | Lenis, sincronizado com o `ScrollTrigger` do GSAP |
 | Fontes | Sora + Inter self-hosted (`public/fonts`) |
@@ -34,7 +34,7 @@ precisa medir a janela antes de escolher entre duas montagens diferentes:
 
 - **Desktop** (`≥ 1024px`): `DesktopFrame` desenha tudo numa prancheta fixa de
   **1920px** e aplica `zoom` para caber na viewport. É assim que o layout
-  exportado do Figma se mantém exato em qualquer largura — as medidas nos
+  exportado do Figma se mantém exato em qualquer largura, as medidas nos
   componentes são sempre px de design, nunca px de tela.
 - **Mobile** (`< 1024px`): `MobileHome`, coluna única com `max-w-[430px]`.
 
@@ -91,7 +91,7 @@ O design system usa os nomes exportados do Figma
 arquivos em `public/fonts`.
 
 Algumas regras do CSS pedem as famílias genéricas `Sora, sans-serif` e
-`Inter, sans-serif` — títulos e textos dos cards de módulo, o rótulo do CTA
+`Inter, sans-serif`, títulos e textos dos cards de módulo, o rótulo do CTA
 mobile e os números-fantasma do trilho. O site em produção **não** declara
 essas famílias, então elas caem na fonte do sistema; mantivemos o mesmo
 comportamento para o layout bater linha a linha (a página fecha com os mesmos

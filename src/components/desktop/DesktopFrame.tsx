@@ -7,7 +7,7 @@ import { DESIGN_WIDTH } from "@/lib/constants";
 type Frame = { scale: number; heroHeight: number };
 
 /** O desktop é desenhado numa prancheta fixa de 1920px e reduzido com `zoom`
- *  para caber na viewport — é assim que o layout do Figma se mantém exato em
+ *  para caber na viewport. É assim que o layout do Figma se mantém exato em
  *  qualquer largura. A altura da hero acompanha a viewport já desescalada. */
 function measure(): Frame {
   if (typeof window === "undefined" || typeof document === "undefined") {

@@ -23,7 +23,7 @@ export function SiteHeader() {
             type="button"
             onClick={() => goTo("home")}
             className="flex items-center"
-            aria-label="Code Flow — ir ao topo"
+            aria-label="Code Flow, ir ao topo"
           >
             <span className="site-header-logo inline-flex h-10 items-center gap-2.5 font-['Sora:Regular',sans-serif] text-[21px] tracking-[-0.8px] text-white lg:h-11 lg:gap-3 lg:text-[23px]">
               <img

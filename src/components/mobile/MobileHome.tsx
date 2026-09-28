@@ -32,11 +32,11 @@ export function MobileHome() {
             CODE FLOW
           </p>
           <h1 className="mobile-hero-heading mx-auto mt-5 max-w-[390px] font-['Sora:Regular',sans-serif] text-[24px] leading-[1.28] tracking-[-0.6px]">
-            Crie com IA. Encontre com a Code Hunter. Venda com a nossa
-            metodologia — e coloque dinheiro no bolso.
+            Um único prompt. Um site fora da curva. Sem programar, sem cara de
+            IA.
           </h1>
           <ShinyCta
-            aria-label="Entrar no grupo oficial do lançamento"
+            aria-label="Entrar no grupo do Code Flow"
             className="mobile-hero-card"
             href={WHATSAPP_GROUP_URL}
             target="_blank"
@@ -66,11 +66,11 @@ export function MobileHome() {
       >
         <FadeUp>
           <h2 className="font-['Sora:Regular',sans-serif] text-[42px] leading-[1.08] tracking-[-1.8px]">
-            Seu próximo projeto precisa virar venda
+            Um prompt. Um site fora da curva.
           </h2>
           <p className="mx-auto mt-5 max-w-[330px] text-[15px] leading-6">
-            Entre no grupo para acessar a jornada completa: criar com IA,
-            encontrar clientes com a Code Hunter e vender com o nosso método.
+            Entre no grupo do Code Flow e aprenda a criar sites de nível
+            agência com um único prompt.
           </p>
           <a
             className="mt-8 inline-flex min-h-12 items-center rounded-full bg-black px-6 font-medium text-white"
@@ -78,7 +78,7 @@ export function MobileHome() {
             target="_blank"
             rel="noreferrer"
           >
-            Entrar no grupo oficial
+            Entrar no grupo do Code Flow
           </a>
         </FadeUp>
 
@@ -97,7 +97,7 @@ export function MobileHome() {
             <span>Code Flow</span>
           </p>
           <p className="mt-5 max-w-[300px] text-sm leading-6 text-white/72">
-            Crie com IA. Encontre com a Code Hunter. Venda com método.
+            Método Code Flow: Site Fora da Curva. Um prompt, um site premium.
           </p>
           <p className="mt-12 border-t border-white/15 pt-6 text-center text-xs text-white/55">
             © 2026 Code Flow. Todos os direitos reservados.

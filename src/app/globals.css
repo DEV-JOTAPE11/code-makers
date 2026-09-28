@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------ */
-/*  Fontes — Sora + Inter (self-hosted, subsets latin / latin-ext)     */
+/*  Fontes: Sora  + Inter (self-hosted, subsets latin / latin-ext)     */
 /*  Os nomes com dois-pontos replicam o design system exportado do     */
 /*  Figma, usado nas classes font-['Sora:Regular',sans-serif].         */
 /* ------------------------------------------------------------------ */
@@ -15,8 +15,8 @@
 /*  O site em produção declara @font-face apenas para os nomes vindos    */
 /*  do Figma ("Sora:Regular", "Inter:Medium", ...). As regras abaixo do  */
 /*  design system que pedem `font-family: Sora, sans-serif` ou           */
-/*  `Inter, sans-serif` — títulos e textos dos cards de módulo, o rótulo */
-/*  do CTA mobile e os números-fantasma do trilho — acabam caindo na     */
+/*  `Inter, sans-serif`: títulos e textos dos cards de módulo, o rótulo */
+/*  do CTA mobile e os números-fantasma do trilho acabam   caindo na     */
 /*  fonte do sistema. Mantemos o mesmo comportamento para o layout       */
 /*  bater linha a linha com o que está no ar.                            */
 /*                                                                      */
@@ -1618,18 +1618,18 @@ html::-webkit-scrollbar {
 .course-code-window {
   position: relative;
 }
-.code-hunter-console {
+.flow-console {
   box-shadow:
     inset 0 1px #ffffff0e,
     0 24px 70px #0003;
 }
-.code-hunter-live-dot {
-  animation: 1.8s ease-in-out infinite code-hunter-live;
+.flow-live-dot {
+  animation: 1.8s ease-in-out infinite flow-live;
   box-shadow:
     0 0 0 5px #4388ff1a,
     0 0 18px #4388ffe0;
 }
-.code-hunter-radar {
+.flow-radar {
   aspect-ratio: 1;
   background-color: #0000;
   background-image:
@@ -1660,7 +1660,7 @@ html::-webkit-scrollbar {
     inset 0 0 28px #2f7bff1f,
     0 0 30px #0041b01f;
 }
-.code-hunter-radar-sweep {
+.flow-radar-sweep {
   border-radius: inherit;
   background: conic-gradient(
     from 0deg,
@@ -1668,11 +1668,11 @@ html::-webkit-scrollbar {
     #468aff75 94%,
     #7dadff0f 100%
   );
-  animation: 3.6s linear infinite code-hunter-scan;
+  animation: 3.6s linear infinite flow-scan;
   position: absolute;
   inset: -1px;
 }
-.code-hunter-radar-target {
+.flow-radar-target {
   background: #6da3ff;
   border-radius: 999px;
   width: 6px;
@@ -1682,21 +1682,21 @@ html::-webkit-scrollbar {
     0 0 0 4px #6da3ff1f,
     0 0 12px #4388ff;
 }
-.code-hunter-radar-target-a {
+.flow-radar-target-a {
   top: 29%;
   left: 63%;
 }
-.code-hunter-radar-target-b {
+.flow-radar-target-b {
   animation-delay: 0.7s;
   bottom: 25%;
   right: 62%;
 }
-@keyframes code-hunter-scan {
+@keyframes flow-scan {
   to {
     transform: rotate(360deg);
   }
 }
-@keyframes code-hunter-live {
+@keyframes flow-live {
   0%,
   to {
     opacity: 0.55;
@@ -2272,8 +2272,8 @@ html::-webkit-scrollbar {
   .course-code-window:after,
   .course-after-card:after,
   .course-final-orbit,
-  .code-hunter-live-dot,
-  .code-hunter-radar-sweep {
+  .flow-live-dot,
+  .flow-radar-sweep {
     animation: none;
   }
   .course-module-artwork,

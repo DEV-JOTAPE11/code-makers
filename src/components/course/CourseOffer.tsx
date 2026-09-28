@@ -6,13 +6,13 @@ import { WHATSAPP_GROUP_URL } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 
 const ARSENAL = [
-  "Método Code Flow para criar soluções com IA",
-  "Code Hunter para encontrar clientes qualificados",
-  "Playbook de venda com oferta, abordagem e fechamento",
-  "Kit de execução com prompts, scripts e proposta",
+  "Método Code Flow: Site Fora da Curva",
+  "Prompt mestre pronto para copiar e adaptar",
+  "Biblioteca de referências e estilos premium",
+  "Passo a passo para publicar com domínio próprio",
 ];
 
-/** Oferta do lançamento: painel vermelho + console da Code Hunter. */
+/** Oferta do método: painel azul + console do prompt Code Flow. */
 export function CourseOffer({
   desktop,
   container,
@@ -48,25 +48,25 @@ export function CourseOffer({
               </div>
 
               <div className="relative z-10 flex h-full flex-col text-center lg:text-left">
-                <SectionEyebrow light>O ecossistema completo</SectionEyebrow>
+                <SectionEyebrow light>O método completo</SectionEyebrow>
                 <h2
                   className={`font-['Sora:Regular',sans-serif] leading-[0.95] tracking-[-0.06em] ${
                     desktop ? "text-[76px]" : "text-[52px]"
                   }`}
                 >
-                  Crie.
+                  Um prompt.
                   <br />
-                  Encontre. Venda.
+                  Um site fora da curva.
                 </h2>
                 <p className="mx-auto mt-7 max-w-[520px] text-[17px] leading-7 text-white/72 lg:mx-0">
-                  IA para construir. Code Hunter para encontrar. Metodologia
-                  para fechar. Um único caminho para transformar habilidade em
-                  dinheiro no bolso.
+                  Estrutura, direção de arte e publicação. Tudo o que você
+                  precisa para gerar sites que ninguém acredita que foram feitos
+                  com IA.
                 </p>
 
                 <div className="mt-auto pt-16">
                   <p className="text-[11px] uppercase tracking-[0.17em] text-white/55">
-                    Da ideia ao dinheiro no bolso.
+                    Método Code Flow
                   </p>
                   <p
                     className={`mt-2 font-['Sora:Regular',sans-serif] tracking-[-0.045em] ${
@@ -75,7 +75,7 @@ export function CourseOffer({
                         : "mx-auto max-w-[310px] text-[26px] leading-[1.12]"
                     }`}
                   >
-                    VOCÊ CRIA. VOCÊ ENCONTRA. VOCÊ VENDE.
+                    SITE FORA DA CURVA.
                   </p>
                 </div>
               </div>
@@ -84,41 +84,41 @@ export function CourseOffer({
             <div className={`relative z-10 bg-[#101010] ${desktop ? "p-14" : "p-7"}`}>
               <div className="text-center">
                 <p className="font-['Inter:Medium',sans-serif] text-[11px] font-medium uppercase tracking-[0.19em] text-[#70a4ff]">
-                  Tudo o que entra no seu arsenal
+                  Tudo o que você vai receber
                 </p>
 
-                <div className="code-hunter-console mt-6 rounded-[20px] border border-[#5895ff]/30 bg-black/35 p-5 text-left">
+                <div className="flow-console mt-6 rounded-[20px] border border-[#5895ff]/30 bg-black/35 p-5 text-left">
                   <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-4">
                     <span className="flex items-center gap-2 font-['Inter:Medium',sans-serif] text-[11px] uppercase tracking-[0.18em] text-[#70a4ff]">
-                      <span className="code-hunter-live-dot size-2 rounded-full bg-[#4388ff]" />
-                      Code Hunter
+                      <span className="flow-live-dot size-2 rounded-full bg-[#4388ff]" />
+                      Prompt Code Flow
                     </span>
                     <span className="rounded-full border border-white/12 bg-white/[0.055] px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.14em] text-white/55">
-                      Nova ferramenta
+                      1 comando
                     </span>
                   </div>
 
                   <div className="mt-5 grid grid-cols-[92px_1fr] items-center gap-5 sm:grid-cols-[112px_1fr]">
-                    <div aria-hidden="true" className="code-hunter-radar">
-                      <span className="code-hunter-radar-sweep" />
-                      <span className="code-hunter-radar-target code-hunter-radar-target-a" />
-                      <span className="code-hunter-radar-target code-hunter-radar-target-b" />
+                    <div aria-hidden="true" className="flow-radar">
+                      <span className="flow-radar-sweep" />
+                      <span className="flow-radar-target flow-radar-target-a" />
+                      <span className="flow-radar-target flow-radar-target-b" />
                     </div>
                     <div>
                       <p className="font-['Sora:Regular',sans-serif] text-[22px] leading-[1.05] tracking-[-0.04em] text-white">
-                        Clientes qualificados na mira.
+                        Um prompt. Site completo.
                       </p>
                       <p className="mt-3 text-[13px] leading-5 text-white/52">
-                        Busque empresas qualificadas e coloque oportunidades
-                        reais no seu radar.
+                        Cole, gere e publique. A IA faz o trabalho pesado, o
+                        método garante o resultado.
                       </p>
                     </div>
                   </div>
                 </div>
 
                 <p className="mx-auto mt-4 max-w-[520px] text-[16px] leading-7 text-white/58">
-                  Você não entra apenas para aprender. Entra para executar o
-                  ciclo completo e chegar à venda.
+                  Você não entra só para assistir. Entra para sair com um site
+                  fora da curva no ar.
                 </p>
               </div>
 
@@ -142,10 +142,10 @@ export function CourseOffer({
                 target="_blank"
                 rel="noreferrer"
               >
-                ENTRAR NO GRUPO OFICIAL <span aria-hidden="true">↗</span>
+                ENTRAR NO GRUPO DO CODE FLOW <span aria-hidden="true">↗</span>
               </a>
               <p className="mt-5 text-center text-[12px] leading-5 text-white/38">
-                Você será direcionado para o grupo do lançamento no WhatsApp.
+                Você será direcionado para o grupo do Code Flow no WhatsApp.
               </p>
             </div>
           </div>

@@ -1,4 +1,4 @@
-/** Link oficial do grupo de lançamento — usado por todos os CTAs. */
+/** Link do grupo do Code Flow, usado por todos os CTAs. */
 export const WHATSAPP_GROUP_URL =
   "https://chat.whatsapp.com/BfnEyRKFlQYKVRS8Wyq1oG";
 

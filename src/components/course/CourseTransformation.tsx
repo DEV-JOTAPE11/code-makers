@@ -5,17 +5,17 @@ import { StageReveal } from "@/components/motion-primitives";
 import { IMAGES } from "@/lib/images";
 
 const BEFORE = [
-  "Salva tutorial e não executa",
-  "Projeto com cara de template barato",
-  "Trava na hora de cobrar",
-  "Prospecção aleatória e sem contexto",
+  "Prompt vago, resultado genérico",
+  "Site com cara de template de IA",
+  "Horas corrigindo detalhe por detalhe",
+  "Vergonha de mostrar o resultado",
 ];
 
 const AFTER = [
-  "Rota rápida da ideia à demo",
-  "Site ou sistema que prova valor",
-  "Clientes qualificados na mira",
-  "Proposta pronta para negociar",
+  "Prompt estruturado do início ao fim",
+  "Design e animações de nível agência",
+  "Site completo gerado de primeira",
+  "Projeto pronto para mostrar ou vender",
 ];
 
 /** Comparação antes/depois: o cartão escuro e o cartão vermelho. */
@@ -40,7 +40,7 @@ export function CourseTransformation({
               desktop ? "text-[68px]" : "text-[42px]"
             }`}
           >
-            Pare de criar sem destino e prospectar sem critério.
+            Pare de aceitar o site genérico que a IA te entrega.
           </h2>
         </StageReveal>
 
@@ -56,18 +56,18 @@ export function CourseTransformation({
               }`}
             >
               <span className="font-['Inter:Medium',sans-serif] text-[11px] uppercase tracking-[0.18em] text-white/35">
-                Preso no tutorial
+                Sem método
               </span>
               <h3
                 className={`mt-14 font-['Sora:Regular',sans-serif] leading-none tracking-[-0.045em] text-white/42 ${
                   desktop ? "text-[66px]" : "text-[43px]"
                 }`}
               >
-                Mais uma aula.
+                Mais um prompt.
                 <br />
-                Mais uma ferramenta.
+                Mais um template.
                 <br />
-                Zero pipeline.
+                Mesmo resultado.
               </h3>
               <ul className="mt-16 space-y-4 text-[15px] text-white/50">
                 {BEFORE.map((item) => (
@@ -96,18 +96,18 @@ export function CourseTransformation({
               />
               <div className="relative z-10">
                 <span className="font-['Inter:Medium',sans-serif] text-[11px] uppercase tracking-[0.18em] text-white/60">
-                  Em modo Code Maker
+                  Com o método Code Flow
                 </span>
                 <h3
                   className={`mt-14 font-['Sora:Regular',sans-serif] leading-none tracking-[-0.045em] ${
                     desktop ? "text-[66px]" : "text-[43px]"
                   }`}
                 >
-                  Solução pronta.
+                  Um prompt.
                   <br />
-                  Oferta afiada.
+                  Um site.
                   <br />
-                  Code Hunter ativa.
+                  Fora da curva.
                 </h3>
                 <ul className="mt-16 space-y-4 text-[15px] text-white/82">
                   {AFTER.map((item) => (

@@ -28,13 +28,13 @@ export function CourseCurriculum({
             }`}
           >
             <div className="text-center lg:text-left">
-              <SectionEyebrow>Da ideia ao dinheiro</SectionEyebrow>
+              <SectionEyebrow>O que você aprende</SectionEyebrow>
               <h2
                 className={`mx-auto max-w-[980px] font-['Sora:Regular',sans-serif] leading-[0.95] tracking-[-0.06em] lg:mx-0 ${
                   desktop ? "text-[82px]" : "text-[49px]"
                 }`}
               >
-                4 entregas. Da primeira demo às empresas certas.
+                4 módulos. Do zero ao site fora da curva.
               </h2>
             </div>
 
@@ -44,12 +44,13 @@ export function CourseCurriculum({
                   Aprenda fazendo
                 </span>
                 <span className="course-route-count font-mono text-[13px]">
-                  01 — 04
+                  01 / 04
                 </span>
               </div>
               <p className="course-route-text pt-5 font-['Inter:Regular',sans-serif] text-[16px] leading-7">
-                Cada etapa termina com algo que você pode mostrar, oferecer e
-                vender. Nada fica preso no tutorial.
+                Cada módulo termina com algo concreto na sua mão. No final,
+                você tem um prompt que gera sites fora da curva sempre que
+                precisar.
               </p>
             </div>
           </div>

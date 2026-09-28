@@ -10,12 +10,12 @@ const FOOTER_GRADIENT = `url("data:image/svg+xml;utf8,<svg viewBox='0 0 1920 905
 
 const PRIMARY_LINKS = [
   { id: "home", label: "Início" },
-  { id: "about", label: "Sobre" },
-  { id: "services", label: "Serviços" },
-  { id: "projects", label: "Projetos" },
+  { id: "about", label: "O método" },
+  { id: "services", label: "Módulos" },
+  { id: "faq", label: "Dúvidas" },
 ];
 
-const SECONDARY_LINKS = [{ id: "pricing", label: "Lançamento" }];
+const SECONDARY_LINKS = [{ id: "pricing", label: "Acesso" }];
 
 function FooterLink({ id, label }: { id: string; label: string }) {
   return (
@@ -35,7 +35,7 @@ export function DesktopFooter() {
   return (
     <div
       className="relative flex w-full shrink-0 flex-col content-stretch items-center justify-center overflow-clip px-[30px] pb-[45px] pt-[65px]"
-      data-name="Footer - Desktop"
+      data-name="Footer Desktop"
     >
       <div
         className="absolute inset-0"
@@ -49,13 +49,13 @@ export function DesktopFooter() {
           <div className="relative flex w-full shrink-0 flex-col content-stretch items-center gap-[22px]">
             <div className="relative w-full shrink-0">
               <div className="whitespace-nowrap text-center font-['Sora:Regular',sans-serif] text-[60px] leading-[1.12] tracking-[-1.2px] text-black">
-                <p>Seu próximo projeto</p>
-                <p>precisa virar venda</p>
+                <p>Um prompt. Um site</p>
+                <p>fora da curva.</p>
               </div>
             </div>
             <div className="relative flex w-full shrink-0 flex-col items-center text-center font-['Inter:Regular',sans-serif] text-[16px] font-normal not-italic leading-[24px] text-[#171717] [word-break:break-word]">
-              <p>Entre no grupo para aprender a criar com IA, encontrar clientes</p>
-              <p>com a Code Hunter e vender com o método Code Flow.</p>
+              <p>Entre no grupo do Code Flow e aprenda a criar sites</p>
+              <p>de nível agência com um único prompt.</p>
             </div>
           </div>
 
@@ -71,7 +71,7 @@ export function DesktopFooter() {
                   <div className="relative flex shrink-0 flex-col content-stretch items-center">
                     <div className="relative flex w-full shrink-0 flex-col content-stretch items-center">
                       <div className="relative flex shrink-0 flex-col justify-center whitespace-nowrap font-['Inter:Medium',sans-serif] text-[16px] font-medium not-italic leading-[0] text-white [word-break:break-word]">
-                        <p className="leading-[24px]">Entrar no grupo oficial</p>
+                        <p className="leading-[24px]">Entrar no grupo do Code Flow</p>
                       </div>
                     </div>
                   </div>
@@ -100,12 +100,12 @@ export function DesktopFooter() {
                 <div className="relative flex w-full shrink-0 flex-col content-stretch items-start">
                   <div className="relative flex w-full shrink-0 flex-col justify-center whitespace-pre-wrap font-['Inter:Regular',sans-serif] text-[16px] font-normal not-italic leading-[0] text-white [word-break:break-word]">
                     <p className="mb-0 leading-[24px]">
-                      Crie com IA, encontre clientes
+                      Método Code Flow:
                     </p>
                     <p className="mb-0 leading-[24px]">
-                      qualificados e venda soluções
+                      Site Fora da Curva. Sites de
                     </p>
-                    <p className="leading-[24px]">para empresas.</p>
+                    <p className="leading-[24px]">agência com um único prompt.</p>
                   </div>
                 </div>
               </div>

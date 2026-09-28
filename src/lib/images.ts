@@ -5,7 +5,6 @@ export const IMAGES = {
   codeToCashFlow: "/assets/codemakers-code-to-cash-flow.png",
   redTexture: "/assets/textura-vermelha.png",
   integratedStack: "/assets/stack-solar-integrado.png",
-  mobileCodeHunterCard: "/assets/mobile-code-hunter-card.png",
   symbol: "/code-flow-symbol.png",
 
   modules: {

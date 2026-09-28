@@ -59,18 +59,18 @@ function HeroCta() {
       href={WHATSAPP_GROUP_URL}
       target="_blank"
       rel="noreferrer"
-      aria-label="Entrar no grupo oficial do lançamento"
+      aria-label="Entrar no grupo do Code Flow"
       className="group block w-full cursor-pointer rounded-[12px] text-left outline-none focus-visible:ring-2 focus-visible:ring-white/90 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
     >
       <CardReveal className="desktop-hero-cta-card relative flex w-full shrink-0 flex-col content-stretch items-center justify-center gap-[42px] overflow-clip rounded-[16px] border border-white/15 bg-[linear-gradient(145deg,rgba(8,8,8,0.96),rgba(0,15,42,0.94))] p-[26px] shadow-[0_22px_58px_rgba(0,12,32,0.34),inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-[5px] transition-[transform,border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-1 group-hover:border-[#5291ff]/45 group-hover:shadow-[0_28px_68px_rgba(0,12,32,0.46),0_0_34px_rgba(0,65,176,0.18),inset_0_1px_0_rgba(255,255,255,0.12)]">
         <div className="relative flex w-full shrink-0 flex-col content-stretch items-start">
           <span className="mb-3 font-['Inter:Medium',sans-serif] text-[11px] font-medium uppercase tracking-[0.18em] text-[#70a4ff]">
-            Code Flow + Code Hunter
+            Método Code Flow
           </span>
           <div className="relative flex w-full shrink-0 flex-col justify-center font-['Sora:Regular',sans-serif] text-[22px] font-normal leading-[0] text-white [word-break:break-word]">
-            <p className="leading-[29px]">Da ideia ao cliente.</p>
+            <p className="leading-[29px]">Site fora da curva.</p>
             <p className="leading-[29px] text-white/72">
-              Do cliente ao dinheiro no bolso.
+              Com um prompt só.
             </p>
           </div>
         </div>
@@ -118,16 +118,16 @@ export function DesktopHero() {
               <div className="absolute left-0 right-0 top-[-1.03px] flex flex-col content-stretch items-start">
                 <h1 className="relative flex shrink-0 flex-col justify-center whitespace-nowrap font-['Sora:Regular',sans-serif] text-[30px] font-normal leading-[0] text-white [word-break:break-word]">
                   <span className="mb-0 whitespace-pre leading-[38px]">
-                    Crie com IA.
+                    Um único prompt.
                   </span>
                   <span className="mb-0 whitespace-pre leading-[38px]">
-                    Encontre com a Code Hunter.
+                    Um site fora da curva.
                   </span>
                   <span className="mb-0 whitespace-pre leading-[38px]">
-                    Venda com a nossa
+                    Sem programar,
                   </span>
                   <span className="whitespace-pre leading-[38px]">
-                    metodologia.
+                    sem cara de IA.
                   </span>
                 </h1>
               </div>

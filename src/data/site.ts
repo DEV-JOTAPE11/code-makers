@@ -14,24 +14,24 @@ export type ConversionStep = {
 export const CONVERSION_STEPS: ConversionStep[] = [
   {
     number: "01",
-    label: "CRIAR",
-    title: "Crie sites e sistemas em minutos",
-    text: "Use IA para transformar uma ideia em um site ou sistema pronto para apresentar.",
-    outcome: "Seu primeiro projeto pronto",
+    label: "ESTRUTURAR",
+    title: "Monte o prompt certo",
+    text: "Aprenda a estrutura do prompt Code Flow: referência, identidade, seções, copy e movimento em um único comando.",
+    outcome: "Um prompt pronto para usar",
   },
   {
     number: "02",
-    label: "ENCONTRAR",
-    title: "Encontre clientes com a Code Hunter",
-    text: "Coloque empresas qualificadas no radar e chegue a cada conversa sabendo onde sua solução gera valor.",
-    outcome: "Oportunidades certas no radar",
+    label: "GERAR",
+    title: "Gere o site com um comando",
+    text: "Cole o prompt e veja a IA entregar um site completo, responsivo e animado, sem corrigir linha por linha.",
+    outcome: "Site completo em minutos",
   },
   {
     number: "03",
-    label: "VENDER",
-    title: "Venda com a nossa metodologia",
-    text: "Use oferta, abordagem, demonstração, proposta e fechamento para transformar oportunidades em clientes.",
-    outcome: "Venda fechada. Dinheiro no bolso",
+    label: "PUBLICAR",
+    title: "Coloque no ar fora da curva",
+    text: "Publique com domínio próprio um site que não parece mais um template genérico feito por IA.",
+    outcome: "Site no ar, pronto para mostrar",
   },
 ];
 
@@ -45,65 +45,65 @@ export type CourseModule = {
 
 export const COURSE_MODULES: CourseModule[] = [
   {
-    phase: "CRIAR",
-    title: "Crie sites com IA em minutos.",
-    text: "Você vai aprender a transformar um prompt em um site completo, responsivo e pronto para apresentar — mesmo começando do zero.",
+    phase: "FUNDAMENTO",
+    title: "Entenda por que a IA entrega sites genéricos.",
+    text: "Você vai entender o que faz a IA repetir sempre o mesmo layout e como virar esse jogo com direção, referência e contexto, mesmo começando do zero.",
     image: IMAGES.modules.createAi,
-    outcome: "Seu primeiro site criado com IA e pronto para mostrar",
+    outcome: "Clareza do que separa um site comum de um fora da curva",
   },
   {
-    phase: "VALORIZAR",
-    title: "Faça o projeto parecer premium.",
-    text: "Você vai aprender design, copy e apresentação para sair do site genérico, aumentar o valor percebido e conseguir cobrar mais.",
+    phase: "PROMPT",
+    title: "Escreva o prompt único do método.",
+    text: "Você vai aprender a estrutura completa do prompt Code Flow: identidade visual, tipografia, seções, copy e animações em um só comando.",
     image: IMAGES.modules.premiumSites,
-    outcome: "Um projeto profissional que justifica um preço maior",
+    outcome: "Seu prompt mestre pronto para reutilizar",
   },
   {
-    phase: "RESOLVER",
-    title: "Construa sistemas com IA que empresas precisam.",
-    text: "Você vai aprender a encontrar problemas reais de um negócio e criar sistemas, automações e demos que mostram a solução funcionando.",
+    phase: "DESIGN",
+    title: "Deixe o site com cara de agência.",
+    text: "Você vai aprender a pedir animações, microinterações e detalhes visuais que fazem o site parecer caro, sem mexer em código.",
     image: IMAGES.modules.businessSystems,
-    outcome: "Um sistema demonstrável criado para resolver e vender",
+    outcome: "Um site com acabamento premium de verdade",
   },
   {
-    phase: "VENDER",
-    title: "Encontre clientes. Conduza a venda.",
-    text: "Com a Code Hunter, você encontra empresas qualificadas. Com a metodologia Code Flow, você aborda, apresenta, propõe e conduz a conversa até o fechamento.",
+    phase: "PUBLICAR",
+    title: "Coloque no ar e mostre para o mundo.",
+    text: "Você vai publicar o site com domínio próprio, deixar tudo rápido no celular e sair com um projeto pronto para portfólio ou para vender.",
     image: IMAGES.modules.b2bSales,
-    outcome: "Clientes no radar e um processo claro para fechar vendas",
+    outcome: "Site publicado e pronto para apresentar",
   },
 ];
 
 export const FAQ: [question: string, answer: string][] = [
   [
     "Preciso saber programar?",
-    "Não. O método parte de ferramentas com IA e ensina a pensar a solução, orientar a criação e revisar a entrega.",
+    "Não. O método inteiro parte de um único prompt. Você aprende o que pedir, como pedir e como revisar o resultado, sem escrever código.",
   ],
   [
-    "E se eu ainda não tiver portfólio?",
-    "Você aprende a construir demonstrações direcionadas para problemas reais. Elas tornam sua capacidade visível antes do primeiro contrato.",
+    "É mesmo um prompt só?",
+    "Sim. A estrutura do método concentra identidade, seções, copy e animações em um único comando. Ajustes finos são opcionais, não obrigatórios.",
   ],
   [
-    "Serve para sites e sistemas?",
-    "Sim. O raciocínio comercial é o mesmo: identificar um problema, demonstrar uma solução e vender o resultado — com execução adaptada a cada formato.",
+    "O site não vai ficar com cara de feito por IA?",
+    "Esse é justamente o ponto. O método foi criado para fugir do layout genérico e entregar sites com direção de arte de verdade.",
   ],
   [
-    "O método também ensina a vender?",
-    "Sim. Criação sem prospecção vira projeto parado. Por isso, abordagem, apresentação, proposta e próximo passo fazem parte da jornada.",
+    "Serve para qualquer tipo de site?",
+    "Sim. Landing pages, sites institucionais, portfólios e páginas de venda seguem a mesma lógica: referência, identidade e estrutura dentro do prompt.",
   ],
   [
-    "O que é a Code Hunter?",
-    "É a ferramenta da Code Flow criada para buscar clientes qualificados e colocar empresas com potencial real no seu radar de prospecção.",
+    "Posso vender os sites que eu criar?",
+    "Pode. Com o método você cria projetos prontos para portfólio e para oferecer a empresas e clientes.",
   ],
   [
-    "Como participo do lançamento?",
-    "Entre no grupo oficial. É por lá que você recebe os avisos de abertura e todos os detalhes da Code Flow e da Code Hunter.",
+    "Como participo?",
+    "Entre no grupo do Code Flow. É por lá que você recebe os avisos de abertura e todos os detalhes do Método Code Flow: Site Fora da Curva.",
   ],
 ];
 
 export const NAV_SECTIONS = [
   { id: "about", label: "O método" },
   { id: "services", label: "Módulos" },
-  { id: "pricing", label: "Lançamento" },
+  { id: "pricing", label: "Acesso" },
   { id: "faq", label: "Dúvidas" },
 ] as const;

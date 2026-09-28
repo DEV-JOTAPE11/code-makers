@@ -44,7 +44,7 @@ export function CardReveal({ children, className, delay = 0 }: RevealProps) {
   );
 }
 
-/** Entrada da jornada do curso — sobe com leve desfoque. */
+/** Entrada da jornada do curso: sobe com leve desfoque. */
 export function StageReveal({
   children,
   className = "",
@@ -125,7 +125,7 @@ export function MagneticHover({
   );
 }
 
-/** Stagger em GSAP aplicado aos filhos diretos — usado na hero. */
+/** Stagger em GSAP aplicado aos filhos diretos, usado na hero. */
 export function GsapStagger({ children, className }: RevealProps) {
   const container = useRef<HTMLDivElement>(null);
 

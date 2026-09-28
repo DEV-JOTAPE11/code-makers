@@ -63,11 +63,11 @@ export function CourseObjections({
               desktop ? "text-[72px]" : "text-[46px]"
             }`}
           >
-            As dúvidas que travam quase todo iniciante.
+            O que todo mundo pergunta antes de entrar.
           </h2>
           <p className="mx-auto mt-7 max-w-[500px] text-[17px] leading-7 text-[#68605b] lg:mx-0">
-            O método existe justamente para remover a distância entre aprender
-            uma ferramenta e conseguir entregar algo comercial.
+            O método existe para tirar você do site genérico e colocar um site
+            fora da curva no ar com um único prompt.
           </p>
         </StageReveal>
 

@@ -7,18 +7,18 @@ import { IMAGES } from "@/lib/images";
 
 /** Linhas do "editor" que resume o método em pseudo-código. */
 const CODE_LINES: { keyword: string; assignment: string; call: string; rest: string }[] = [
-  { keyword: "const", assignment: " ideia = ", call: "problemaReal", rest: ";" },
-  { keyword: "const", assignment: " entrega = ", call: "criarComIA", rest: "(ideia);" },
-  { keyword: "const", assignment: " oferta = ", call: "empacotarValor", rest: "(entrega);" },
+  { keyword: "const", assignment: " referencia = ", call: "sitesPremium", rest: ";" },
+  { keyword: "const", assignment: " identidade = ", call: "definirMarca", rest: "(referencia);" },
+  { keyword: "const", assignment: " estrutura = ", call: "montarSecoes", rest: "(identidade);" },
   {
     keyword: "const",
-    assignment: " oportunidades = ",
-    call: "codeHunter.buscar",
-    rest: "(oferta);",
+    assignment: " prompt = ",
+    call: "codeFlow.prompt",
+    rest: "(estrutura);",
   },
 ];
 
-const STEPS = ["CRIAR", "ENCONTRAR", "VENDER"];
+const STEPS = ["PROMPT", "GERAR", "PUBLICAR"];
 
 export function CourseManifesto({
   desktop,
@@ -40,15 +40,15 @@ export function CourseManifesto({
         }`}
       >
         <StageReveal className="text-center lg:text-left">
-          <SectionEyebrow>O ciclo que gera receita</SectionEyebrow>
+          <SectionEyebrow>Por que quase todo site de IA é igual</SectionEyebrow>
           <h2
             className={`font-['Sora:Regular',sans-serif] leading-[0.98] tracking-[-0.055em] text-[#151515] ${
               desktop ? "text-[82px]" : "text-[47px]"
             }`}
           >
-            Criar é só o começo.
+            A IA não é o problema.
             <span className="mt-3 block text-[#0041b0]">
-              O dinheiro entra quando você encontra e vende.
+              O prompt é.
             </span>
           </h2>
           <p
@@ -56,10 +56,10 @@ export function CourseManifesto({
               desktop ? "text-[19px]" : "text-[17px]"
             }`}
           >
-            A Code Flow ensina você a construir a solução com IA. A Code Hunter
-            encontra empresas qualificadas. Nossa metodologia mostra como
-            abordar, apresentar, fechar e transformar o projeto em dinheiro no
-            bolso.
+            Quase todo mundo pede um site para a IA e recebe o mesmo layout
+            genérico. O método Code Flow mostra como escrever um único prompt
+            que entrega um site com direção de arte, copy e animações de
+            agência.
           </p>
           <a
             className="course-primary-cta mt-9 inline-flex min-h-14 items-center gap-6 rounded-full bg-[#171717] px-8 font-['Inter:Medium',sans-serif] text-[15px] font-medium text-white"
@@ -67,7 +67,7 @@ export function CourseManifesto({
             target="_blank"
             rel="noreferrer"
           >
-            Entrar no grupo oficial{" "}
+            Entrar no grupo do Code Flow{" "}
             <span aria-hidden="true">↗</span>
           </a>
         </StageReveal>
@@ -81,7 +81,7 @@ export function CourseManifesto({
                 <span className="size-2.5 rounded-full bg-white/20" />
               </div>
               <span className="font-['Inter:Medium',sans-serif] text-[10px] uppercase tracking-[0.18em] text-white/40">
-                code_to_cash.flow
+                site_fora_da_curva.flow
               </span>
             </div>
 
@@ -103,8 +103,8 @@ export function CourseManifesto({
                 ))}
                 <p>
                   <span className="text-[#649dff]">return</span>{" "}
-                  <span className="text-white">venderParaEmpresa</span>
-                  (oportunidades);
+                  <span className="text-white">siteForaDaCurva</span>
+                  (prompt);
                 </p>
               </div>
 
