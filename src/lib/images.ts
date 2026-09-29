@@ -2,6 +2,7 @@
 export const IMAGES = {
   heroBackground: "/assets/fundo-flow.png",
   heroRobot: "/assets/hero-robot-blue.png",
+  hands: "/assets/mãos.png",
   leonardoDicaprio: "/assets/leonardo-dicaprio.png",
   redTexture: "/assets/textura-vermelha.png",
   integratedStack: "/assets/stack-solar-integrado.png",

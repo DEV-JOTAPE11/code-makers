@@ -3,17 +3,18 @@
 import { motion } from "motion/react";
 
 import { LiquidMetalBorder } from "@/components/LiquidMetalBorder";
-import { CONVERSION_STEPS } from "@/data/site";
 import { EASE, WHATSAPP_GROUP_URL } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 
-/** "O método Code Flow": manchete + cartão de decisão + trilho 01/02/03. */
+/** "O método Code Flow": manchete + cartão de decisão + mãos. */
 export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
   return (
     <section
       aria-label="O método Code Flow"
       className={`conversion-rail relative overflow-hidden bg-[#080808] text-white ${
-        desktop ? "w-[1920px] px-[210px] py-[210px]" : "px-4 py-24"
+        desktop
+          ? "conversion-rail-desktop flex w-[1920px] flex-col px-[210px] pt-[88px] pb-[52px]"
+          : "px-4 py-24"
       }`}
     >
       {/* Fundo da hero espelhado na vertical: o rodapé escuro da hero encosta
@@ -44,7 +45,9 @@ export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
       />
 
       <div
-        className={`relative z-10 mx-auto ${desktop ? "w-[1500px]" : "max-w-[430px]"}`}
+        className={`relative z-10 mx-auto ${
+          desktop ? "flex min-h-0 w-[1500px] flex-1 flex-col" : "max-w-[430px]"
+        }`}
       >
         <motion.div
           initial={{ opacity: 0, y: 28 }}
@@ -100,59 +103,35 @@ export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
           </div>
         </motion.div>
 
-        <div
-          className={`conversion-steps relative mt-20 grid ${
-            desktop ? "grid-cols-3" : "grid-cols-1"
+        {/* No desktop a seção tem a altura da janela e as mãos ocupam o que
+            sobra dela, sem distorcer; os braços cortados somem num fade
+            lateral. No mobile a imagem fica maior que a tela para as mãos não
+            ficarem minúsculas, e o fade vai nas bordas da tela. */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.9, ease: EASE }}
+          className={`conversion-hands relative left-1/2 -translate-x-1/2 ${
+            desktop
+              ? "mt-8 flex min-h-0 w-[1920px] flex-1 justify-center"
+              : "conversion-hands-fade mt-16 w-screen"
           }`}
         >
-          {CONVERSION_STEPS.map((step, index) => (
-            <motion.article
-              key={step.number}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.35 }}
-              transition={{ duration: 0.66, delay: index * 0.09, ease: EASE }}
-              className="conversion-step group relative overflow-hidden"
-            >
-              <span aria-hidden="true" className="conversion-step-ghost">
-                {step.number}
-              </span>
-
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                  <span className="conversion-step-node grid size-11 place-items-center rounded-full font-['Inter:Medium',sans-serif] text-[11px]">
-                    {step.number}
-                  </span>
-                  <span className="font-['Inter:Medium',sans-serif] text-[11px] tracking-[0.2em] text-[#70a4ff]">
-                    {step.label}
-                  </span>
-                </div>
-                <span className="conversion-step-arrow grid size-10 place-items-center rounded-full border border-white/20 text-lg transition-all duration-500 group-hover:border-[#4388ff] group-hover:bg-[#0041b0]">
-                  ↗
-                </span>
-              </div>
-
-              <h3
-                className={`relative z-10 mt-14 max-w-[360px] font-['Sora:Regular',sans-serif] leading-[1.02] tracking-[-0.04em] ${
-                  desktop ? "text-[38px]" : "text-[31px]"
-                }`}
-              >
-                {step.title}
-              </h3>
-              <p className="relative z-10 mt-5 max-w-[370px] font-['Inter:Regular',sans-serif] text-[15px] leading-6 text-white/58">
-                {step.text}
-              </p>
-
-              <div className="conversion-step-outcome relative z-10 mt-auto pt-8">
-                <span className="text-[#498cff]">✓</span>
-                <span>{step.outcome}</span>
-              </div>
-            </motion.article>
-          ))}
-        </div>
+          <div aria-hidden="true" className="conversion-hands-glow" />
+          <img
+            alt="Duas mãos metálicas azuis quase se tocando"
+            className={
+              desktop
+                ? "conversion-hands-fade relative block h-full w-auto max-w-full object-contain"
+                : "relative left-1/2 block h-auto w-[130%] max-w-none -translate-x-1/2"
+            }
+            src={IMAGES.hands}
+          />
+        </motion.div>
 
         {desktop && (
-          <div className="mt-8 flex justify-end font-['Inter:Medium',sans-serif] text-[11px] uppercase tracking-[0.16em] text-white/38">
+          <div className="mt-4 flex justify-end font-['Inter:Medium',sans-serif] text-[11px] uppercase tracking-[0.16em] text-white/38">
             Um prompt. Um site fora da curva. Método Code Flow.
           </div>
         )}

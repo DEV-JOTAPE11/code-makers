@@ -3,38 +3,6 @@ import { IMAGES } from "@/lib/images";
 /** Conteúdo editorial do site. Mantido fora dos componentes para que o
  *  texto possa ser revisado sem tocar em layout ou motion. */
 
-export type ConversionStep = {
-  number: string;
-  label: string;
-  title: string;
-  text: string;
-  outcome: string;
-};
-
-export const CONVERSION_STEPS: ConversionStep[] = [
-  {
-    number: "01",
-    label: "ESTRUTURAR",
-    title: "Monte o prompt certo",
-    text: "Aprenda a estrutura do prompt Code Flow: referência, identidade, seções, copy e movimento em um único comando.",
-    outcome: "Um prompt pronto para usar",
-  },
-  {
-    number: "02",
-    label: "GERAR",
-    title: "Gere o site com um comando",
-    text: "Cole o prompt e veja a IA entregar um site completo, responsivo e animado, sem corrigir linha por linha.",
-    outcome: "Site completo em minutos",
-  },
-  {
-    number: "03",
-    label: "PUBLICAR",
-    title: "Coloque no ar fora da curva",
-    text: "Publique com domínio próprio um site que não parece mais um template genérico feito por IA.",
-    outcome: "Site no ar, pronto para mostrar",
-  },
-];
-
 export type CourseModule = {
   phase: string;
   title: string;

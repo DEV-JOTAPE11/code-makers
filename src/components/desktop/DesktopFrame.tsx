@@ -4,14 +4,15 @@ import { useLayoutEffect, useState, type ReactNode } from "react";
 
 import { DESIGN_WIDTH } from "@/lib/constants";
 
-type Frame = { scale: number; heroHeight: number };
+type Frame = { scale: number; heroHeight: number; viewportHeight: number };
 
 /** O desktop é desenhado numa prancheta fixa de 1920px e reduzido com `zoom`
  *  para caber na viewport. É assim que o layout do Figma se mantém exato em
- *  qualquer largura. A altura da hero acompanha a viewport já desescalada. */
+ *  qualquer largura. A altura da hero (e da seção do método) acompanha a viewport já
+ *  desescalada. */
 function measure(): Frame {
   if (typeof window === "undefined" || typeof document === "undefined") {
-    return { scale: 1, heroHeight: 1080 };
+    return { scale: 1, heroHeight: 1080, viewportHeight: 1080 };
   }
 
   const scale =
@@ -20,11 +21,19 @@ function measure(): Frame {
   const viewportHeight =
     window.visualViewport?.height ?? document.documentElement.clientHeight;
 
-  return { scale, heroHeight: Math.max(1080, Math.ceil(viewportHeight / scale)) };
+  return {
+    scale,
+    heroHeight: Math.max(1080, Math.ceil(viewportHeight / scale)),
+    viewportHeight: Math.floor(viewportHeight / scale),
+  };
 }
 
 export function DesktopFrame({ children }: { children: ReactNode }) {
-  const [frame, setFrame] = useState<Frame>({ scale: 1, heroHeight: 1080 });
+  const [frame, setFrame] = useState<Frame>({
+    scale: 1,
+    heroHeight: 1080,
+    viewportHeight: 1080,
+  });
 
   useLayoutEffect(() => {
     let raf = 0;
@@ -35,7 +44,8 @@ export function DesktopFrame({ children }: { children: ReactNode }) {
         const next = measure();
         setFrame((current) =>
           Math.abs(current.scale - next.scale) > 1e-6 ||
-          current.heroHeight !== next.heroHeight
+          current.heroHeight !== next.heroHeight ||
+          current.viewportHeight !== next.viewportHeight
             ? next
             : current,
         );
@@ -61,6 +71,7 @@ export function DesktopFrame({ children }: { children: ReactNode }) {
           zoom: frame.scale,
           marginInline: "auto",
           ["--frame-hero-height" as string]: `${frame.heroHeight}px`,
+          ["--frame-viewport-height" as string]: `${frame.viewportHeight}px`,
         }}
       >
         {children}
