@@ -1658,7 +1658,7 @@ html::-webkit-scrollbar {
     #efebe7;
 }
 .course-manifesto:before {
-  content: "VALUE > TIME";
+  content: "CODE FLOW";
   color: #0041b00b;
   letter-spacing: -0.08em;
   white-space: nowrap;
@@ -1668,7 +1668,7 @@ html::-webkit-scrollbar {
   line-height: 1;
   position: absolute;
   bottom: -0.17em;
-  right: -0.03em;
+  right: 2.35em;
 }
 .course-primary-cta,
 .course-enroll-button {
@@ -1680,9 +1680,6 @@ html::-webkit-scrollbar {
 .course-enroll-button:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 48px #0041b040;
-}
-.course-code-window {
-  position: relative;
 }
 .flow-console {
   box-shadow:
@@ -1771,34 +1768,6 @@ html::-webkit-scrollbar {
   50% {
     opacity: 1;
     transform: scale(1);
-  }
-}
-.course-code-window:after {
-  content: "";
-  pointer-events: none;
-  inset-inline: 0;
-  background: linear-gradient(#0000, #3881ff29, #0000);
-  height: 22%;
-  animation: 4.8s ease-in-out infinite course-code-scan;
-  position: absolute;
-  top: -12%;
-}
-@keyframes course-code-scan {
-  0%,
-  12% {
-    opacity: 0;
-    transform: translateY(-120%);
-  }
-  24% {
-    opacity: 1;
-  }
-  76% {
-    opacity: 0.78;
-  }
-  90%,
-  to {
-    opacity: 0;
-    transform: translateY(570%);
   }
 }
 .course-curriculum {
@@ -2335,7 +2304,6 @@ html::-webkit-scrollbar {
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .course-code-window:after,
   .course-after-card:after,
   .course-final-orbit,
   .flow-live-dot,

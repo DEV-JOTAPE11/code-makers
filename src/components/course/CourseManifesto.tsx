@@ -4,21 +4,6 @@ import { StageReveal } from "@/components/motion-primitives";
 import { WHATSAPP_GROUP_URL } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 
-/** Linhas do "editor" que resume o método em pseudo-código. */
-const CODE_LINES: { keyword: string; assignment: string; call: string; rest: string }[] = [
-  { keyword: "const", assignment: " referencia = ", call: "sitesPremium", rest: ";" },
-  { keyword: "const", assignment: " identidade = ", call: "definirMarca", rest: "(referencia);" },
-  { keyword: "const", assignment: " estrutura = ", call: "montarSecoes", rest: "(identidade);" },
-  {
-    keyword: "const",
-    assignment: " prompt = ",
-    call: "codeFlow.prompt",
-    rest: "(estrutura);",
-  },
-];
-
-const STEPS = ["PROMPT", "GERAR", "PUBLICAR"];
-
 export function CourseManifesto({
   desktop,
   container,
@@ -33,12 +18,20 @@ export function CourseManifesto({
         desktop ? "w-[1920px] px-[210px] py-[150px]" : "px-5 py-24"
       }`}
     >
-      <div
-        className={`${container} relative z-10 ${
-          desktop ? "grid grid-cols-[1.08fr_0.92fr] items-center gap-[110px]" : ""
-        }`}
-      >
-        <StageReveal className="text-center lg:text-left">
+      {desktop && (
+        <StageReveal className="pointer-events-none absolute bottom-0 right-[-40px] h-[94%]">
+          <img
+            alt="Leonardo DiCaprio segurando uma nota de um dólar"
+            className="h-full w-auto max-w-none"
+            src={IMAGES.leonardoDicaprio}
+          />
+        </StageReveal>
+      )}
+
+      <div className={`${container} relative z-10`}>
+        <StageReveal
+          className={`text-center lg:text-left ${desktop ? "max-w-[760px]" : ""}`}
+        >
           <h2
             className={`font-['Sora:Regular',sans-serif] leading-[0.98] tracking-[-0.055em] text-[#151515] ${
               desktop ? "text-[82px]" : "text-[47px]"
@@ -70,60 +63,15 @@ export function CourseManifesto({
           </a>
         </StageReveal>
 
-        <StageReveal className={desktop ? "" : "mt-14"} delay={0.08}>
-          <div className="course-code-window overflow-hidden rounded-[22px] border border-black/10 bg-[#111] text-white shadow-[0_35px_100px_rgba(0,18,49,0.24)]">
-            <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
-              <div className="flex gap-2">
-                <span className="size-2.5 rounded-full bg-[#4388ff]" />
-                <span className="size-2.5 rounded-full bg-white/20" />
-                <span className="size-2.5 rounded-full bg-white/20" />
-              </div>
-              <span className="font-['Inter:Medium',sans-serif] text-[10px] uppercase tracking-[0.18em] text-white/40">
-                site_fora_da_curva.flow
-              </span>
-            </div>
-
-            <div className="relative p-6 sm:p-8">
-              <img
-                alt="Fluxo visual do método Code Flow"
-                className="absolute inset-0 size-full object-cover opacity-20 mix-blend-screen"
-                src={IMAGES.codeToCashFlow}
-              />
-
-              <div className="relative z-10 space-y-3 font-mono text-[13px] leading-6 sm:text-[14px]">
-                {CODE_LINES.map((line) => (
-                  <p key={line.call}>
-                    <span className="text-[#649dff]">{line.keyword}</span>
-                    {line.assignment}
-                    <span className="text-white/55">{line.call}</span>
-                    {line.rest}
-                  </p>
-                ))}
-                <p>
-                  <span className="text-[#649dff]">return</span>{" "}
-                  <span className="text-white">siteForaDaCurva</span>
-                  (prompt);
-                </p>
-              </div>
-
-              <div className="relative z-10 mt-10 grid grid-cols-3 gap-2 border-t border-white/10 pt-5 text-center">
-                {STEPS.map((step, index) => (
-                  <div
-                    key={step}
-                    className="rounded-[10px] bg-white/[0.055] px-2 py-4"
-                  >
-                    <span className="block text-[10px] text-[#70a4ff]">
-                      0{index + 1}
-                    </span>
-                    <span className="mt-1 block text-[11px] font-medium tracking-[0.08em]">
-                      {step}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </StageReveal>
+        {!desktop && (
+          <StageReveal className="-mx-5 -mb-24 mt-10 overflow-hidden" delay={0.08}>
+            <img
+              alt="Leonardo DiCaprio segurando uma nota de um dólar"
+              className="relative left-1/2 w-[128%] max-w-none -translate-x-1/2"
+              src={IMAGES.leonardoDicaprio}
+            />
+          </StageReveal>
+        )}
       </div>
     </section>
   );

@@ -2,7 +2,7 @@
 export const IMAGES = {
   heroBackground: "/assets/fundo-flow.png",
   heroRobot: "/assets/hero-robot-blue.png",
-  codeToCashFlow: "/assets/codemakers-code-to-cash-flow.png",
+  leonardoDicaprio: "/assets/leonardo-dicaprio.png",
   redTexture: "/assets/textura-vermelha.png",
   integratedStack: "/assets/stack-solar-integrado.png",
   symbol: "/code-flow-symbol.png",
