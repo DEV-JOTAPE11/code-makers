@@ -562,9 +562,6 @@ html.lenis body {
     min-height: 66px;
     margin-top: 22px;
   }
-  .group-cta-label {
-    font-size: 14px;
-  }
   .mobile-hero-robot {
     height: clamp(330px, 43svh, 380px);
   }
@@ -600,9 +597,6 @@ html.lenis body {
     min-height: 62px;
     margin-top: 18px;
     padding-left: 22px;
-  }
-  .group-cta-label {
-    font-size: 13px;
   }
   .group-cta-arrow {
     flex-basis: 40px;
@@ -2276,5 +2270,27 @@ html::-webkit-scrollbar {
       radial-gradient(circle at 100% 0, #3d9eff26, #0000 40%),
       linear-gradient(160deg, #ffffff1c 0%, #ffffff0a 45%, #ffffff05 100%),
       rgba(7, 20, 39, 0.82);
+  }
+}
+/* Botões de "Aprenda a criar sites fora da curva" no mobile: o texto nunca
+   quebra linha. A fonte acompanha a largura do container (cqi) e só cresce
+   até o tamanho original. --cta-fit-reserve é o que não é texto (padding,
+   gap e seta) e o divisor é a largura do texto por px de fonte, com folga
+   para outras fontes do sistema. */
+@media (width<=1023px) {
+  .group-cta,
+  .cta-fit-box {
+    container-type: inline-size;
+  }
+  .group-cta-label {
+    white-space: nowrap;
+    font-size: min(15px, calc((100cqi - 62px) / 21.4));
+  }
+  .cta-fit {
+    white-space: nowrap;
+    font-size: min(
+      var(--cta-fit-max),
+      calc((100cqi - var(--cta-fit-reserve)) / 21.8)
+    );
   }
 }

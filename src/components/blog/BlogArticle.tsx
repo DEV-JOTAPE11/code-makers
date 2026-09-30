@@ -105,7 +105,7 @@ export function BlogArticle({ post }: { post: BlogPost }) {
           </div>
 
           <aside className="lg:sticky lg:top-8">
-            <div className="overflow-hidden rounded-[18px] bg-[#03122c] p-7 text-white sm:p-9">
+            <div className="cta-fit-box overflow-hidden rounded-[18px] bg-[#03122c] p-7 text-white sm:p-9">
               <div className="mb-8 h-1 w-16 rounded-full bg-[#669eff]" />
               <p className="font-['Sora:Regular',sans-serif] text-[29px] leading-[1.16] tracking-[-0.025em]">
                 {post.ctaTitle}
@@ -117,9 +117,9 @@ export function BlogArticle({ post }: { post: BlogPost }) {
                 href={WHATSAPP_GROUP_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-8 flex w-full items-center justify-center rounded-full bg-white px-5 py-4 text-center font-['Inter:Medium',sans-serif] text-sm font-medium text-[#030f24] transition-colors hover:bg-[#d0e1ff] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#669eff]"
+                className="mt-8 flex w-full items-center justify-center rounded-full bg-white px-5 py-4 text-center cta-fit [--cta-fit-max:14px] [--cta-fit-reserve:44px] font-['Inter:Medium',sans-serif] text-sm font-medium text-[#030f24] transition-colors hover:bg-[#d0e1ff] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#669eff]"
               >
-                Entrar no grupo do Code Flow
+                APRENDA A CRIAR SITES FORA DA CURVA!
               </a>
             </div>
 

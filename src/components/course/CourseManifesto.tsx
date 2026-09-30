@@ -43,7 +43,7 @@ export function CourseManifesto({
               O prompt é.
             </span>
           </BlurRevealText>
-          <StageReveal>
+          <StageReveal className="cta-fit-box">
             <p
               className={`mx-auto mt-8 max-w-[720px] font-['Inter:Regular',sans-serif] leading-8 text-[#5c5652] lg:mx-0 ${
                 desktop ? "text-[19px]" : "text-[17px]"
@@ -55,12 +55,12 @@ export function CourseManifesto({
               agência.
             </p>
             <a
-              className="course-primary-cta mt-9 inline-flex min-h-14 items-center gap-6 rounded-full bg-[#171717] px-8 font-['Inter:Medium',sans-serif] text-[15px] font-medium text-white"
+              className="course-primary-cta mt-9 inline-flex min-h-14 items-center gap-6 rounded-full bg-[#171717] px-8 cta-fit [--cta-fit-max:15px] [--cta-fit-reserve:104px] font-['Inter:Medium',sans-serif] text-[15px] font-medium text-white"
               href={WHATSAPP_GROUP_URL}
               target="_blank"
               rel="noreferrer"
             >
-              Entrar no grupo do Code Flow{" "}
+              APRENDA A CRIAR SITES FORA DA CURVA!{" "}
               <span aria-hidden="true">↗</span>
             </a>
           </StageReveal>

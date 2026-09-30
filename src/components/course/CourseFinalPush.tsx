@@ -55,14 +55,14 @@ export function CourseFinalPush({
           Enquanto todo mundo gera o mesmo site, você entrega o que ninguém
           esperava.
         </BlurRevealText>
-        <StageReveal>
+        <StageReveal className="cta-fit-box">
           <a
-            className="mt-10 inline-flex min-h-15 items-center gap-6 rounded-full bg-black px-9 font-['Inter:Medium',sans-serif] text-[16px] font-medium text-white shadow-[0_20px_55px_rgba(0,0,0,0.28)]"
+            className="mt-10 inline-flex min-h-15 items-center gap-6 rounded-full bg-black px-9 cta-fit [--cta-fit-max:16px] [--cta-fit-reserve:112px] font-['Inter:Medium',sans-serif] text-[16px] font-medium text-white shadow-[0_20px_55px_rgba(0,0,0,0.28)]"
             href={WHATSAPP_GROUP_URL}
             target="_blank"
             rel="noreferrer"
           >
-            Entrar no grupo do Code Flow <span aria-hidden="true">↗</span>
+            APRENDA A CRIAR SITES FORA DA CURVA! <span aria-hidden="true">↗</span>
           </a>
         </StageReveal>
       </div>

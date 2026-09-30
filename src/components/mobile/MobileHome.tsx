@@ -37,10 +37,10 @@ export function MobileHome() {
             IA.
           </h1>
           <GroupCta
-            aria-label="Entrar no grupo do Code Flow"
+            aria-label="Aprenda a criar sites fora da curva"
             className="mobile-hero-card"
           >
-            ENTRAR NO GRUPO OFICIAL!
+            APRENDA A CRIAR SITES FORA DA CURVA!
           </GroupCta>
         </div>
 
@@ -65,18 +65,18 @@ export function MobileHome() {
         <BlurRevealText className="font-['Sora:Regular',sans-serif] text-[42px] leading-[1.08] tracking-[-1.8px]">
           Um prompt. Um site fora da curva.
         </BlurRevealText>
-        <FadeUp>
+        <FadeUp className="cta-fit-box">
           <p className="mx-auto mt-5 max-w-[330px] text-[15px] leading-6">
             Entre no grupo do Code Flow e aprenda a criar sites de nível
             agência com um único prompt.
           </p>
           <a
-            className="mt-8 inline-flex min-h-12 items-center rounded-full bg-black px-6 font-medium text-white"
+            className="mt-8 inline-flex min-h-12 items-center rounded-full bg-black px-6 cta-fit [--cta-fit-max:16px] [--cta-fit-reserve:52px] font-medium text-white"
             href={WHATSAPP_GROUP_URL}
             target="_blank"
             rel="noreferrer"
           >
-            Entrar no grupo do Code Flow
+            APRENDA A CRIAR SITES FORA DA CURVA!
           </a>
         </FadeUp>
 

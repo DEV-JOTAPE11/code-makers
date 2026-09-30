@@ -77,7 +77,7 @@ export function CourseOffer({
               </div>
             </div>
 
-            <div className={`relative z-10 bg-[#101010] ${desktop ? "p-14" : "p-7"}`}>
+            <div className={`cta-fit-box relative z-10 bg-[#101010] ${desktop ? "p-14" : "p-7"}`}>
               <div className="text-center">
                 <div className="flow-console rounded-[20px] border border-[#5895ff]/30 bg-black/35 p-5 text-left">
                   <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-4">
@@ -129,12 +129,12 @@ export function CourseOffer({
               </div>
 
               <a
-                className="course-enroll-button mt-7 flex min-h-16 w-full items-center justify-center gap-5 rounded-full bg-white px-7 text-center font-['Inter:Medium',sans-serif] text-[16px] font-semibold text-[#171717] shadow-[0_16px_45px_rgba(255,255,255,0.1)]"
+                className="course-enroll-button mt-7 flex min-h-16 w-full items-center justify-center gap-5 rounded-full bg-white px-7 text-center cta-fit [--cta-fit-max:16px] [--cta-fit-reserve:92px] font-['Inter:Medium',sans-serif] text-[16px] font-semibold text-[#171717] shadow-[0_16px_45px_rgba(255,255,255,0.1)]"
                 href={WHATSAPP_GROUP_URL}
                 target="_blank"
                 rel="noreferrer"
               >
-                ENTRAR NO GRUPO DO CODE FLOW <span aria-hidden="true">↗</span>
+                APRENDA A CRIAR SITES FORA DA CURVA! <span aria-hidden="true">↗</span>
               </a>
               <p className="mt-5 text-center text-[12px] leading-5 text-white/38">
                 Você será direcionado para o grupo do Code Flow no WhatsApp.

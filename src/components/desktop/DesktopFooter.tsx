@@ -75,7 +75,7 @@ export function DesktopFooter() {
                   <div className="relative flex shrink-0 flex-col content-stretch items-center">
                     <div className="relative flex w-full shrink-0 flex-col content-stretch items-center">
                       <div className="relative flex shrink-0 flex-col justify-center whitespace-nowrap font-['Inter:Medium',sans-serif] text-[16px] font-medium not-italic leading-[0] text-white [word-break:break-word]">
-                        <p className="leading-[24px]">Entrar no grupo do Code Flow</p>
+                        <p className="leading-[24px]">APRENDA A CRIAR SITES FORA DA CURVA!</p>
                       </div>
                     </div>
                   </div>

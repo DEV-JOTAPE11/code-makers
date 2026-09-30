@@ -90,7 +90,7 @@ export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
                 design, copy e animações de nível agência logo de primeira.
               </p>
               <GroupCta className="mt-7">
-                Entrar no grupo do Code Flow
+                APRENDA A CRIAR SITES FORA DA CURVA!
               </GroupCta>
               <p className="mt-4 text-center font-['Inter:Medium',sans-serif] text-[10px] uppercase tracking-[0.16em] text-white/35">
                 Estruturar • gerar • publicar

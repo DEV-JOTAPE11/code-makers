@@ -60,7 +60,7 @@ function HeroCta() {
       href={WHATSAPP_GROUP_URL}
       target="_blank"
       rel="noreferrer"
-      aria-label="Entrar no grupo do Code Flow"
+      aria-label="Aprenda a criar sites fora da curva"
       className="group block w-full cursor-pointer rounded-[12px] text-left outline-none focus-visible:ring-2 focus-visible:ring-white/90 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
     >
       <CardReveal className="desktop-hero-cta-card relative flex w-full shrink-0 flex-col content-stretch items-center justify-center gap-[42px] overflow-clip rounded-[16px] p-[26px] shadow-[0_22px_58px_rgba(0,12,32,0.34),inset_0_1px_0_rgba(255,255,255,0.18)] transition-[transform,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-1 group-hover:shadow-[0_28px_68px_rgba(0,12,32,0.46),0_0_34px_rgba(0,65,176,0.18),inset_0_1px_0_rgba(255,255,255,0.24)]">
@@ -76,9 +76,9 @@ function HeroCta() {
         </div>
 
         <div className="relative flex w-full shrink-0 items-center justify-between overflow-clip content-stretch">
-          <div className="relative flex shrink-0 flex-col content-stretch items-start">
-            <div className="relative flex shrink-0 flex-col justify-center whitespace-nowrap font-['Inter:Bold',sans-serif] text-[19px] font-bold leading-[0] text-white [word-break:break-word]">
-              <p className="leading-[28px]">ENTRAR NO GRUPO OFICIAL</p>
+          <div className="relative flex min-w-0 flex-1 flex-col content-stretch items-start">
+            <div className="relative flex flex-col justify-center font-['Inter:Bold',sans-serif] text-[19px] font-bold leading-[0] text-white [word-break:break-word]">
+              <p className="leading-[26px]">APRENDA A CRIAR SITES FORA DA CURVA!</p>
             </div>
           </div>
           <div className="relative flex size-[44px] shrink-0 origin-center flex-col content-stretch items-start justify-center transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:rotate-45 group-focus-visible:rotate-45">
