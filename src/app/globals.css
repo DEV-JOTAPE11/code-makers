@@ -317,6 +317,116 @@ html.lenis body {
     #000 86%
   );
 }
+/* Botão de entrar no grupo (hero mobile e cartão do método), ver GroupCta.
+   Link comum feito só com CSS: borda prateada no border-box, fundo escuro
+   no padding-box e um reflexo que atravessa o botão animando só transform.
+   Nada de WebGL, máscara, filtro ou estado de toque. */
+.group-cta {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  min-height: 70px;
+  padding: 11px 12px 11px 22px;
+  overflow: hidden;
+  border: 2px solid #0000;
+  border-radius: 999px;
+  color: #fff;
+  text-align: left;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  background:
+    radial-gradient(circle at 76% 120%, #0041b042, #0000 42%) padding-box,
+    radial-gradient(circle at 22% -60%, #ffffff1c, #0000 40%) padding-box,
+    repeating-linear-gradient(115deg, #0000 0 7px, #ffffff05 7px 8px)
+      padding-box,
+    linear-gradient(#111 0%, #050505 100%) padding-box,
+    linear-gradient(
+        135deg,
+        #f4f6fa 0%,
+        #5d6068 30%,
+        #e9ecf2 55%,
+        #26282d 80%,
+        #c9ccd3 100%
+      )
+      border-box;
+  box-shadow:
+    0 18px 42px #000b1d61,
+    0 0 26px #0041b029;
+}
+.group-cta:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  width: 30%;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    #0000,
+    #ffffff0a 30%,
+    #ffffff3d 50%,
+    #3a82ff24 70%,
+    #0000
+  );
+  opacity: 0;
+  transform: translateX(-130%) skewX(-18deg);
+  animation: group-cta-shine 4.6s cubic-bezier(0.45, 0, 0.2, 1) infinite;
+}
+@keyframes group-cta-shine {
+  0%,
+  18% {
+    opacity: 0;
+    transform: translateX(-130%) skewX(-18deg);
+  }
+  27% {
+    opacity: 1;
+  }
+  62%,
+  to {
+    opacity: 0;
+    transform: translateX(430%) skewX(-18deg);
+  }
+}
+.group-cta:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+.group-cta-label {
+  position: relative;
+  z-index: 1;
+  font-family: Sora, sans-serif;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+.group-cta-arrow {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ffffff30;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(145deg, #0b51c9, #002b76);
+  box-shadow:
+    0 7px 20px #0041b061,
+    inset 0 1px #ffffff3d;
+}
+.group-cta-arrow svg {
+  width: 45%;
+  height: 45%;
+}
 @media (width<=1023px) {
   .mobile-nav-panel {
     isolation: isolate;
@@ -427,12 +537,6 @@ html.lenis body {
   .mobile-hero-card {
     margin-top: 28px;
   }
-  .hero-gradient-motion:before,
-  .hero-gradient-motion:after,
-  .hero-gradient-shadow-motion:before,
-  .hero-gradient-shadow-motion:after {
-    filter: blur(58px);
-  }
 }
 @media (width<=430px) and (height<=850px) {
   .site-header {
@@ -465,7 +569,11 @@ html.lenis body {
     line-height: 1.24;
   }
   .mobile-hero-card {
+    min-height: 66px;
     margin-top: 22px;
+  }
+  .group-cta-label {
+    font-size: 14px;
   }
   .mobile-hero-robot {
     height: clamp(330px, 43svh, 380px);
@@ -499,7 +607,17 @@ html.lenis body {
     line-height: 1.23;
   }
   .mobile-hero-card {
+    min-height: 62px;
     margin-top: 18px;
+    padding-left: 20px;
+  }
+  .group-cta-label {
+    font-size: 13px;
+  }
+  .group-cta-arrow {
+    flex-basis: 40px;
+    width: 40px;
+    height: 40px;
   }
   .mobile-hero-robot {
     height: clamp(285px, 40svh, 320px);
@@ -993,6 +1111,9 @@ html::-webkit-scrollbar {
 @media (prefers-reduced-motion: reduce) {
   .shiny-cta-surface:after {
     animation-duration: 7s;
+  }
+  .group-cta:after {
+    animation: none;
   }
   .section-triangle-spin {
     animation: none;
@@ -2092,5 +2213,78 @@ html::-webkit-scrollbar {
   .course-primary-cta,
   .course-enroll-button {
     transition: none;
+  }
+}
+/* Fundo parado no mobile (hero e seção do método): segurar o dedo num dos
+   botões em cima das manchas animadas, desfocadas e com blend congelava a
+   página. As manchas ficam fixas, sem desfoque nem blend (o degradê radial
+   já some antes da borda), e o cartão perde o vidro. Fica no fim do arquivo
+   para vencer as regras base, que têm o mesmo peso. */
+@media (width<=1023px) {
+  .hero-gradient-motion,
+  .hero-gradient-shadow-motion {
+    isolation: auto;
+  }
+  .hero-gradient-motion:before,
+  .hero-gradient-motion:after,
+  .hero-gradient-shadow-motion:before,
+  .hero-gradient-shadow-motion:after {
+    animation: none;
+    filter: none;
+    mix-blend-mode: normal;
+    will-change: auto;
+  }
+  /* Sem o desfoque, o degradê precisa terminar dentro da elipse
+     (closest-side), senão a borda dela aparece. */
+  .hero-gradient-motion:before {
+    background: radial-gradient(
+      closest-side,
+      #e1ecffd1 0%,
+      #5392ffad 30%,
+      #0041b06b 52%,
+      #02163800 76%
+    );
+  }
+  .hero-gradient-motion:after {
+    background: radial-gradient(
+      closest-side,
+      #4e8cf8c2 0%,
+      #0041b09e 34%,
+      #0c327461 54%,
+      #010f2700 78%
+    );
+  }
+  .hero-gradient-shadow-motion:before {
+    background: radial-gradient(
+      closest-side,
+      #000307fa 0%,
+      #010918db 34%,
+      #031f5094 55%,
+      #031f5000 78%
+    );
+  }
+  .hero-gradient-shadow-motion:after {
+    background: radial-gradient(
+      closest-side,
+      #00040af0 0%,
+      #020e22cc 38%,
+      #05255c7a 58%,
+      #05255c00 80%
+    );
+  }
+  .conversion-rail-signal {
+    display: none;
+  }
+  .conversion-decision-glow {
+    filter: none;
+    opacity: 0.6;
+  }
+  .liquid-glass {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background:
+      radial-gradient(circle at 100% 0, #3d9eff26, #0000 40%),
+      linear-gradient(160deg, #ffffff1c 0%, #ffffff0a 45%, #ffffff05 100%),
+      rgba(7, 20, 39, 0.82);
   }
 }

@@ -1,8 +1,8 @@
 "use client";
 
 import { BlurRevealText } from "@/components/BlurRevealText";
-import { GroupCta } from "@/components/GroupCta";
 import { StageReveal } from "@/components/motion-primitives";
+import { WHATSAPP_GROUP_URL } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 
 export function CourseManifesto({
@@ -54,9 +54,15 @@ export function CourseManifesto({
               que entrega um site com direção de arte, copy e animações de
               agência.
             </p>
-            <GroupCta className="mt-9">
-              Entrar no grupo do Code Flow
-            </GroupCta>
+            <a
+              className="course-primary-cta mt-9 inline-flex min-h-14 items-center gap-6 rounded-full bg-[#171717] px-8 font-['Inter:Medium',sans-serif] text-[15px] font-medium text-white"
+              href={WHATSAPP_GROUP_URL}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Entrar no grupo do Code Flow{" "}
+              <span aria-hidden="true">↗</span>
+            </a>
           </StageReveal>
         </div>
 
