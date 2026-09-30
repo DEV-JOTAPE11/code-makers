@@ -318,114 +318,87 @@ html.lenis body {
   );
 }
 /* Botão de entrar no grupo (hero mobile e cartão do método), ver GroupCta.
-   Link comum feito só com CSS: borda prateada no border-box, fundo escuro
-   no padding-box e um reflexo que atravessa o botão animando só transform.
-   Nada de WebGL, máscara, filtro ou estado de toque. */
-.group-cta {
+   Mesmo botão da hero da Globosat: um link simples, com um brilho girando
+   atrás da borda. Sem WebGL, máscara ou estado de toque. */
+.btn-glow {
   position: relative;
   isolation: isolate;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  width: 100%;
-  min-height: 70px;
-  padding: 11px 12px 11px 22px;
+  display: inline-block;
   overflow: hidden;
-  border: 2px solid #0000;
-  border-radius: 999px;
+  padding: 3px;
+  border-radius: 1000px;
+  background: radial-gradient(
+    68.5% 119.738% at 49.1% 100%,
+    #0041c880,
+    #3c6edc80
+  );
+  box-shadow: 0 0 40px #0041c866;
   color: #fff;
-  text-align: left;
   text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.4s,
+    box-shadow 0.4s;
   -webkit-tap-highlight-color: transparent;
-  background:
-    radial-gradient(circle at 76% 120%, #0041b042, #0000 42%) padding-box,
-    radial-gradient(circle at 22% -60%, #ffffff1c, #0000 40%) padding-box,
-    repeating-linear-gradient(115deg, #0000 0 7px, #ffffff05 7px 8px)
-      padding-box,
-    linear-gradient(#111 0%, #050505 100%) padding-box,
-    linear-gradient(
-        135deg,
-        #f4f6fa 0%,
-        #5d6068 30%,
-        #e9ecf2 55%,
-        #26282d 80%,
-        #c9ccd3 100%
-      )
-      border-box;
-  box-shadow:
-    0 18px 42px #000b1d61,
-    0 0 26px #0041b029;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
-.group-cta:after {
+.btn-glow:hover {
+  transform: translateY(-2px) scale(0.99);
+  box-shadow: 0 0 80px 10px #0041c866;
+}
+.btn-glow:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 3px;
+}
+.btn-glow:before {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 0;
-  width: 30%;
-  pointer-events: none;
-  background: linear-gradient(
-    90deg,
-    #0000,
-    #ffffff0a 30%,
-    #ffffff3d 50%,
-    #3a82ff24 70%,
-    #0000
-  );
-  opacity: 0;
-  transform: translateX(-130%) skewX(-18deg);
-  animation: group-cta-shine 4.6s cubic-bezier(0.45, 0, 0.2, 1) infinite;
-}
-@keyframes group-cta-shine {
-  0%,
-  18% {
-    opacity: 0;
-    transform: translateX(-130%) skewX(-18deg);
-  }
-  27% {
-    opacity: 1;
-  }
-  62%,
-  to {
-    opacity: 0;
-    transform: translateX(430%) skewX(-18deg);
-  }
-}
-.group-cta:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: 4px;
-}
-.group-cta-label {
-  position: relative;
+  top: -40%;
+  left: 50%;
   z-index: 1;
+  width: 20px;
+  height: 180px;
+  border-radius: 8px;
+  background: #fff;
+  filter: blur(10px);
+  transform-origin: bottom;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: btn-glow-rotate 5s linear infinite;
+}
+.btn-glow-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 28px;
+  border-radius: 1000px;
+  background: radial-gradient(53.6% 100% at 50% 100%, #0a78dc, #003cc8);
+  color: #fff;
   font-family: Sora, sans-serif;
   font-size: 15px;
-  font-weight: 650;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-  text-wrap: balance;
+  font-weight: 600;
+  line-height: 1.2;
+  transition: all 0.5s;
 }
-.group-cta-arrow {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  place-items: center;
-  flex: 0 0 44px;
-  width: 44px;
-  height: 44px;
-  border: 1px solid #ffffff30;
-  border-radius: 999px;
-  color: #fff;
-  background: linear-gradient(145deg, #0b51c9, #002b76);
-  box-shadow:
-    0 7px 20px #0041b061,
-    inset 0 1px #ffffff3d;
+.btn-glow-inner svg {
+  flex-shrink: 0;
+  transition: transform 0.4s;
 }
-.group-cta-arrow svg {
-  width: 45%;
-  height: 45%;
+.btn-glow:hover .btn-glow-inner svg {
+  transform: translateX(3px);
+}
+@keyframes btn-glow-rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 @media (width<=1023px) {
   .mobile-nav-panel {
@@ -575,11 +548,7 @@ html.lenis body {
     line-height: 1.24;
   }
   .mobile-hero-card {
-    min-height: 66px;
     margin-top: 22px;
-  }
-  .group-cta-label {
-    font-size: 14px;
   }
   .mobile-hero-robot {
     height: clamp(330px, 43svh, 380px);
@@ -613,17 +582,11 @@ html.lenis body {
     line-height: 1.23;
   }
   .mobile-hero-card {
-    min-height: 62px;
     margin-top: 18px;
-    padding-left: 20px;
   }
-  .group-cta-label {
-    font-size: 13px;
-  }
-  .group-cta-arrow {
-    flex-basis: 40px;
-    width: 40px;
-    height: 40px;
+  .btn-glow-inner {
+    padding-inline: 22px;
+    font-size: 14px;
   }
   .mobile-hero-robot {
     height: clamp(285px, 40svh, 320px);
@@ -1118,7 +1081,7 @@ html::-webkit-scrollbar {
   .shiny-cta-surface:after {
     animation-duration: 7s;
   }
-  .group-cta:after {
+  .btn-glow:before {
     animation: none;
   }
   .section-triangle-spin {

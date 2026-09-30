@@ -89,7 +89,7 @@ export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
                 Você aprende a estrutura exata de prompt que gera sites com
                 design, copy e animações de nível agência logo de primeira.
               </p>
-              <GroupCta className="mt-7">
+              <GroupCta className="mt-7 w-full">
                 Entrar no grupo do Code Flow
               </GroupCta>
               <p className="mt-4 text-center font-['Inter:Medium',sans-serif] text-[10px] uppercase tracking-[0.16em] text-white/35">
