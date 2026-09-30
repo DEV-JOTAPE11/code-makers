@@ -32,8 +32,14 @@ export function ShinyCta({
   );
 
   if (rest.href) {
+    // Sem arraste nem menu de contexto: o toque longo no link travava o mobile.
     return (
-      <a className={classes} {...rest}>
+      <a
+        className={classes}
+        draggable={false}
+        onContextMenu={(event) => event.preventDefault()}
+        {...rest}
+      >
         {content}
       </a>
     );

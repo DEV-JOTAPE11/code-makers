@@ -43,7 +43,7 @@ export function MobileHome() {
             target="_blank"
             rel="noreferrer"
           >
-            ENTRAR NO GRUPO OFICIAL
+            ENTRAR NO GRUPO OFICIAL!
           </ShinyCta>
         </div>
 
