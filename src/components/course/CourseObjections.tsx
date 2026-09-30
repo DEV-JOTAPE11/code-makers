@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 
+import { BlurRevealText } from "@/components/BlurRevealText";
 import { StageReveal } from "@/components/motion-primitives";
 import { FAQ } from "@/data/site";
 import { EASE } from "@/lib/constants";
@@ -55,19 +56,21 @@ export function CourseObjections({
         }`}
         layout
       >
-        <StageReveal className="text-center lg:text-left">
-          <h2
+        <div className="text-center lg:text-left">
+          <BlurRevealText
             className={`font-['Sora:Regular',sans-serif] leading-[0.98] tracking-[-0.055em] text-[#171717] ${
               desktop ? "text-[72px]" : "text-[46px]"
             }`}
           >
             O que todo mundo pergunta antes de entrar.
-          </h2>
-          <p className="mx-auto mt-7 max-w-[500px] text-[17px] leading-7 text-[#68605b] lg:mx-0">
-            O método existe para tirar você do site genérico e colocar um site
-            fora da curva no ar com um único prompt.
-          </p>
-        </StageReveal>
+          </BlurRevealText>
+          <StageReveal>
+            <p className="mx-auto mt-7 max-w-[500px] text-[17px] leading-7 text-[#68605b] lg:mx-0">
+              O método existe para tirar você do site genérico e colocar um site
+              fora da curva no ar com um único prompt.
+            </p>
+          </StageReveal>
+        </div>
 
         <StageReveal className={desktop ? "" : "mt-12"} delay={0.08}>
           <motion.div

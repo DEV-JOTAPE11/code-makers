@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { useEffect, useRef, type ReactNode } from "react";
+import { useRef, type ReactNode } from "react";
 import gsap from "gsap";
 
 import { EASE } from "@/lib/constants";
@@ -120,41 +120,6 @@ export function MagneticHover({
       }}
       style={{ willChange: "transform" }}
     >
-      {children}
-    </div>
-  );
-}
-
-/** Stagger em GSAP aplicado aos filhos diretos, usado na hero. */
-export function GsapStagger({ children, className }: RevealProps) {
-  const container = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const element = container.current;
-    if (!element) return;
-
-    const targets = Array.from(element.children);
-    const context = gsap.context(() => {
-      gsap.fromTo(
-        targets,
-        { opacity: 0, y: 32, filter: "blur(6px)" },
-        {
-          opacity: 1,
-          y: 0,
-          filter: "blur(0px)",
-          duration: 0.9,
-          stagger: 0.15,
-          ease: "power3.out",
-          delay: 0.15,
-        },
-      );
-    }, element);
-
-    return () => context.revert();
-  }, []);
-
-  return (
-    <div ref={container} className={className}>
       {children}
     </div>
   );

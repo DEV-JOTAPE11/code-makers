@@ -1,5 +1,6 @@
 "use client";
 
+import { BlurRevealText } from "@/components/BlurRevealText";
 import { MagneticHover } from "@/components/motion-primitives";
 import { WHATSAPP_GROUP_URL } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
@@ -48,10 +49,13 @@ export function DesktopFooter() {
         <div className="relative flex w-[640px] max-w-[640px] shrink-0 flex-col content-stretch items-center gap-[34px] text-center">
           <div className="relative flex w-full shrink-0 flex-col content-stretch items-center gap-[22px]">
             <div className="relative w-full shrink-0">
-              <div className="whitespace-nowrap text-center font-['Sora:Regular',sans-serif] text-[60px] leading-[1.12] tracking-[-1.2px] text-black">
+              <BlurRevealText
+                as="div"
+                className="whitespace-nowrap text-center font-['Sora:Regular',sans-serif] text-[60px] leading-[1.12] tracking-[-1.2px] text-black"
+              >
                 <p>Um prompt. Um site</p>
                 <p>fora da curva.</p>
-              </div>
+              </BlurRevealText>
             </div>
             <div className="relative flex w-full shrink-0 flex-col items-center text-center font-['Inter:Regular',sans-serif] text-[16px] font-normal not-italic leading-[24px] text-[#171717] [word-break:break-word]">
               <p>Entre no grupo do Code Flow e aprenda a criar sites</p>

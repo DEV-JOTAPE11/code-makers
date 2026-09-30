@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { BlurRevealText } from "@/components/BlurRevealText";
 import type { BlogPost } from "@/data/blog";
 import { WHATSAPP_GROUP_URL } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
@@ -35,7 +36,7 @@ export function BlogArticle({ post }: { post: BlogPost }) {
       <article className="mx-auto max-w-[1320px] px-5 pb-24 pt-14 sm:px-8 lg:px-12 lg:pt-20">
         <div className="grid items-end gap-10 lg:grid-cols-[minmax(0,1fr)_300px]">
           <div>
-            <h1 className="max-w-[940px] font-['Sora:Regular',sans-serif] text-[clamp(2.55rem,5vw,5rem)] font-normal leading-[1.02] tracking-[-0.045em]">
+            <h1 className="anim-entrada max-w-[940px] font-['Sora:Regular',sans-serif] text-[clamp(2.55rem,5vw,5rem)] font-normal leading-[1.02] tracking-[-0.045em]">
               {post.title}
             </h1>
             <p className="mt-7 max-w-[820px] font-['Inter:Regular',sans-serif] text-lg leading-8 text-[#46525a] sm:text-xl">
@@ -78,9 +79,9 @@ export function BlogArticle({ post }: { post: BlogPost }) {
                     <span className="mt-1 font-['Inter:Medium',sans-serif] text-sm font-medium text-[#0041b0]">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <h2 className="font-['Sora:Regular',sans-serif] text-[30px] leading-[1.18] tracking-[-0.025em] sm:text-[38px]">
+                    <BlurRevealText className="font-['Sora:Regular',sans-serif] text-[30px] leading-[1.18] tracking-[-0.025em] sm:text-[38px]">
                       {section.title}
-                    </h2>
+                    </BlurRevealText>
                   </div>
 
                   <div className="space-y-5 pl-0 font-['Inter:Regular',sans-serif] text-[17px] leading-8 text-[#46525a] sm:pl-10 sm:text-lg">

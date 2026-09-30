@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 
+import { BlurRevealText } from "@/components/BlurRevealText";
 import { GroupCta } from "@/components/GroupCta";
 import { LiquidMetalBorder } from "@/components/LiquidMetalBorder";
 import { EASE } from "@/lib/constants";
@@ -50,17 +51,13 @@ export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
           desktop ? "flex min-h-0 w-[1500px] flex-1 flex-col" : "max-w-[430px]"
         }`}
       >
-        <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.35 }}
-          transition={{ duration: 0.72, ease: EASE }}
+        <div
           className={`conversion-rail-hero text-center lg:text-left ${
             desktop ? "grid grid-cols-[1.15fr_0.85fr] items-center gap-24" : ""
           }`}
         >
           <div>
-            <h2
+            <BlurRevealText
               className={`font-['Sora:Regular',sans-serif] font-normal leading-[0.98] tracking-[-0.055em] ${
                 desktop ? "max-w-[920px] text-[78px]" : "text-[46px]"
               }`}
@@ -69,10 +66,16 @@ export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
               <span className="mt-3 block text-[#4388ff]">
                 Esse é o método Code Flow.
               </span>
-            </h2>
+            </BlurRevealText>
           </div>
 
-          <div className={`relative isolate ${desktop ? "" : "mt-9"}`}>
+          <motion.div
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.35 }}
+            transition={{ duration: 0.72, ease: EASE }}
+            className={`relative isolate ${desktop ? "" : "mt-9"}`}
+          >
             <div aria-hidden="true" className="conversion-decision-glow" />
             <div className="conversion-decision-card liquid-glass">
               <LiquidMetalBorder />
@@ -93,8 +96,8 @@ export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
                 Estruturar • gerar • publicar
               </p>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
 
         {/* No desktop a seção tem a altura da janela e as mãos ocupam o que
             sobra dela, sem distorcer; os braços cortados somem num fade

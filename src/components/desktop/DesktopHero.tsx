@@ -1,7 +1,7 @@
 "use client";
 
 import { LiquidMetalBorder } from "@/components/LiquidMetalBorder";
-import { CardReveal, GsapStagger } from "@/components/motion-primitives";
+import { CardReveal } from "@/components/motion-primitives";
 import { WHATSAPP_GROUP_URL } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 
@@ -112,13 +112,13 @@ export function DesktopHero() {
       <HeroBackdrop />
 
       <div className="relative left-[-9px] flex w-full max-w-[1430px] shrink-0 flex-col content-stretch items-center justify-center">
-        <GsapStagger className="relative flex w-full shrink-0 flex-col content-stretch items-center justify-center gap-[130px]">
+        <div className="relative flex w-full shrink-0 flex-col content-stretch items-center justify-center gap-[130px]">
           {/* Sem overflow-clip: o card é o item mais alto da linha, e o
               -translate-y do hover cortava a borda de cima. */}
           <div className="relative z-20 flex w-full shrink-0 items-center justify-between content-stretch">
             <div className="relative h-[152px] min-w-px max-w-[420px] flex-[1_0_0]">
               <div className="absolute left-0 right-0 top-[-1.03px] flex flex-col content-stretch items-start">
-                <h1 className="relative flex shrink-0 flex-col justify-center whitespace-nowrap font-['Sora:Regular',sans-serif] text-[30px] font-normal leading-[0] text-white [word-break:break-word]">
+                <h1 className="anim-entrada relative flex shrink-0 flex-col justify-center whitespace-nowrap font-['Sora:Regular',sans-serif] text-[30px] font-normal leading-[0] text-white [word-break:break-word]">
                   <span className="mb-0 whitespace-pre leading-[38px]">
                     Um único prompt.
                   </span>
@@ -140,11 +140,11 @@ export function DesktopHero() {
             </div>
           </div>
 
-          <div className="relative flex w-full shrink-0 items-center justify-between whitespace-nowrap font-['Sora:Regular',sans-serif] text-[150px] font-normal uppercase leading-[223.2px] text-white">
+          <div className="anim-entrada relative flex w-full shrink-0 items-center justify-between whitespace-nowrap font-['Sora:Regular',sans-serif] text-[150px] font-normal uppercase leading-[223.2px] text-white">
             <p>Code</p>
             <p>Flow</p>
           </div>
-        </GsapStagger>
+        </div>
       </div>
 
       <div

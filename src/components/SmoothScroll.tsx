@@ -35,6 +35,23 @@ function LenisBridge() {
       window.removeEventListener("codemakers:navigate-section", onNavigate);
   }, [lenis]);
 
+  /* As revelações dos títulos (BlurRevealText) medem a posição de cada título
+     ao montar, mas a página ainda muda de altura depois: o `zoom` do desktop
+     entra um quadro depois, e imagens e fontes terminam de carregar. */
+  useEffect(() => {
+    let timeout = 0;
+    const observer = new ResizeObserver(() => {
+      window.clearTimeout(timeout);
+      timeout = window.setTimeout(() => ScrollTrigger.refresh(), 150);
+    });
+    observer.observe(document.body);
+
+    return () => {
+      window.clearTimeout(timeout);
+      observer.disconnect();
+    };
+  }, []);
+
   return null;
 }
 

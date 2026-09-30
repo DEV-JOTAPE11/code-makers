@@ -1,5 +1,6 @@
 "use client";
 
+import { BlurRevealText } from "@/components/BlurRevealText";
 import { StageReveal } from "@/components/motion-primitives";
 import { IMAGES } from "@/lib/images";
 
@@ -32,15 +33,15 @@ export function CourseTransformation({
       }`}
     >
       <div className={container}>
-        <StageReveal className="text-center">
-          <h2
+        <div className="text-center">
+          <BlurRevealText
             className={`mx-auto max-w-[1320px] font-['Sora:Regular',sans-serif] leading-[0.98] tracking-[-0.05em] text-[#171717] ${
               desktop ? "text-[68px]" : "text-[42px]"
             }`}
           >
             Pare de aceitar o site genérico que a IA te entrega.
-          </h2>
-        </StageReveal>
+          </BlurRevealText>
+        </div>
 
         <div
           className={`mt-16 grid overflow-hidden rounded-[24px] border border-black/10 ${
@@ -53,7 +54,8 @@ export function CourseTransformation({
                 desktop ? "min-h-[650px] p-14" : "min-h-[520px] p-7"
               }`}
             >
-              <h3
+              <BlurRevealText
+                as="h3"
                 className={`font-['Sora:Regular',sans-serif] leading-none tracking-[-0.045em] text-white/42 ${
                   desktop ? "text-[66px]" : "text-[43px]"
                 }`}
@@ -63,7 +65,7 @@ export function CourseTransformation({
                 Mais um template.
                 <br />
                 Mesmo resultado.
-              </h3>
+              </BlurRevealText>
               <ul className="mt-16 space-y-4 text-[15px] text-white/50">
                 {BEFORE.map((item) => (
                   <li
@@ -90,7 +92,8 @@ export function CourseTransformation({
                 src={IMAGES.redTexture}
               />
               <div className="relative z-10">
-                <h3
+                <BlurRevealText
+                  as="h3"
                   className={`font-['Sora:Regular',sans-serif] leading-none tracking-[-0.045em] ${
                     desktop ? "text-[66px]" : "text-[43px]"
                   }`}
@@ -100,7 +103,7 @@ export function CourseTransformation({
                   Um site.
                   <br />
                   Fora da curva.
-                </h3>
+                </BlurRevealText>
                 <ul className="mt-16 space-y-4 text-[15px] text-white/82">
                   {AFTER.map((item) => (
                     <li

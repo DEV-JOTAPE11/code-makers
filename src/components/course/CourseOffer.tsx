@@ -1,5 +1,6 @@
 "use client";
 
+import { BlurRevealText } from "@/components/BlurRevealText";
 import { StageReveal } from "@/components/motion-primitives";
 import { WHATSAPP_GROUP_URL } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
@@ -47,7 +48,7 @@ export function CourseOffer({
               </div>
 
               <div className="relative z-10 flex h-full flex-col text-center lg:text-left">
-                <h2
+                <BlurRevealText
                   className={`font-['Sora:Regular',sans-serif] leading-[0.95] tracking-[-0.06em] ${
                     desktop ? "text-[76px]" : "text-[52px]"
                   }`}
@@ -55,7 +56,7 @@ export function CourseOffer({
                   Um prompt.
                   <br />
                   Um site fora da curva.
-                </h2>
+                </BlurRevealText>
                 <p className="mx-auto mt-7 max-w-[520px] text-[17px] leading-7 text-white/72 lg:mx-0">
                   Estrutura, direção de arte e publicação. Tudo o que você
                   precisa para gerar sites que ninguém acredita que foram feitos

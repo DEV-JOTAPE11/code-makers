@@ -1,5 +1,6 @@
 "use client";
 
+import { BlurRevealText } from "@/components/BlurRevealText";
 import { StageReveal } from "@/components/motion-primitives";
 import { COURSE_MODULES } from "@/data/site";
 import { IMAGES } from "@/lib/images";
@@ -20,23 +21,23 @@ export function CourseCurriculum({
       }`}
     >
       <div className={`${container} relative z-10`}>
-        <StageReveal>
-          <div
-            className={`course-curriculum-header ${
-              desktop ? "grid grid-cols-[1.08fr_0.52fr] items-end gap-[120px]" : ""
-            }`}
-          >
-            <div className="text-center lg:text-left">
-              <h2
-                className={`mx-auto max-w-[980px] font-['Sora:Regular',sans-serif] leading-[0.95] tracking-[-0.06em] lg:mx-0 ${
-                  desktop ? "text-[82px]" : "text-[49px]"
-                }`}
-              >
-                4 módulos. Do zero ao site fora da curva.
-              </h2>
-            </div>
+        <div
+          className={`course-curriculum-header ${
+            desktop ? "grid grid-cols-[1.08fr_0.52fr] items-end gap-[120px]" : ""
+          }`}
+        >
+          <div className="text-center lg:text-left">
+            <BlurRevealText
+              className={`mx-auto max-w-[980px] font-['Sora:Regular',sans-serif] leading-[0.95] tracking-[-0.06em] lg:mx-0 ${
+                desktop ? "text-[82px]" : "text-[49px]"
+              }`}
+            >
+              4 módulos. Do zero ao site fora da curva.
+            </BlurRevealText>
+          </div>
 
-            <div className={`course-route-summary ${desktop ? "mb-1" : "mt-9"}`}>
+          <StageReveal className={desktop ? "mb-1" : "mt-9"}>
+            <div className="course-route-summary">
               <div className="course-route-summary-head flex items-center justify-between pb-5">
                 <span className="course-route-kicker font-['Inter:Medium',sans-serif] text-[10px] uppercase tracking-[0.2em]">
                   Aprenda fazendo
@@ -51,8 +52,8 @@ export function CourseCurriculum({
                 precisar.
               </p>
             </div>
-          </div>
-        </StageReveal>
+          </StageReveal>
+        </div>
 
         <div id="projects" className="course-module-roadmap mt-20">
           {COURSE_MODULES.map((module, index) => (
@@ -88,7 +89,9 @@ export function CourseCurriculum({
                       <span>MÓDULO 0{index + 1}</span>
                       <span>ETAPA {module.phase}</span>
                     </div>
-                    <h3 className="course-module-title">{module.title}</h3>
+                    <BlurRevealText as="h3" className="course-module-title">
+                      {module.title}
+                    </BlurRevealText>
                     <p className="course-module-description">{module.text}</p>
                   </div>
 

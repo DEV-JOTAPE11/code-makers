@@ -265,6 +265,34 @@ html.lenis body {
   will-change: transform;
   animation: 1.42s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both hero-robot-arrival;
 }
+/* Entrada dos títulos da hero, trazida do lp-jtp-wp (`gsapEntrada`): sobe
+   50px saindo do desfoque. Os outros títulos usam o BlurRevealText. */
+@keyframes gsapEntrada {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+    filter: blur(18px);
+  }
+  40% {
+    opacity: 0.6;
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+.anim-entrada {
+  opacity: 0;
+  animation: gsapEntrada 2.4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .anim-entrada {
+    opacity: 1;
+    animation: none;
+  }
+}
 .desktop-hero-section {
   height: var(--frame-hero-height, 1080px);
   min-height: var(--frame-hero-height, 1080px);

@@ -1,5 +1,6 @@
 "use client";
 
+import { BlurRevealText } from "@/components/BlurRevealText";
 import { ConversionRail } from "@/components/ConversionRail";
 import { CourseSalesJourney } from "@/components/course/CourseSalesJourney";
 import { GroupCta } from "@/components/GroupCta";
@@ -28,10 +29,10 @@ export function MobileHome() {
         />
 
         <div className="mobile-hero-content relative z-10 mx-auto flex max-w-[430px] flex-col items-center text-center">
-          <p className="mobile-hero-wordmark font-['Sora:Regular',sans-serif] text-[44px] leading-none tracking-[-2px]">
+          <p className="mobile-hero-wordmark anim-entrada font-['Sora:Regular',sans-serif] text-[44px] leading-none tracking-[-2px]">
             CODE FLOW
           </p>
-          <h1 className="mobile-hero-heading mx-auto mt-5 max-w-[390px] font-['Sora:Regular',sans-serif] text-[24px] leading-[1.28] tracking-[-0.6px]">
+          <h1 className="mobile-hero-heading anim-entrada mx-auto mt-5 max-w-[390px] font-['Sora:Regular',sans-serif] text-[24px] leading-[1.28] tracking-[-0.6px]">
             Um único prompt. Um site fora da curva. Sem programar, sem cara de
             IA.
           </h1>
@@ -61,10 +62,10 @@ export function MobileHome() {
         id="contact"
         className="mobile-footer-gradient px-5 pb-10 pt-20 text-center"
       >
+        <BlurRevealText className="font-['Sora:Regular',sans-serif] text-[42px] leading-[1.08] tracking-[-1.8px]">
+          Um prompt. Um site fora da curva.
+        </BlurRevealText>
         <FadeUp>
-          <h2 className="font-['Sora:Regular',sans-serif] text-[42px] leading-[1.08] tracking-[-1.8px]">
-            Um prompt. Um site fora da curva.
-          </h2>
           <p className="mx-auto mt-5 max-w-[330px] text-[15px] leading-6">
             Entre no grupo do Code Flow e aprenda a criar sites de nível
             agência com um único prompt.
