@@ -13,6 +13,10 @@ import { useEffect, useRef } from "react";
 const BADGE_OBJECT_PX = 46 * 8;
 const BADGE_DIAGONAL = Math.hypot(142, 46);
 
+/* No mobile e em telas de toque o WebGL travava a página ao tocar no botão:
+   lá fica só o gradiente metálico estático do CSS. */
+const STATIC_BORDER_QUERY = "(max-width: 1023px), (pointer: coarse)";
+
 function uniformsFor(width: number, height: number) {
   const spread = Math.max(Math.hypot(width, height) / BADGE_DIAGONAL, 1);
   return {
@@ -38,6 +42,7 @@ export function LiquidMetalBorder() {
   useEffect(() => {
     const ring = ringRef.current;
     if (!ring) return;
+    if (window.matchMedia(STATIC_BORDER_QUERY).matches) return;
 
     const reduceMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
