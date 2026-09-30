@@ -289,6 +289,116 @@ html.lenis body {
     #000 86%
   );
 }
+/* Botão de entrar no grupo (hero mobile e cartão do método), ver GroupCta.
+   Link comum feito só com CSS: borda prateada no border-box, fundo escuro
+   no padding-box e um reflexo que atravessa o botão animando só transform.
+   Nada de WebGL, máscara, filtro ou estado de toque. */
+.group-cta {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  min-height: 70px;
+  padding: 11px 12px 11px 22px;
+  overflow: hidden;
+  border: 2px solid #0000;
+  border-radius: 999px;
+  color: #fff;
+  text-align: left;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  background:
+    radial-gradient(circle at 76% 120%, #0041b042, #0000 42%) padding-box,
+    radial-gradient(circle at 22% -60%, #ffffff1c, #0000 40%) padding-box,
+    repeating-linear-gradient(115deg, #0000 0 7px, #ffffff05 7px 8px)
+      padding-box,
+    linear-gradient(#111 0%, #050505 100%) padding-box,
+    linear-gradient(
+        135deg,
+        #f4f6fa 0%,
+        #5d6068 30%,
+        #e9ecf2 55%,
+        #26282d 80%,
+        #c9ccd3 100%
+      )
+      border-box;
+  box-shadow:
+    0 18px 42px #000b1d61,
+    0 0 26px #0041b029;
+}
+.group-cta:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  width: 30%;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    #0000,
+    #ffffff0a 30%,
+    #ffffff3d 50%,
+    #3a82ff24 70%,
+    #0000
+  );
+  opacity: 0;
+  transform: translateX(-130%) skewX(-18deg);
+  animation: group-cta-shine 4.6s cubic-bezier(0.45, 0, 0.2, 1) infinite;
+}
+@keyframes group-cta-shine {
+  0%,
+  18% {
+    opacity: 0;
+    transform: translateX(-130%) skewX(-18deg);
+  }
+  27% {
+    opacity: 1;
+  }
+  62%,
+  to {
+    opacity: 0;
+    transform: translateX(430%) skewX(-18deg);
+  }
+}
+.group-cta:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+.group-cta-label {
+  position: relative;
+  z-index: 1;
+  font-family: Sora, sans-serif;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+.group-cta-arrow {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ffffff30;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(145deg, #0b51c9, #002b76);
+  box-shadow:
+    0 7px 20px #0041b061,
+    inset 0 1px #ffffff3d;
+}
+.group-cta-arrow svg {
+  width: 45%;
+  height: 45%;
+}
 @media (width<=1023px) {
   .mobile-nav-panel {
     isolation: isolate;
@@ -396,149 +506,8 @@ html.lenis body {
   .blog-card-cursor {
     display: none;
   }
-  .shiny-cta {
-    isolation: isolate;
-    appearance: none;
-    color: #fff;
-    text-align: left;
-    -webkit-tap-highlight-color: transparent;
-    /* Segurar o dedo no link abria a prévia/arraste nativo do navegador e a
-       página congelava: o toque longo aqui não faz nada. */
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    user-select: none;
-    -webkit-user-drag: none;
-    touch-action: manipulation;
-    background: #ffffff24;
-    border: 0;
-    border-radius: 999px;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-    min-height: 70px;
-    padding: 13px 14px 13px 24px;
-    display: flex;
-    position: relative;
-    overflow: visible;
-    box-shadow:
-      0 18px 42px #000b1d61,
-      inset 0 0 0 1px #ffffff0d,
-      0 0 26px #0041b029;
-  }
-  .shiny-cta:before,
-  .shiny-cta:after {
-    content: "";
-    pointer-events: none;
-    position: absolute;
-  }
-  .shiny-cta:before {
-    z-index: 0;
-    border-radius: inherit;
-    background: linear-gradient(
-        105deg,
-        #ffffff21 0% 38%,
-        #307cffe0 46%,
-        #ffffffeb 50%,
-        #307cffe0 54%,
-        #ffffff21 62% 100%
-      )
-      130%/320% 100%;
-    animation: 4.6s cubic-bezier(0.45, 0, 0.2, 1) infinite
-      mobile-cta-border-shine;
-    inset: 0;
-  }
-  .shiny-cta:after {
-    z-index: 0;
-    filter: blur(12px);
-    opacity: 0;
-    background: #0855dab3;
-    border-radius: 999px;
-    width: 30%;
-    height: 16px;
-    animation: 4.6s cubic-bezier(0.45, 0, 0.2, 1) infinite
-      mobile-cta-bottom-glow;
-    bottom: -9px;
-    right: 8%;
-    transform: translate(-230%);
-  }
   .mobile-hero-card {
     margin-top: 28px;
-  }
-  .shiny-cta-label {
-    z-index: 2;
-    letter-spacing: -0.025em;
-    text-wrap: balance;
-    font-family: Sora, sans-serif;
-    font-size: 15px;
-    font-weight: 650;
-    line-height: 1.15;
-    position: relative;
-  }
-  .shiny-cta-arrow {
-    z-index: 2;
-    color: #fff;
-    background: linear-gradient(145deg, #0b51c9, #002b76);
-    border: 1px solid #ffffff30;
-    border-radius: 999px;
-    flex: 0 0 44px;
-    place-items: center;
-    width: 44px;
-    height: 44px;
-    font-size: 22px;
-    line-height: 1;
-    animation: 3.2s ease-in-out infinite mobile-cta-arrow-pulse;
-    display: grid;
-    position: relative;
-    box-shadow:
-      0 7px 20px #0041b061,
-      inset 0 1px #ffffff3d;
-  }
-  .shiny-cta:focus-visible {
-    outline-offset: 4px;
-    outline: 2px solid #fff;
-  }
-  @keyframes mobile-cta-border-shine {
-    0%,
-    18% {
-      background-position: 130%;
-    }
-    62%,
-    to {
-      background-position: -130%;
-    }
-  }
-  @keyframes mobile-cta-bottom-glow {
-    0%,
-    18% {
-      opacity: 0;
-      transform: translate(-230%);
-    }
-    28% {
-      opacity: 0.72;
-    }
-    62% {
-      opacity: 0;
-      transform: translate(80%);
-    }
-    to {
-      opacity: 0;
-      transform: translate(80%);
-    }
-  }
-  @keyframes mobile-cta-arrow-pulse {
-    0%,
-    to {
-      box-shadow:
-        0 7px 20px #0041b047,
-        inset 0 1px #fff3;
-    }
-    50% {
-      box-shadow:
-        0 8px 25px #0a56d87a,
-        0 0 0 4px #0041b014,
-        inset 0 1px #ffffff3d;
-    }
   }
   .hero-gradient-motion:before,
   .hero-gradient-motion:after,
@@ -581,7 +550,7 @@ html.lenis body {
     min-height: 66px;
     margin-top: 22px;
   }
-  .shiny-cta-label {
+  .group-cta-label {
     font-size: 14px;
   }
   .mobile-hero-robot {
@@ -620,14 +589,13 @@ html.lenis body {
     margin-top: 18px;
     padding-left: 20px;
   }
-  .shiny-cta-label {
+  .group-cta-label {
     font-size: 13px;
   }
-  .shiny-cta-arrow {
+  .group-cta-arrow {
     flex-basis: 40px;
     width: 40px;
     height: 40px;
-    font-size: 20px;
   }
   .mobile-hero-robot {
     height: clamp(285px, 40svh, 320px);
@@ -1119,13 +1087,11 @@ html::-webkit-scrollbar {
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .shiny-cta-arrow {
-    animation: none;
-  }
-  .shiny-cta:before,
-  .shiny-cta:after,
   .shiny-cta-surface:after {
     animation-duration: 7s;
+  }
+  .group-cta:after {
+    animation: none;
   }
   .section-triangle-spin {
     animation: none;
@@ -1209,11 +1175,6 @@ html::-webkit-scrollbar {
   left: -40%;
   transform: skew(-18deg);
 }
-.conversion-rail-cta {
-  box-shadow:
-    0 16px 40px #0041b06b,
-    inset 0 1px #ffffff40;
-}
 /* Brilho atrás do cartão: dá ao vidro algo para desfocar. */
 .conversion-decision-glow {
   pointer-events: none;
@@ -1273,8 +1234,7 @@ html::-webkit-scrollbar {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
-/* Fundo do CTA da hero: global porque o card do desktop usa o mesmo do botão
-   mobile (.shiny-cta). */
+/* Fundo do card de CTA da hero desktop. */
 .shiny-cta-surface {
   z-index: 1;
   border-radius: inherit;
@@ -1333,17 +1293,6 @@ html::-webkit-scrollbar {
     opacity: 0;
     transform: translate(610px) rotate(18deg);
   }
-}
-/* Com a borda de metal, o fundo recua 2px (a espessura do anel) e sai o
-   brilho de borda próprio do botão mobile. */
-.shiny-cta--metal {
-  background: transparent;
-}
-.shiny-cta--metal:before {
-  display: none;
-}
-.shiny-cta--metal > .shiny-cta-surface {
-  inset: 2px;
 }
 /* `.desktop-hero-cta-card > *` põe os filhos em position: relative. */
 .desktop-hero-cta-card > .liquid-metal-border,

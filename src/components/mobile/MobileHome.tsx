@@ -2,8 +2,8 @@
 
 import { ConversionRail } from "@/components/ConversionRail";
 import { CourseSalesJourney } from "@/components/course/CourseSalesJourney";
+import { GroupCta } from "@/components/GroupCta";
 import { FadeUp } from "@/components/motion-primitives";
-import { ShinyCta } from "@/components/ShinyCta";
 import { WHATSAPP_GROUP_URL } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 
@@ -35,16 +35,12 @@ export function MobileHome() {
             Um único prompt. Um site fora da curva. Sem programar, sem cara de
             IA.
           </h1>
-          <ShinyCta
+          <GroupCta
             aria-label="Entrar no grupo do Code Flow"
             className="mobile-hero-card"
-            metalBorder
-            href={WHATSAPP_GROUP_URL}
-            target="_blank"
-            rel="noreferrer"
           >
             ENTRAR NO GRUPO OFICIAL!
-          </ShinyCta>
+          </GroupCta>
         </div>
 
         <div className="mobile-hero-robot absolute bottom-[-18px] left-1/2 z-[5] aspect-[1672/941] h-[clamp(360px,45svh,430px)] max-w-none -translate-x-1/2">

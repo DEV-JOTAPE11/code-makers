@@ -2,8 +2,9 @@
 
 import { motion } from "motion/react";
 
+import { GroupCta } from "@/components/GroupCta";
 import { LiquidMetalBorder } from "@/components/LiquidMetalBorder";
-import { EASE, WHATSAPP_GROUP_URL } from "@/lib/constants";
+import { EASE } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 
 /** "O método Code Flow": manchete + cartão de decisão + mãos. */
@@ -85,17 +86,9 @@ export function ConversionRail({ desktop = false }: { desktop?: boolean }) {
                 Você aprende a estrutura exata de prompt que gera sites com
                 design, copy e animações de nível agência logo de primeira.
               </p>
-              <a
-                href={WHATSAPP_GROUP_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="conversion-rail-cta mt-7 inline-flex min-h-14 w-full items-center justify-between gap-5 rounded-full bg-[#004ac9] px-7 font-['Inter:Medium',sans-serif] text-[14px] font-medium text-white transition-transform hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#609aff]"
-              >
+              <GroupCta className="mt-7">
                 Entrar no grupo do Code Flow
-                <span aria-hidden="true" className="text-xl">
-                  ↗
-                </span>
-              </a>
+              </GroupCta>
               <p className="mt-4 text-center font-['Inter:Medium',sans-serif] text-[10px] uppercase tracking-[0.16em] text-white/35">
                 Estruturar • gerar • publicar
               </p>
