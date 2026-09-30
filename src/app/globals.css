@@ -317,89 +317,6 @@ html.lenis body {
     #000 86%
   );
 }
-/* Botão de entrar no grupo (hero mobile e cartão do método), ver GroupCta.
-   Mesmo botão da hero da Globosat: um link simples, com um brilho girando
-   atrás da borda. Sem WebGL, máscara ou estado de toque. */
-.btn-glow {
-  position: relative;
-  isolation: isolate;
-  display: inline-block;
-  overflow: hidden;
-  padding: 3px;
-  border-radius: 1000px;
-  background: radial-gradient(
-    68.5% 119.738% at 49.1% 100%,
-    #0041c880,
-    #3c6edc80
-  );
-  box-shadow: 0 0 40px #0041c866;
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
-  transition:
-    transform 0.4s,
-    box-shadow 0.4s;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-.btn-glow:hover {
-  transform: translateY(-2px) scale(0.99);
-  box-shadow: 0 0 80px 10px #0041c866;
-}
-.btn-glow:focus-visible {
-  outline: 2px solid #1d4ed8;
-  outline-offset: 3px;
-}
-.btn-glow:before {
-  content: "";
-  position: absolute;
-  top: -40%;
-  left: 50%;
-  z-index: 1;
-  width: 20px;
-  height: 180px;
-  border-radius: 8px;
-  background: #fff;
-  filter: blur(10px);
-  transform-origin: bottom;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  animation: btn-glow-rotate 5s linear infinite;
-}
-.btn-glow-inner {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 16px 28px;
-  border-radius: 1000px;
-  background: radial-gradient(53.6% 100% at 50% 100%, #0a78dc, #003cc8);
-  color: #fff;
-  font-family: Sora, sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.2;
-  transition: all 0.5s;
-}
-.btn-glow-inner svg {
-  flex-shrink: 0;
-  transition: transform 0.4s;
-}
-.btn-glow:hover .btn-glow-inner svg {
-  transform: translateX(3px);
-}
-@keyframes btn-glow-rotate {
-  0% {
-    transform: translate(-50%, -50%) rotate(0);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
 @media (width<=1023px) {
   .mobile-nav-panel {
     isolation: isolate;
@@ -583,10 +500,6 @@ html.lenis body {
   }
   .mobile-hero-card {
     margin-top: 18px;
-  }
-  .btn-glow-inner {
-    padding-inline: 22px;
-    font-size: 14px;
   }
   .mobile-hero-robot {
     height: clamp(285px, 40svh, 320px);
@@ -1080,9 +993,6 @@ html::-webkit-scrollbar {
 @media (prefers-reduced-motion: reduce) {
   .shiny-cta-surface:after {
     animation-duration: 7s;
-  }
-  .btn-glow:before {
-    animation: none;
   }
   .section-triangle-spin {
     animation: none;
