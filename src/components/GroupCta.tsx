@@ -2,6 +2,7 @@
 
 import type { AnchorHTMLAttributes } from "react";
 
+import { LiquidMetalBorder } from "@/components/LiquidMetalBorder";
 import { WHATSAPP_GROUP_URL } from "@/lib/constants";
 
 type Props = Omit<
@@ -10,8 +11,9 @@ type Props = Omit<
 >;
 
 /** Botão de entrar no grupo do WhatsApp, usado na hero mobile e no cartão do
- *  método. Link comum estilizado só com CSS (ver `.group-cta`). O toque
- *  longo não abre o menu do link nem começa a arrastá-lo. */
+ *  método. Borda de metal líquido igual à do cartão da hero desktop; o resto
+ *  é CSS (ver `.group-cta`). O toque longo não abre o menu do link nem começa
+ *  a arrastá-lo. */
 export function GroupCta({ children, className = "", ...rest }: Props) {
   return (
     <a
@@ -23,6 +25,7 @@ export function GroupCta({ children, className = "", ...rest }: Props) {
       draggable={false}
       onContextMenu={(event) => event.preventDefault()}
     >
+      <LiquidMetalBorder />
       <span className="group-cta-label">{children}</span>
       <span aria-hidden="true" className="group-cta-arrow">
         <svg
