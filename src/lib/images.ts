@@ -4,16 +4,10 @@ export const IMAGES = {
   heroRobot: "/assets/hero-robot-blue.png",
   hands: "/assets/mãos.png",
   leonardoDicaprio: "/assets/leonardo-dicaprio.png",
+  templates: "/assets/templates-showcase.webp",
   redTexture: "/assets/textura-vermelha.png",
   integratedStack: "/assets/stack-solar-integrado.png",
   symbol: "/code-flow-symbol.png",
-
-  modules: {
-    createAi: "/assets/codemakers-module-create-ai.png",
-    premiumSites: "/assets/codemakers-module-premium-sites.png",
-    businessSystems: "/assets/codemakers-module-business-systems.png",
-    b2bSales: "/assets/codemakers-module-b2b-sales.png",
-  },
 
   services: {
     sites: "/assets/service-sites.png",

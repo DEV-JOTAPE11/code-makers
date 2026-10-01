@@ -12,7 +12,6 @@ const FOOTER_GRADIENT = `url("data:image/svg+xml;utf8,<svg viewBox='0 0 1920 905
 const PRIMARY_LINKS = [
   { id: "home", label: "Início" },
   { id: "about", label: "O método" },
-  { id: "services", label: "Módulos" },
   { id: "faq", label: "Dúvidas" },
 ];
 

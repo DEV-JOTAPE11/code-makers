@@ -1,46 +1,5 @@
-import { IMAGES } from "@/lib/images";
-
 /** Conteúdo editorial do site. Mantido fora dos componentes para que o
  *  texto possa ser revisado sem tocar em layout ou motion. */
-
-export type CourseModule = {
-  phase: string;
-  title: string;
-  text: string;
-  image: string;
-  outcome: string;
-};
-
-export const COURSE_MODULES: CourseModule[] = [
-  {
-    phase: "FUNDAMENTO",
-    title: "Entenda por que a IA entrega sites genéricos.",
-    text: "Você vai entender o que faz a IA repetir sempre o mesmo layout e como virar esse jogo com direção, referência e contexto, mesmo começando do zero.",
-    image: IMAGES.modules.createAi,
-    outcome: "Clareza do que separa um site comum de um fora da curva",
-  },
-  {
-    phase: "PROMPT",
-    title: "Escreva o prompt único do método.",
-    text: "Você vai aprender a estrutura completa do prompt Code Flow: identidade visual, tipografia, seções, copy e animações em um só comando.",
-    image: IMAGES.modules.premiumSites,
-    outcome: "Seu prompt mestre pronto para reutilizar",
-  },
-  {
-    phase: "DESIGN",
-    title: "Deixe o site com cara de agência.",
-    text: "Você vai aprender a pedir animações, microinterações e detalhes visuais que fazem o site parecer caro, sem mexer em código.",
-    image: IMAGES.modules.businessSystems,
-    outcome: "Um site com acabamento premium de verdade",
-  },
-  {
-    phase: "PUBLICAR",
-    title: "Coloque no ar e mostre para o mundo.",
-    text: "Você vai publicar o site com domínio próprio, deixar tudo rápido no celular e sair com um projeto pronto para portfólio ou para vender.",
-    image: IMAGES.modules.b2bSales,
-    outcome: "Site publicado e pronto para apresentar",
-  },
-];
 
 export const FAQ: [question: string, answer: string][] = [
   [
@@ -71,7 +30,6 @@ export const FAQ: [question: string, answer: string][] = [
 
 export const NAV_SECTIONS = [
   { id: "about", label: "O método" },
-  { id: "services", label: "Módulos" },
   { id: "pricing", label: "Acesso" },
   { id: "faq", label: "Dúvidas" },
 ] as const;
