@@ -1,8 +1,10 @@
 "use client";
 
+import { motion, useInView } from "motion/react";
+import { useRef } from "react";
 import { BlurRevealText } from "@/components/BlurRevealText";
 import { StageReveal } from "@/components/motion-primitives";
-import { WHATSAPP_GROUP_URL } from "@/lib/constants";
+import { EASE, WHATSAPP_GROUP_URL } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 
 const STATS = [
@@ -10,6 +12,75 @@ const STATS = [
   { value: "R$ 5 mil+", label: "valor de mercado de cada um" },
   { value: "1 prompt", label: "para adaptar ao seu cliente" },
 ];
+
+/** Só no mobile: cartões no mesmo azul do selo, no início da seção, em
+ *  laterais alternadas e com inclinações opostas (um desce na diagonal, o
+ *  outro sobe). Param com a ponta ainda fora da tela: `edge` é quanto do
+ *  cartão fica cortado. As alturas foram medidas de 320 a 1023px para nunca
+ *  cobrir o título: até ~520px as linhas dele ocupam quase toda a largura,
+ *  então o cartão da direita fica acima do título e só desce para a altura
+ *  do "awards." a partir de 768px, quando sobra lateral livre. */
+const EDGE_CARDS = [
+  {
+    eyebrow: "Templates",
+    value: "+20",
+    label: "nível awards",
+    side: "left",
+    top: "top-[18px]",
+    edge: 38,
+    rotate: 10,
+  },
+  {
+    eyebrow: "Adaptação",
+    value: "1 prompt",
+    label: "por cliente",
+    side: "right",
+    top: "top-[36px] md:top-[170px]",
+    edge: 30,
+    rotate: -9,
+  },
+] as const;
+
+type EdgeCardData = (typeof EDGE_CARDS)[number];
+
+function EdgeCard({
+  card,
+  show,
+  delay,
+}: {
+  card: EdgeCardData;
+  show: boolean;
+  delay: number;
+}) {
+  const left = card.side === "left";
+  const pad = 13 + card.edge;
+
+  return (
+    <motion.div
+      aria-hidden="true"
+      className={`course-templates-seal course-templates-edge-card absolute z-20 ${card.top}`}
+      style={
+        // Respiro extra do lado cortado para o texto não sumir da tela.
+        left
+          ? { left: -card.edge, paddingLeft: pad }
+          : { right: -card.edge, paddingRight: pad }
+      }
+      initial={{ opacity: 0, x: left ? -160 : 160, rotate: 0 }}
+      animate={show ? { opacity: 1, x: 0, rotate: card.rotate } : undefined}
+      transition={{ duration: 0.9, delay, ease: EASE }}
+    >
+      <span className="block font-['Inter:Medium',sans-serif] text-[8px] uppercase tracking-[0.18em] text-white/70">
+        {card.eyebrow}
+      </span>
+      <span className="mt-1 block font-['Sora:Regular',sans-serif] text-[19px] leading-none tracking-[-0.05em] text-white">
+        {card.value}
+      </span>
+      <span className="mt-1.5 block font-['Inter:Medium',sans-serif] text-[9px] text-[#bcd3ff]">
+        {card.label}
+      </span>
+    </motion.div>
+  );
+}
 
 const NICHES = [
   "Hotelaria",
@@ -29,14 +100,30 @@ export function CourseTemplates({
   desktop: boolean;
   container: string;
 }) {
+  // Os cartões nascem fora da área visível da seção (overflow-hidden), então
+  // o gatilho fica na seção, e não em cada cartão.
+  const sectionRef = useRef<HTMLElement>(null);
+  const showEdgeCards = useInView(sectionRef, { once: true, amount: 0.2 });
+
   return (
     <section
+      ref={sectionRef}
       id="templates"
       aria-label="Templates inclusos no método Code Flow"
       className={`course-templates order-0 relative overflow-hidden ${
-        desktop ? "w-[1920px] px-[210px] pt-[150px] pb-[120px]" : "px-5 pt-24 pb-16"
+        desktop ? "w-[1920px] px-[210px] pt-[150px] pb-[120px]" : "px-5 pt-36 pb-16"
       }`}
     >
+      {!desktop &&
+        EDGE_CARDS.map((card, index) => (
+          <EdgeCard
+            key={card.value}
+            card={card}
+            show={showEdgeCards}
+            delay={0.2 + index * 0.15}
+          />
+        ))}
+
       <div className={`${container} relative z-10`}>
         <div
           className={
@@ -44,15 +131,8 @@ export function CourseTemplates({
           }
         >
           <div className="text-center lg:text-left">
-            <StageReveal>
-              <span className="course-templates-eyebrow inline-flex items-center gap-2.5 rounded-full border border-[#0041b0]/20 bg-white/70 px-4 py-2 font-['Inter:Medium',sans-serif] text-[11px] uppercase tracking-[0.18em] text-[#0041b0]">
-                <span aria-hidden="true" className="course-templates-dot" />
-                Bônus incluso no método
-              </span>
-            </StageReveal>
-
             <BlurRevealText
-              className={`mt-7 font-['Sora:Regular',sans-serif] leading-[0.98] tracking-[-0.055em] text-[#151515] ${
+              className={`font-['Sora:Regular',sans-serif] leading-[0.98] tracking-[-0.055em] text-[#151515] ${
                 desktop ? "text-[72px]" : "text-[44px]"
               }`}
             >
@@ -163,6 +243,8 @@ export function CourseTemplates({
           >
             <div aria-hidden="true" className="course-templates-glow" />
             <img
+              width={1600}
+              height={1527}
               alt="Templates de sites Code Flow em notebook, tablets e celulares: hotel, suplementos, barbearia, loja de iPhone, churrascaria e provedor de internet"
               className={`course-templates-showcase relative block h-auto max-w-none ${
                 desktop ? "w-[860px]" : "mx-auto w-full"
@@ -186,6 +268,7 @@ export function CourseTemplates({
                 no preço de agência
               </span>
             </div>
+
           </StageReveal>
         </div>
       </div>
