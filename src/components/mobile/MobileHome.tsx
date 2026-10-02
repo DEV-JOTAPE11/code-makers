@@ -1,10 +1,13 @@
 "use client";
 
+import Link from "next/link";
+
 import { BlurRevealText } from "@/components/BlurRevealText";
 import { ConversionRail } from "@/components/ConversionRail";
 import { CourseSalesJourney } from "@/components/course/CourseSalesJourney";
 import { GroupCta } from "@/components/GroupCta";
 import { FadeUp } from "@/components/motion-primitives";
+import { LEGAL } from "@/data/site";
 import { WHATSAPP_GROUP_URL } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 
@@ -97,9 +100,20 @@ export function MobileHome() {
           <p className="mt-5 max-w-[300px] text-sm leading-6 text-white/72">
             Método Code Flow: Site Fora da Curva. Um prompt, um site premium.
           </p>
-          <p className="mt-12 border-t border-white/15 pt-6 text-center text-xs text-white/55">
-            © 2026 Code Flow. Todos os direitos reservados.
-          </p>
+          <div className="mt-12 border-t border-white/15 pt-6 text-center text-xs text-white/55">
+            <p className="mb-3 font-['Inter:Regular',sans-serif] text-[13px] leading-5">
+              {LEGAL.entity} · {LEGAL.cnpj} · {LEGAL.email}
+              {LEGAL.links.map((link) => (
+                <span key={link.href}>
+                  {" · "}
+                  <Link className="underline underline-offset-4" href={link.href}>
+                    {link.label}
+                  </Link>
+                </span>
+              ))}
+            </p>
+            <p>© 2026 Code Flow. Todos os direitos reservados.</p>
+          </div>
         </FadeUp>
       </section>
     </main>

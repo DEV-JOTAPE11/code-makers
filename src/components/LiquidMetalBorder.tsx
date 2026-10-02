@@ -31,8 +31,11 @@ function uniformsFor(width: number, height: number) {
 }
 
 /** Anel de 2px de metal líquido. Deve ficar dentro de um pai `position: relative`
-    com `border-radius`; o CSS `.liquid-metal-border` recorta o canvas no anel. */
-export function LiquidMetalBorder() {
+    com `border-radius`; o CSS `.liquid-metal-border` recorta o canvas no anel.
+    `lazy`: só cria o shader quando o anel chega perto da tela (para anéis
+    longe do topo não pesarem no carregamento). Até lá fica o gradiente
+    estático do CSS. */
+export function LiquidMetalBorder({ lazy = false }: { lazy?: boolean }) {
   const ringRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
@@ -43,30 +46,50 @@ export function LiquidMetalBorder() {
       "(prefers-reduced-motion: reduce)",
     ).matches;
 
-    let mount: ShaderMount;
-    try {
-      mount = new ShaderMount(
-        ring,
-        liquidMetalFragmentShader,
-        uniformsFor(ring.offsetWidth, ring.offsetHeight),
-        undefined,
-        reduceMotion ? 0 : 0.6,
+    let mount: ShaderMount | undefined;
+    let resize: ResizeObserver | undefined;
+
+    const start = () => {
+      try {
+        mount = new ShaderMount(
+          ring,
+          liquidMetalFragmentShader,
+          uniformsFor(ring.offsetWidth, ring.offsetHeight),
+          undefined,
+          reduceMotion ? 0 : 0.6,
+        );
+      } catch {
+        // Sem WebGL: fica o gradiente metálico estático do CSS.
+        return;
+      }
+      const shader = mount;
+      resize = new ResizeObserver(() => {
+        shader.setUniforms(uniformsFor(ring.offsetWidth, ring.offsetHeight));
+      });
+      resize.observe(ring);
+    };
+
+    let near: IntersectionObserver | undefined;
+    if (lazy) {
+      near = new IntersectionObserver(
+        (entries) => {
+          if (!entries.some((entry) => entry.isIntersecting)) return;
+          near?.disconnect();
+          start();
+        },
+        { rootMargin: "600px 0px" },
       );
-    } catch {
-      // Sem WebGL: fica o gradiente metálico estático do CSS.
-      return;
+      near.observe(ring);
+    } else {
+      start();
     }
 
-    const observer = new ResizeObserver(() => {
-      mount.setUniforms(uniformsFor(ring.offsetWidth, ring.offsetHeight));
-    });
-    observer.observe(ring);
-
     return () => {
-      observer.disconnect();
-      mount.dispose();
+      near?.disconnect();
+      resize?.disconnect();
+      mount?.dispose();
     };
-  }, []);
+  }, [lazy]);
 
   // <span> e não <div>: o anel também entra em <button>, que só aceita
   // conteúdo inline.

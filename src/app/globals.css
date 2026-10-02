@@ -2053,3 +2053,568 @@ html::-webkit-scrollbar {
     );
   }
 }
+
+/* === NOVAS SEÇÕES: demo, método, autor, oferta === */
+
+/* --- Demonstração (#demo) ---------------------------------------------- */
+.cf-demo {
+  background:
+    radial-gradient(ellipse 46% 56% at 72% 40%, #0041b040, #0000 72%),
+    linear-gradient(90deg, #ffffff08 1px, #0000 1px) 0 0/112px 100%,
+    #080808;
+}
+.cf-demo-stage {
+  aspect-ratio: 100 / 70;
+}
+.cf-demo-glow {
+  position: absolute;
+  inset: 4% 2% -4% 6%;
+  pointer-events: none;
+  background: radial-gradient(closest-side, #4388ff59, #0041b02e 55%, #0000);
+  filter: blur(70px);
+}
+/* Notebook: tampa com moldura escura + base em trapézio. Os paddings em %
+   acompanham a largura, então a moldura escala junto em qualquer tela. */
+.cf-demo-laptop-lid {
+  position: relative;
+  padding: 2.2% 2.2% 2.8%;
+  border-radius: 3.4% / 5.2%;
+  background: linear-gradient(160deg, #2b2e35 0%, #0c0d10 42%, #17191d 100%);
+  box-shadow:
+    inset 0 0 0 1px #ffffff1f,
+    inset 0 1px #ffffff40,
+    0 40px 60px #0a14305e,
+    0 12px 18px #0a14303d;
+}
+.cf-demo-laptop-cam {
+  position: absolute;
+  top: 0.9%;
+  left: 50%;
+  width: 0.7%;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: #2a2d33;
+  transform: translateX(-50%);
+}
+.cf-demo-screen {
+  border-radius: 0.8% / 1.3%;
+  background: #000;
+}
+.cf-demo-laptop-base {
+  position: relative;
+  height: 0;
+  margin: 0 -7%;
+  padding-bottom: 3.4%;
+  border-radius: 0 0 14% 14% / 0 0 100% 100%;
+  background: linear-gradient(#41454d 0%, #1c1e22 55%, #0b0c0e 100%);
+  box-shadow:
+    inset 0 1px #ffffff47,
+    0 30px 50px #0a14305e;
+}
+.cf-demo-laptop-base:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 43%;
+  width: 14%;
+  height: 34%;
+  border-radius: 0 0 10px 10px;
+  background: #101114;
+}
+.cf-demo-phone {
+  transform: rotate(-4deg);
+  transform-origin: 100% 100%;
+}
+.cf-demo-phone-body {
+  position: relative;
+  padding: 4.4%;
+  border-radius: 16% / 7.4%;
+  background: linear-gradient(150deg, #3c4048 0%, #0d0e11 36%, #1e2025 100%);
+  box-shadow:
+    inset 0 0 0 1px #ffffff29,
+    inset 0 1px #ffffff47,
+    0 40px 60px #0a14307a,
+    0 12px 18px #0a143052;
+}
+.cf-demo-phone-screen {
+  border-radius: 12.5% / 5.8%;
+  background: #000;
+}
+.cf-demo-phone-island {
+  position: absolute;
+  z-index: 2;
+  top: 6.4%;
+  left: 50%;
+  width: 30%;
+  height: 2.6%;
+  border-radius: 999px;
+  background: #000;
+  transform: translateX(-50%);
+}
+/* Barra de progresso das tabs (estilo stories). A duração vem do JS. */
+.cf-demo-tab-progress {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 3px;
+  height: 2px;
+  border-radius: 2px;
+  background: #ffffffd9;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: cf-demo-progress linear forwards;
+}
+@keyframes cf-demo-progress {
+  to {
+    transform: scaleX(1);
+  }
+}
+.cf-demo-tabs.is-paused .cf-demo-tab-progress {
+  animation-play-state: paused;
+}
+.cf-demo-tab:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+.cf-demo-tabs-scroll {
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.cf-demo-tabs-scroll::-webkit-scrollbar {
+  display: none;
+}
+.cf-demo-var {
+  border-radius: 4px;
+  padding: 0 0.15em;
+  background: #0041b04d;
+}
+.cf-demo-caret {
+  display: inline-block;
+  width: 0.5em;
+  height: 1.05em;
+  margin-left: 1px;
+  vertical-align: -0.18em;
+  background: #4388ff;
+  animation: cf-demo-blink 1s steps(1) infinite;
+}
+@keyframes cf-demo-blink {
+  50% {
+    opacity: 0;
+  }
+}
+.cf-demo-player {
+  box-shadow:
+    0 40px 90px #0009,
+    0 0 80px #0041b02e;
+}
+.cf-demo-player-shade {
+  background:
+    radial-gradient(circle at 50% 50%, #0041b038, #0000 60%),
+    linear-gradient(180deg, #0000 35%, #000000b3 100%);
+}
+.cf-demo-play {
+  width: 96px;
+  height: 96px;
+  border: 1px solid #ffffff40;
+  color: #fff;
+  background: linear-gradient(145deg, #0b51c9, #002b76);
+  box-shadow:
+    0 14px 40px #0041b080,
+    inset 0 1px #ffffff4d;
+  transition: scale 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.cf-demo-play:hover {
+  scale: 1.06;
+}
+.cf-demo-play:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 5px;
+}
+.cf-demo-soon {
+  rotate: -4deg;
+  border: 1px solid #ffffff2e;
+  background:
+    radial-gradient(circle at 100% 0, #4388ff80, #0000 55%),
+    #0041b0;
+  box-shadow:
+    inset 0 1px #ffffff40,
+    0 18px 40px #0041b052;
+}
+
+/* --- O método (#metodo) ------------------------------------------------ */
+/* overflow: clip (e não hidden) para não quebrar o sticky da coluna. */
+.cf-method {
+  overflow: clip;
+  background:
+    radial-gradient(circle at 16% 10%, #0041b014, #0000 32%),
+    linear-gradient(90deg, #1414140b 1px, #0000 1px) 0 0/112px 100%,
+    #efebe7;
+}
+.cf-method:before {
+  content: "MÉTODO";
+  position: absolute;
+  top: 40px;
+  right: -60px;
+  color: #0041b00d;
+  font-family: Sora, sans-serif;
+  font-size: 380px;
+  line-height: 1;
+  letter-spacing: -0.08em;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.cf-method-card {
+  box-shadow: 0 30px 60px #0a14300d;
+}
+.cf-method-card[data-active] {
+  box-shadow: 0 34px 80px #0041b01f;
+}
+.cf-method-ghost {
+  color: #0041b014;
+}
+.cf-method-glow {
+  position: absolute;
+  inset: 14%;
+  pointer-events: none;
+  background: radial-gradient(closest-side, #4388ff73, #0041b026 60%, #0000);
+  filter: blur(50px);
+}
+.cf-method-object {
+  filter: drop-shadow(0 30px 40px #0a14302e) drop-shadow(0 10px 14px #0a14301f);
+}
+.cf-method-rail-track,
+.cf-method-rail-fill {
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 7px;
+  width: 2px;
+  border-radius: 2px;
+}
+.cf-method-rail-track {
+  background: #14141421;
+}
+.cf-method-rail-fill {
+  background: linear-gradient(#4388ff, #0041b0);
+  transform: scaleY(0);
+  transform-origin: top;
+}
+.cf-method-rail-dot {
+  position: absolute;
+  top: 0.2em;
+  left: -35px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #14141433;
+  border-radius: 999px;
+  background: #efebe7;
+  transition:
+    background-color 0.5s,
+    border-color 0.5s,
+    box-shadow 0.5s;
+}
+.cf-method-rail-dot.is-lit {
+  border-color: #0041b0;
+  background: #0041b0;
+  box-shadow: 0 0 0 5px #0041b01f;
+}
+.cf-method-access-item {
+  padding: 26px 28px 26px 0;
+}
+.cf-method-access.grid-cols-3 .cf-method-access-item:not(:nth-child(3n + 1)) {
+  border-left: 1px solid #1414141a;
+  padding-left: 28px;
+}
+.cf-method-access.grid-cols-3 .cf-method-access-item:nth-child(n + 4) {
+  border-top: 1px solid #1414141a;
+}
+.cf-method-access.grid-cols-2 .cf-method-access-item {
+  padding: 18px 14px 18px 0;
+}
+.cf-method-access.grid-cols-2 .cf-method-access-item:nth-child(2n) {
+  border-left: 1px solid #1414141a;
+  padding-left: 16px;
+}
+.cf-method-access.grid-cols-2 .cf-method-access-item:nth-child(n + 3) {
+  border-top: 1px solid #1414141a;
+}
+
+/* --- Quem está por trás (#autor) --------------------------------------- */
+.cf-author {
+  background:
+    linear-gradient(90deg, #14141408 1px, #0000 1px) 0 0/112px 100%,
+    #f5f5f5;
+}
+.cf-author:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 210px;
+  right: 210px;
+  height: 1px;
+  background: linear-gradient(90deg, #0000, #14141424 18% 82%, #0000);
+}
+.cf-author-glow {
+  position: absolute;
+  right: 80px;
+  bottom: 40px;
+  width: 780px;
+  height: 780px;
+  pointer-events: none;
+  background: radial-gradient(closest-side, #4388ff52, #0041b026 60%, #0000);
+  filter: blur(70px);
+}
+.cf-author-portrait {
+  -webkit-mask-image: linear-gradient(#000 72%, #0000 100%);
+  mask-image: linear-gradient(#000 72%, #0000 100%);
+}
+.cf-author-work-image {
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.cf-author-arrow {
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (hover: hover) and (pointer: fine) {
+  .cf-author-work:hover .cf-author-work-image {
+    transform: scale(1.045);
+  }
+  .cf-author-work:hover .cf-author-arrow {
+    transform: rotate(45deg);
+  }
+}
+.cf-author-carousel {
+  scrollbar-width: none;
+}
+.cf-author-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Oferta (#pricing) ------------------------------------------------- */
+/* Mesmo gradiente azul animado do antigo .course-master-offer. O padding de
+   baixo soma o encaixe da curva do FAQ (.course-objections sobe
+   --course-interlock-depth por cima desta seção) e o selo de garantia, que
+   passa da borda do ingresso. */
+.cf-offer-bg {
+  --course-interlock-depth: 120px;
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+  overflow: hidden;
+  padding-bottom: calc(150px + 64px + var(--course-interlock-depth));
+  background:
+    radial-gradient(at 50% 36%, #0c59def5, #0000 58%),
+    linear-gradient(128deg, #000e25 0%, #0041b0 38%, #002b76 67%, #000817 100%);
+}
+.cf-offer-bg:before,
+.cf-offer-bg:after {
+  content: "";
+  position: absolute;
+  inset: -42%;
+  z-index: 0;
+  pointer-events: none;
+  transform-origin: 50%;
+  will-change: transform, opacity;
+  background-repeat: no-repeat;
+}
+.cf-offer-bg:before {
+  inset: -28%;
+  z-index: 1;
+  filter: blur(36px);
+  mix-blend-mode: multiply;
+  background:
+    radial-gradient(at 5% 22%, #000 0%, #000000f0 12%, #0000 30%),
+    radial-gradient(at 94% 18%, #000 0%, #000000eb 13%, #0000 31%),
+    radial-gradient(at 91% 91%, #000 0%, #000000e6 12%, #0000 30%),
+    radial-gradient(at 18% 86%, #000 0%, #000000e0 11%, #0000 28%);
+  animation: 4.8s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate
+    course-offer-gradient-a;
+}
+.cf-offer-bg:after {
+  filter: blur(58px) saturate(1.45);
+  mix-blend-mode: screen;
+  background:
+    radial-gradient(at 18% 18%, #b9d3ffe0 0%, #2877ffb8 14%, #0000 38%),
+    radial-gradient(at 82% 72%, #3680ffcc 0%, #004ccf9e 16%, #0000 40%),
+    radial-gradient(at 47% 94%, #146affad 0%, #0041b080 15%, #0000 36%);
+  animation: 6.4s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate
+    course-offer-gradient-b;
+}
+.cf-offer-bg > div {
+  position: relative;
+  z-index: 2;
+}
+/* Sombra do ingresso: drop-shadow no pai porque o corpo usa mask. */
+.cf-offer-ticket {
+  filter: drop-shadow(0 50px 70px #00000059) drop-shadow(0 0 60px #0041b029);
+}
+.cf-offer-ticket-body {
+  overflow: hidden;
+}
+.cf-offer-dark {
+  background:
+    radial-gradient(circle at 100% 0, #3d9eff26, #0000 40%),
+    linear-gradient(160deg, #ffffff12 0%, #ffffff05 45%, #0000 100%),
+    #101010;
+}
+/* Furos semicirculares do picote. Cada camada da máscara cobre metade do
+   ingresso, então não é preciso mask-composite. */
+.cf-offer-notch-v {
+  /* Furos centrados no picote (.cf-offer-perf-v). */
+  --notch: 24px;
+  -webkit-mask:
+    radial-gradient(circle var(--notch) at calc(60% + 16px) 0, #0000 97%, #000) top / 100%
+      51% no-repeat,
+    radial-gradient(circle var(--notch) at calc(60% + 16px) 100%, #0000 97%, #000) bottom /
+      100% 51% no-repeat;
+  mask:
+    radial-gradient(circle var(--notch) at calc(60% + 16px) 0, #0000 97%, #000) top / 100%
+      51% no-repeat,
+    radial-gradient(circle var(--notch) at calc(60% + 16px) 100%, #0000 97%, #000) bottom /
+      100% 51% no-repeat;
+}
+.cf-offer-notch-bottom {
+  --notch: 18px;
+  -webkit-mask:
+    radial-gradient(circle var(--notch) at 0 100%, #0000 97%, #000) left / 51%
+      100% no-repeat,
+    radial-gradient(circle var(--notch) at 100% 100%, #0000 97%, #000) right /
+      51% 100% no-repeat;
+  mask:
+    radial-gradient(circle var(--notch) at 0 100%, #0000 97%, #000) left / 51%
+      100% no-repeat,
+    radial-gradient(circle var(--notch) at 100% 100%, #0000 97%, #000) right /
+      51% 100% no-repeat;
+}
+.cf-offer-notch-top {
+  --notch: 18px;
+  -webkit-mask:
+    radial-gradient(circle var(--notch) at 0 0, #0000 97%, #000) left / 51%
+      100% no-repeat,
+    radial-gradient(circle var(--notch) at 100% 0, #0000 97%, #000) right /
+      51% 100% no-repeat;
+  mask:
+    radial-gradient(circle var(--notch) at 0 0, #0000 97%, #000) left / 51%
+      100% no-repeat,
+    radial-gradient(circle var(--notch) at 100% 0, #0000 97%, #000) right /
+      51% 100% no-repeat;
+}
+.cf-offer-perf {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+}
+.cf-offer-perf-v {
+  top: 30px;
+  bottom: 30px;
+  /* Um pouco para dentro da parte branca, onde o tracejado tem contraste. */
+  left: calc(60% + 16px);
+  width: 2px;
+  background: repeating-linear-gradient(#0041b0a6 0 10px, #0000 10px 20px);
+  transform-origin: top;
+}
+.cf-offer-perf-h {
+  top: 50%;
+  left: 24px;
+  right: 24px;
+  height: 2px;
+  margin-top: -1px;
+  background: repeating-linear-gradient(90deg, #4388ffa6 0 9px, #0000 9px 18px);
+  transform-origin: left;
+}
+.cf-offer-seal {
+  border: 1px solid #ffffff2e;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 100% 0, #4388ff80, #0000 55%),
+    #0041b0;
+  transform: rotate(-8deg);
+  box-shadow:
+    inset 0 1px #ffffff40,
+    0 24px 50px #0041b052,
+    0 18px 40px #00000059;
+}
+.cf-offer-object-glow {
+  position: absolute;
+  inset: 8% 14%;
+  pointer-events: none;
+  background: radial-gradient(closest-side, #4388ffa6, #0041b04d 60%, #0000);
+  filter: blur(60px);
+}
+.cf-offer-object {
+  filter: drop-shadow(0 40px 60px #0a14305e) drop-shadow(0 12px 18px #0a14303d);
+}
+
+/* --- Mobile ------------------------------------------------------------- */
+@media (width<=1023px) {
+  .cf-demo,
+  .cf-method {
+    background-size:
+      auto,
+      48px 100%,
+      auto;
+  }
+  .cf-author {
+    background-size:
+      48px 100%,
+      auto;
+  }
+  .cf-demo-glow,
+  .cf-method-glow,
+  .cf-offer-object-glow {
+    filter: blur(40px);
+  }
+  .cf-demo-play {
+    width: 64px;
+    height: 64px;
+  }
+  .cf-method:before {
+    top: 24px;
+    right: -0.3em;
+    font-size: 7.5rem;
+  }
+  .cf-author:before {
+    left: 20px;
+    right: 20px;
+  }
+  .cf-author-glow {
+    inset: 12% 0 0;
+    width: auto;
+    height: auto;
+    filter: blur(40px);
+  }
+  .cf-offer-bg {
+    --course-interlock-depth: 62px;
+    padding-bottom: calc(6rem + var(--course-interlock-depth));
+  }
+  /* Manchas paradas no mobile. */
+  .cf-offer-bg:before,
+  .cf-offer-bg:after {
+    animation: none;
+    will-change: auto;
+  }
+  .cf-offer-bg:after {
+    filter: blur(46px);
+  }
+  .cf-offer-ticket {
+    filter: drop-shadow(0 30px 40px #00000059);
+  }
+  .cf-offer-seal {
+    transform: rotate(-3deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cf-demo-caret,
+  .cf-demo-tab-progress,
+  .cf-offer-bg:before,
+  .cf-offer-bg:after {
+    animation: none;
+  }
+  .cf-demo-play,
+  .cf-author-work-image,
+  .cf-author-arrow,
+  .cf-method-rail-dot {
+    transition: none;
+  }
+}

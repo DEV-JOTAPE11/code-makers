@@ -8,13 +8,21 @@ import { WHATSAPP_GROUP_URL } from "@/lib/constants";
 type Props = Omit<
   AnchorHTMLAttributes<HTMLAnchorElement>,
   "href" | "target" | "rel"
->;
+> & {
+  /** Adia o shader da borda até o botão chegar perto da tela. */
+  lazyBorder?: boolean;
+};
 
 /** Botão de entrar no grupo do WhatsApp, usado na hero mobile e no cartão do
  *  método. Borda de metal líquido igual à do cartão da hero desktop; o resto
  *  é CSS (ver `.group-cta`). O toque longo não abre o menu do link nem começa
  *  a arrastá-lo. */
-export function GroupCta({ children, className = "", ...rest }: Props) {
+export function GroupCta({
+  children,
+  className = "",
+  lazyBorder = false,
+  ...rest
+}: Props) {
   return (
     <a
       {...rest}
@@ -25,7 +33,7 @@ export function GroupCta({ children, className = "", ...rest }: Props) {
       draggable={false}
       onContextMenu={(event) => event.preventDefault()}
     >
-      <LiquidMetalBorder />
+      <LiquidMetalBorder lazy={lazyBorder} />
       <span className="group-cta-label">{children}</span>
       <span aria-hidden="true" className="group-cta-arrow">
         <svg

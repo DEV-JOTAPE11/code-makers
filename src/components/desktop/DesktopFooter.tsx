@@ -1,7 +1,10 @@
 "use client";
 
+import Link from "next/link";
+
 import { BlurRevealText } from "@/components/BlurRevealText";
 import { MagneticHover } from "@/components/motion-primitives";
+import { LEGAL } from "@/data/site";
 import { WHATSAPP_GROUP_URL } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 import { navigateToSection } from "@/lib/navigateToSection";
@@ -11,7 +14,7 @@ const FOOTER_GRADIENT = `url("data:image/svg+xml;utf8,<svg viewBox='0 0 1920 905
 
 const PRIMARY_LINKS = [
   { id: "home", label: "Início" },
-  { id: "about", label: "O método" },
+  { id: "metodo", label: "O método" },
   { id: "faq", label: "Dúvidas" },
 ];
 
@@ -131,6 +134,20 @@ export function DesktopFooter() {
           <div className="relative flex w-full shrink-0 items-center justify-center overflow-clip pt-[30px] content-stretch">
             <div className="relative flex min-w-px flex-[1_0_0] flex-col content-stretch items-start">
               <div className="relative flex w-full shrink-0 flex-col content-stretch items-center">
+                <p className="mb-3 text-center font-['Inter:Regular',sans-serif] text-[14px] leading-[22px] text-white/55">
+                  {LEGAL.entity} · {LEGAL.cnpj} · {LEGAL.email}
+                  {LEGAL.links.map((link) => (
+                    <span key={link.href}>
+                      {" · "}
+                      <Link
+                        className="underline-offset-4 transition-colors hover:text-white hover:underline"
+                        href={link.href}
+                      >
+                        {link.label}
+                      </Link>
+                    </span>
+                  ))}
+                </p>
                 <div className="relative flex shrink-0 flex-col justify-center whitespace-nowrap text-center font-['Inter:Regular',sans-serif] text-[16px] font-normal not-italic leading-[0] text-[rgba(255,255,255,0.7)] [word-break:break-word]">
                   <p>
                     <span className="leading-[24px]">

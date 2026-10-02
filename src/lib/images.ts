@@ -27,4 +27,50 @@ export const IMAGES = {
     automacao: "/assets/blog-automacao-syrion.png",
     atendimento: "/assets/blog-atendimento-ia-syrion.png",
   },
+
+  // PLACEHOLDER: substituir pela imagem final (ver briefing/PLACEHOLDERS.md).
+  // Imagens do Pinterest só para desenvolvimento local: não vão para produção.
+  placeholders: {
+    demo: {
+      barbearia: {
+        desktop: "/assets/placeholders/demo-barbearia-desktop.webp",
+        mobile: "/assets/placeholders/demo-barbearia-mobile.webp",
+      },
+      suplementos: {
+        desktop: "/assets/placeholders/demo-suplementos-desktop.webp",
+        mobile: "/assets/placeholders/demo-suplementos-mobile.webp",
+      },
+      gastronomia: {
+        desktop: "/assets/placeholders/demo-gastronomia-desktop.webp",
+        mobile: "/assets/placeholders/demo-gastronomia-mobile.webp",
+      },
+      eletronicos: {
+        desktop: "/assets/placeholders/demo-eletronicos-desktop.webp",
+        mobile: "/assets/placeholders/demo-eletronicos-mobile.webp",
+      },
+      provedor: {
+        desktop: "/assets/placeholders/demo-provedor-desktop.webp",
+        mobile: "/assets/placeholders/demo-provedor-mobile.webp",
+      },
+      hotelaria: {
+        desktop: "/assets/placeholders/demo-hotelaria-desktop.webp",
+        mobile: "/assets/placeholders/demo-hotelaria-mobile.webp",
+      },
+    },
+    lessonPoster: "/assets/placeholders/demo-aula-poster.webp",
+    method: {
+      step01: "/assets/placeholders/metodo-01.webp",
+      step02: "/assets/placeholders/metodo-02.webp",
+      step03: "/assets/placeholders/metodo-03.webp",
+      step04: "/assets/placeholders/metodo-04.webp",
+    },
+    authorPortrait: "/assets/placeholders/autor-retrato.webp",
+    authorWorks: {
+      almeida: "/assets/placeholders/autor-case-almeida-imports.webp",
+      globoSat: "/assets/placeholders/autor-case-globo-sat.webp",
+      boiNaBrasa: "/assets/placeholders/autor-case-boi-na-brasa.webp",
+      lacerda: "/assets/placeholders/autor-case-lacerda-suplementos.webp",
+    },
+    offerObject: "/assets/placeholders/oferta-objeto.webp",
+  },
 } as const;

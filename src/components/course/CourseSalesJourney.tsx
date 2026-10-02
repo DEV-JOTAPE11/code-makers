@@ -1,15 +1,16 @@
 "use client";
 
-import { CourseFinalPush } from "./CourseFinalPush";
+import { CourseAccessOffer } from "./CourseAccessOffer";
+import { CourseAuthor } from "./CourseAuthor";
+import { CourseDemo } from "./CourseDemo";
 import { CourseManifesto } from "./CourseManifesto";
+import { CourseMethod } from "./CourseMethod";
 import { CourseObjections } from "./CourseObjections";
-import { CourseOffer } from "./CourseOffer";
 import { CourseTemplates } from "./CourseTemplates";
-import { CourseTransformation } from "./CourseTransformation";
 
-/** Jornada de venda: templates → manifesto → oferta → virada → CTA → dúvidas.
- *  A ordem visual é dada pelas classes `order-*` de cada seção, para que o
- *  DOM continue na ordem semântica. */
+/** Jornada de venda: templates → manifesto → demonstração → método → autor
+ *  → oferta → dúvidas. O DOM segue a ordem visual; as classes `order-*`
+ *  (0 a 6) de cada seção só confirmam essa ordem no flex. */
 export function CourseSalesJourney({ desktop = false }: { desktop?: boolean }) {
   const container = desktop ? "mx-auto w-[1500px]" : "mx-auto max-w-[430px]";
 
@@ -21,9 +22,10 @@ export function CourseSalesJourney({ desktop = false }: { desktop?: boolean }) {
     >
       <CourseTemplates desktop={desktop} container={container} />
       <CourseManifesto desktop={desktop} container={container} />
-      <CourseTransformation desktop={desktop} container={container} />
-      <CourseOffer desktop={desktop} container={container} />
-      <CourseFinalPush desktop={desktop} container={container} />
+      <CourseDemo desktop={desktop} container={container} />
+      <CourseMethod desktop={desktop} container={container} />
+      <CourseAuthor desktop={desktop} container={container} />
+      <CourseAccessOffer desktop={desktop} container={container} />
       <CourseObjections desktop={desktop} container={container} />
     </div>
   );
